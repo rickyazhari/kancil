@@ -35,10 +35,30 @@
     <object-folder expanded="1" />
     <families />
     <layout-folder expanded="1">
-        <layout>Layout 1.xml</layout>
+        <layout>splash_screen.xml</layout>
+        <layout>menu.xml</layout>
+        <layout>level_map.xml</layout>
+        <layout>level1.xml</layout>
+        <layout>level2.xml</layout>
+        <layout>level3.xml</layout>
+        <layout>level4.xml</layout>
+        <layout>level5.xml</layout>
+        <layout>level6.xml</layout>
+        <layout>level7.xml</layout>
+        <layout>level8.xml</layout>
     </layout-folder>
     <event-folder expanded="1">
-        <event-sheet>Event sheet 1.xml</event-sheet>
+        <event-sheet>Event_splash_screen.xml</event-sheet>
+        <event-sheet>event_menu.xml</event-sheet>
+        <event-sheet>event_level_map.xml</event-sheet>
+        <event-sheet>event_level1.xml</event-sheet>
+        <event-sheet>event_level3.xml</event-sheet>
+        <event-sheet>event_level2.xml</event-sheet>
+        <event-sheet>event_level4.xml</event-sheet>
+        <event-sheet>event_level5.xml</event-sheet>
+        <event-sheet>event_level6.xml</event-sheet>
+        <event-sheet>event_level7.xml</event-sheet>
+        <event-sheet>event_level8.xml</event-sheet>
     </event-folder>
     <global-instances />
     <sounds-folder expanded="1" />

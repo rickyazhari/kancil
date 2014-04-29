@@ -1,8 +1,8 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <c2layout>
-    <name>Layout 1</name>
-    <sid>2028397387576905</sid>
-    <event-sheet>Event sheet 1</event-sheet>
+    <name>menu</name>
+    <sid>6113163598971679</sid>
+    <event-sheet>event_menu</event-sheet>
     <size>
         <width>1280</width>
         <height>1024</height>
@@ -13,7 +13,7 @@
     </margins>
     <unbounded-scrolling>0</unbounded-scrolling>
     <layers>
-        <layer name="background" sid="7740396990610538">
+        <layer name="background" sid="1790024400415407">
             <initially-visible>1</initially-visible>
             <background-color>255,255,255</background-color>
             <transparent>0</transparent>
@@ -29,7 +29,7 @@
             <instances />
             <effects />
         </layer>
-        <layer name="game" sid="434410169404582">
+        <layer name="game" sid="6345698151937635">
             <initially-visible>1</initially-visible>
             <background-color>255,255,255</background-color>
             <transparent>1</transparent>
@@ -45,15 +45,15 @@
             <instances />
             <effects />
         </layer>
-        <layer name="UI" sid="9826217813692812">
+        <layer name="UI" sid="7345022669176776">
             <initially-visible>1</initially-visible>
             <background-color>255,255,255</background-color>
             <transparent>1</transparent>
             <parallax>
-                <x>1</x>
-                <y>1</y>
+                <x>0</x>
+                <y>0</y>
             </parallax>
-            <zoom-rate>0</zoom-rate>
+            <zoom-rate>1</zoom-rate>
             <opacity>1</opacity>
             <force-own-texture>0</force-own-texture>
             <blend-mode>0</blend-mode>
