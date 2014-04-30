@@ -43,6 +43,11 @@
                 <condition id="0" name="On key pressed" sid="101146822358414" type="Keyboard">
                     <param id="0" name="Key">40 (Down arrow)</param>
                 </condition>
+                <condition id="-14" name="Compare variable" sid="6196140927818569" type="System">
+                    <param id="0" name="Variable">jumlah_jump</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">0</param>
+                </condition>
             </conditions>
             <actions>
                 <action behavior="Platform" id="11" name="Set enabled" sid="1868353576234926" type="kancil">
@@ -92,6 +97,11 @@
                             <param id="2" name="Value">1</param>
                         </condition>
                         <condition behavior="Platform" id="2" inverted="1" name="Is on floor" sid="1325847959970513" type="kancil" />
+                        <condition id="-14" name="Compare variable" sid="5607382718789195" type="System">
+                            <param id="0" name="Variable">sliding_kancil</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">0</param>
+                        </condition>
                     </conditions>
                     <actions>
                         <action id="-10" name="Add to" sid="3466043816706875" type="System">
