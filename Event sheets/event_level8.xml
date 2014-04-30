@@ -2,5 +2,18 @@
 <c2eventsheet>
     <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
     <name>event_level8</name>
-    <events />
+    <events>
+        <event-block sid="1873751893130702">
+            <conditions>
+                <condition id="0" name="On key pressed" sid="6196425845684738" type="Keyboard">
+                    <param id="0" name="Key">39 (Right arrow)</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="3" name="Start" sid="9959239292295378" type="kancil">
+                    <param id="0" name="From">1</param>
+                </action>
+            </actions>
+        </event-block>
+    </events>
 </c2eventsheet>

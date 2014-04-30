@@ -20,8 +20,9 @@ you probably do not want to add any .uistate.xml files to the repository.-->
         <layout>level5</layout>
         <layout>level6</layout>
         <layout>level7</layout>
-        <layout active="1">level8</layout>
-        <event-sheet>player_char</event-sheet>
+        <layout>level8</layout>
+        <event-sheet active="1">player_char</event-sheet>
+        <event-sheet>event_level8</event-sheet>
     </open-tabs>
     <properties>
         <property expanded="1" name="About" />
