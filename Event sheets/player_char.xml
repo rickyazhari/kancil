@@ -3,6 +3,7 @@
     <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
     <name>player_char</name>
     <events>
+        <variable constant="0" name="sliding_kancil" sid="5475212151970251" static="0" type="number">0</variable>
         <event-block sid="3208083953337836">
             <conditions>
                 <condition id="0" name="On key pressed" sid="1961676799227098" type="Keyboard">
@@ -17,16 +18,6 @@
                 <action id="4" name="Set animation" sid="9639127198994483" type="kancil">
                     <param id="0" name="Animation">&quot;jump&quot;</param>
                     <param id="1" name="From">1</param>
-                </action>
-                <action id="-16" name="Wait" sid="6975372776554047" type="System">
-                    <param id="0" name="Seconds">0.5</param>
-                </action>
-                <action id="4" name="Set animation" sid="3149257101046331" type="kancil">
-                    <param id="0" name="Animation">&quot;lari&quot;</param>
-                    <param id="1" name="From">1</param>
-                </action>
-                <action behavior="Platform" id="11" name="Set enabled" sid="1102390330975046" type="kancil">
-                    <param id="0" name="State">0</param>
                 </action>
             </actions>
         </event-block>
@@ -54,6 +45,13 @@
                 </condition>
             </conditions>
             <actions>
+                <action behavior="Platform" id="11" name="Set enabled" sid="1868353576234926" type="kancil">
+                    <param id="0" name="State">1</param>
+                </action>
+                <action id="-9" name="Set value" sid="8626205601848843" type="System">
+                    <param id="0" name="Variable">sliding_kancil</param>
+                    <param id="1" name="Value">1</param>
+                </action>
                 <action id="2" name="Stop" sid="2383656099386467" type="kancil" />
                 <action id="4" name="Set animation" sid="833979755732796" type="kancil">
                     <param id="0" name="Animation">&quot;slide&quot;</param>
@@ -74,7 +72,76 @@
                     <param id="0" name="Animation">&quot;lari&quot;</param>
                     <param id="1" name="From">1</param>
                 </action>
+                <action id="-9" name="Set value" sid="6064391992735024" type="System">
+                    <param id="0" name="Variable">sliding_kancil</param>
+                    <param id="1" name="Value">0</param>
+                </action>
             </actions>
         </event-block>
+        <variable comment="jumlah kancil jump" constant="0" name="jumlah_jump" sid="1444527862761962" static="0" type="number">0</variable>
+        <event-group description="" sid="5674974752222511" title="double jump">
+            <sub-events>
+                <event-block sid="3877500833862058">
+                    <conditions>
+                        <condition id="0" name="On key pressed" sid="708594664643166" type="Keyboard">
+                            <param id="0" name="Key">38 (Up arrow)</param>
+                        </condition>
+                        <condition id="-14" name="Compare variable" sid="4932145149474398" type="System">
+                            <param id="0" name="Variable">jumlah_jump</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">1</param>
+                        </condition>
+                        <condition behavior="Platform" id="2" inverted="1" name="Is on floor" sid="1325847959970513" type="kancil" />
+                    </conditions>
+                    <actions>
+                        <action id="-10" name="Add to" sid="3466043816706875" type="System">
+                            <param id="0" name="Variable">jumlah_jump</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                        <action behavior="Platform" id="9" name="Set vector Y" sid="8382987116580486" type="kancil">
+                            <param id="0" name="Vector Y">-(kancil.Platform.JumpStrength)</param>
+                        </action>
+                        <action id="4" name="Set animation" sid="7817495712950721" type="kancil">
+                            <param id="0" name="Animation">&quot;jump&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="6318740077713763">
+                    <conditions>
+                        <condition behavior="Platform" id="5" name="On jump" sid="951725273058391" type="kancil" />
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Set value" sid="9797141848581486" type="System">
+                            <param id="0" name="Variable">jumlah_jump</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="680709854194228">
+                    <conditions>
+                        <condition behavior="Platform" id="2" name="Is on floor" sid="9418388311345185" type="kancil" />
+                        <condition id="-14" name="Compare variable" sid="2243556422671937" type="System">
+                            <param id="0" name="Variable">sliding_kancil</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">0</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Set value" sid="2755218484605967" type="System">
+                            <param id="0" name="Variable">jumlah_jump</param>
+                            <param id="1" name="Value">0</param>
+                        </action>
+                        <action behavior="Platform" id="11" name="Set enabled" sid="6598064185689448" type="kancil">
+                            <param id="0" name="State">0</param>
+                        </action>
+                        <action id="4" name="Set animation" sid="5851501044847429" type="kancil">
+                            <param id="0" name="Animation">&quot;lari&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
     </events>
 </c2eventsheet>

@@ -95,9 +95,9 @@
                                 <max-speed>150</max-speed>
                                 <acceleration>500</acceleration>
                                 <deceleration>1500</deceleration>
-                                <jump-strength>350</jump-strength>
+                                <jump-strength>450</jump-strength>
                                 <gravity>1500</gravity>
-                                <max-fall-speed>500</max-fall-speed>
+                                <max-fall-speed>800</max-fall-speed>
                                 <default-controls>Yes</default-controls>
                                 <initial-state>Enabled</initial-state>
                             </properties>
