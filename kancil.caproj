@@ -11,8 +11,13 @@
     <saved-with-version>13900</saved-with-version>
     <used-plugins>
         <plugin author="Scirra" id="Sprite" version="1">Sprite</plugin>
+        <plugin author="Scirra" id="TiledBg" version="1">Tiled Background</plugin>
     </used-plugins>
-    <used-behaviors />
+    <used-behaviors>
+        <behavior author="Scirra" id="Platform" version="1">Platform</behavior>
+        <behavior author="Scirra" id="scrollto" version="1">Scroll To</behavior>
+        <behavior author="Scirra" id="solid" version="1">Solid</behavior>
+    </used-behaviors>
     <used-effects />
     <configurations>
         <configuration exporter-descname="HTML5" exporter-id="html5" name="HTML5" />
@@ -22,11 +27,12 @@
         <height>480</height>
     </window-size>
     <pixel-rounding>0</pixel-rounding>
+    <first-layout>level8</first-layout>
     <use-loader-layout>0</use-loader-layout>
     <configuration-settings>
         <prop name="Clear background">Yes</prop>
         <prop name="Enable WebGL">On</prop>
-        <prop name="Fullscreen in browser">Letterbox scale</prop>
+        <prop name="Fullscreen in browser">Scale inner</prop>
         <prop name="Hide address bar">No</prop>
         <prop name="Loader style">Progress bar &amp; logo</prop>
         <prop name="Pause on unfocus">No</prop>
@@ -34,25 +40,67 @@
         <prop name="Sampling">Linear</prop>
         <prop name="Use iOS retina display">All devices</prop>
     </configuration-settings>
-    <object-folder expanded="1">
-        <object-type name="Sprite" sid="2780220259247621">
+    <object-folder expanded="0">
+        <object-type name="main_char" sid="7200027340268508">
             <plugin id="Sprite" />
+            <behaviors>
+                <behavior-type name="ScrollTo" sid="3119229289499963">
+                    <behavior id="scrollto" />
+                </behavior-type>
+                <behavior-type name="Platform" sid="5115898156798077">
+                    <behavior id="Platform" />
+                </behavior-type>
+            </behaviors>
             <animation-folder expanded="1">
-                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="9495662203975029" speed="5">
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.5">
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="293458291014584" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.50152">
                         <collision-poly>
-                            <point x="0.468841" y="0.42724" />
-                            <point x="0.5" y="0.43079" />
-                            <point x="0.778968" y="0.20142" />
-                            <point x="0.685492" y="0.5" />
-                            <point x="0.610516" y="0.645075" />
-                            <point x="0.5" y="0.672138" />
-                            <point x="0.145083" y="0.867791" />
-                            <point x="0.0998053" y="0.5" />
+                            <point x="0.466667" y="0.425532" />
+                            <point x="0.59" y="0.37386" />
+                            <point x="0.57" y="0.290274" />
+                            <point x="0.513333" y="0.227204" />
+                            <point x="0.568333" y="0.18959" />
+                            <point x="0.635833" y="0.201178" />
+                            <point x="0.649583" y="0.130984" />
+                            <point x="0.739792" y="0.171875" />
+                            <point x="0.821562" y="0.237913" />
+                            <point x="0.834114" y="0.289169" />
+                            <point x="0.923333" y="0.331307" />
+                            <point x="0.858333" y="0.399696" />
+                            <point x="0.746667" y="0.422492" />
+                            <point x="0.62" y="0.617021" />
+                            <point x="0.643333" y="0.945289" />
+                            <point x="0.57" y="0.945289" />
+                            <point x="0.556667" y="0.773556" />
+                            <point x="0.51" y="0.671732" />
+                            <point x="0.316667" y="0.676291" />
+                            <point x="0.22" y="0.699848" />
+                            <point x="0.213333" y="0.936171" />
+                            <point x="0.155" y="0.945289" />
+                            <point x="0.105833" y="0.691489" />
+                            <point x="0.147917" y="0.640578" />
+                            <point x="0.125625" y="0.578647" />
+                            <point x="0.107812" y="0.599354" />
+                            <point x="0.0966667" y="0.49848" />
+                            <point x="0.165" y="0.398176" />
+                            <point x="0.249167" y="0.37842" />
                         </collision-poly>
                     </frame>
                 </animation>
             </animation-folder>
+        </object-type>
+        <object-type name="rumput" sid="3200280633005">
+            <plugin id="TiledBg" />
+            <behaviors>
+                <behavior-type name="Solid" sid="3928867909378253">
+                    <behavior id="solid" />
+                </behavior-type>
+            </behaviors>
+            <texture />
+        </object-type>
+        <object-type name="back_level8" sid="7275348709340653">
+            <plugin id="TiledBg" />
+            <texture />
         </object-type>
     </object-folder>
     <families />
@@ -81,11 +129,12 @@
         <event-sheet>event_level6.xml</event-sheet>
         <event-sheet>event_level7.xml</event-sheet>
         <event-sheet>event_level8.xml</event-sheet>
+        <event-sheet>player_char.xml</event-sheet>
     </event-folder>
     <global-instances />
     <sounds-folder expanded="1" />
     <music-folder expanded="1" />
-    <files-folder expanded="1">
+    <files-folder expanded="0">
         <file-folder expanded="0" name="Icons">
             <file name="icon-16.png" />
             <file name="icon-32.png" />
