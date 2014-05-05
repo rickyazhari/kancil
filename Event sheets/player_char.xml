@@ -4,28 +4,6 @@
     <name>player_char</name>
     <events>
         <variable constant="0" name="sliding_kancil" sid="5475212151970251" static="0" type="number">0</variable>
-        <event-block sid="3208083953337836">
-            <conditions>
-                <condition id="0" name="On click" sid="2793865386302987" type="Mouse">
-                    <param id="0" name="Mouse button">0</param>
-                    <param id="1" name="Click type">0</param>
-                </condition>
-                <condition id="-14" name="Compare variable" sid="4105104780553375" type="System">
-                    <param id="0" name="Variable">jumlah_jump</param>
-                    <param id="1" name="Comparison">0</param>
-                    <param id="2" name="Value">0</param>
-                </condition>
-            </conditions>
-            <actions>
-                <action behavior="Platform" id="9" name="Set vector Y" sid="4038537276857978" type="kancil">
-                    <param id="0" name="Vector Y">-(kancil.Platform.JumpStrength)</param>
-                </action>
-                <action id="4" name="Set animation" sid="9639127198994483" type="kancil">
-                    <param id="0" name="Animation">&quot;jump&quot;</param>
-                    <param id="1" name="From">1</param>
-                </action>
-            </actions>
-        </event-block>
         <event-block sid="2082030108452163">
             <conditions>
                 <condition id="2" name="Is playing" sid="6532753351805753" type="kancil">
@@ -35,7 +13,7 @@
             <actions>
                 <action behavior="CustomMovement" id="2" name="Set speed" sid="7464441037339865" type="kancil">
                     <param id="0" name="Which">0</param>
-                    <param id="1" name="Speed">150</param>
+                    <param id="1" name="Speed">200</param>
                 </action>
                 <action behavior="CustomMovement" id="3" name="Accelerate" sid="6757865160480227" type="kancil">
                     <param id="0" name="Which">0</param>
@@ -43,58 +21,11 @@
                 </action>
             </actions>
         </event-block>
-        <event-block sid="8059908299792177">
-            <conditions>
-                <condition id="0" name="On click" sid="101146822358414" type="Mouse">
-                    <param id="0" name="Mouse button">2</param>
-                    <param id="1" name="Click type">0</param>
-                </condition>
-                <condition id="-14" name="Compare variable" sid="6196140927818569" type="System">
-                    <param id="0" name="Variable">jumlah_jump</param>
-                    <param id="1" name="Comparison">0</param>
-                    <param id="2" name="Value">0</param>
-                </condition>
-            </conditions>
-            <actions>
-                <action id="-9" name="Set value" sid="8626205601848843" type="System">
-                    <param id="0" name="Variable">sliding_kancil</param>
-                    <param id="1" name="Value">1</param>
-                </action>
-                <action id="2" name="Stop" sid="2383656099386467" type="kancil" />
-                <action id="4" name="Set animation" sid="833979755732796" type="kancil">
-                    <param id="0" name="Animation">&quot;slide&quot;</param>
-                    <param id="1" name="From">1</param>
-                </action>
-                <action behavior="CustomMovement" id="3" name="Accelerate" sid="6841298492456783" type="kancil">
-                    <param id="0" name="Which">0</param>
-                    <param id="1" name="Acceleration">500</param>
-                </action>
-                <action behavior="CustomMovement" id="2" name="Set speed" sid="5541381161901447" type="kancil">
-                    <param id="0" name="Which">0</param>
-                    <param id="1" name="Speed">150</param>
-                </action>
-                <action id="-16" name="Wait" sid="7336857526903681" type="System">
-                    <param id="0" name="Seconds">0.5</param>
-                </action>
-                <action id="4" name="Set animation" sid="1275881257640015" type="kancil">
-                    <param id="0" name="Animation">&quot;lari&quot;</param>
-                    <param id="1" name="From">1</param>
-                </action>
-                <action id="-9" name="Set value" sid="6064391992735024" type="System">
-                    <param id="0" name="Variable">sliding_kancil</param>
-                    <param id="1" name="Value">0</param>
-                </action>
-            </actions>
-        </event-block>
         <variable comment="jumlah kancil jump" constant="0" name="jumlah_jump" sid="1444527862761962" static="0" type="number">0</variable>
-        <event-group description="" sid="5674974752222511" title="double jump">
+        <event-group description="" sid="5674974752222511" title="jump dan double jump">
             <sub-events>
                 <event-block sid="3877500833862058">
                     <conditions>
-                        <condition id="0" name="On click" sid="4219805802740611" type="Mouse">
-                            <param id="0" name="Mouse button">0</param>
-                            <param id="1" name="Click type">0</param>
-                        </condition>
                         <condition behavior="Platform" id="2" inverted="1" name="Is on floor" sid="1325847959970513" type="kancil" />
                         <condition id="-14" name="Compare variable" sid="5607382718789195" type="System">
                             <param id="0" name="Variable">sliding_kancil</param>
@@ -104,7 +35,7 @@
                         <condition id="-14" name="Compare variable" sid="2147269973984931" type="System">
                             <param id="0" name="Variable">jumlah_jump</param>
                             <param id="1" name="Comparison">0</param>
-                            <param id="2" name="Value">1</param>
+                            <param id="2" name="Value">3</param>
                         </condition>
                     </conditions>
                     <actions>
@@ -116,12 +47,31 @@
                         <action behavior="Platform" id="9" name="Set vector Y" sid="8382987116580486" type="kancil">
                             <param id="0" name="Vector Y">-(kancil.Platform.JumpStrength)</param>
                         </action>
-                        <action id="-10" name="Add to" sid="3466043816706875" type="System">
+                        <action id="-10" name="Add to" sid="1795210879881362" type="System">
                             <param id="0" name="Variable">jumlah_jump</param>
                             <param id="1" name="Value">1</param>
                         </action>
-                        <action id="0" name="Set text" sid="1963645855623866" type="test">
-                            <param id="0" name="Text">&quot;2&quot;</param>
+                    </actions>
+                </event-block>
+                <event-block sid="5682214330082">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="3840058661591135" type="System">
+                            <param id="0" name="Variable">jumlah_jump</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">1</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action behavior="Platform" id="9" name="Set vector Y" sid="9146685693978255" type="kancil">
+                            <param id="0" name="Vector Y">-(kancil.Platform.JumpStrength)</param>
+                        </action>
+                        <action id="4" name="Set animation" sid="3583225146798142" type="kancil">
+                            <param id="0" name="Animation">&quot;jump&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                        <action id="-10" name="Add to" sid="8966892861716779" type="System">
+                            <param id="0" name="Variable">jumlah_jump</param>
+                            <param id="1" name="Value">1</param>
                         </action>
                     </actions>
                 </event-block>
@@ -140,35 +90,98 @@
                         </condition>
                     </conditions>
                     <actions>
-                        <action id="-9" name="Set value" sid="2755218484605967" type="System">
-                            <param id="0" name="Variable">jumlah_jump</param>
-                            <param id="1" name="Value">0</param>
-                        </action>
                         <action id="4" name="Set animation" sid="5851501044847429" type="kancil">
                             <param id="0" name="Animation">&quot;lari&quot;</param>
                             <param id="1" name="From">1</param>
                         </action>
-                        <action id="0" name="Set text" sid="4454131305607353" type="test">
-                            <param id="0" name="Text">&quot;0&quot;</param>
+                        <action id="-9" name="Set value" sid="2755218484605967" type="System">
+                            <param id="0" name="Variable">jumlah_jump</param>
+                            <param id="1" name="Value">0</param>
                         </action>
                     </actions>
                 </event-block>
                 <event-block sid="2536854141002692">
                     <conditions>
-                        <condition behavior="Platform" id="3" name="Is jumping" sid="6883344086303853" type="kancil" />
-                        <condition id="-14" name="Compare variable" sid="5073205674406941" type="System">
-                            <param id="0" name="Variable">jumlah_jump</param>
-                            <param id="1" name="Comparison">0</param>
-                            <param id="2" name="Value">0</param>
+                        <condition id="0" name="On click" sid="6883344086303853" type="Mouse">
+                            <param id="0" name="Mouse button">0</param>
+                            <param id="1" name="Click type">0</param>
                         </condition>
                     </conditions>
                     <actions>
-                        <action id="0" name="Set text" sid="1620814988774047" type="test">
-                            <param id="0" name="Text">&quot;1&quot;</param>
-                        </action>
-                        <action id="-9" name="Set value" sid="6383654765735218" type="System">
+                        <action id="-10" name="Add to" sid="6383654765735218" type="System">
                             <param id="0" name="Variable">jumlah_jump</param>
                             <param id="1" name="Value">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-group description="" sid="6119991090109952" title="player sliding">
+            <sub-events>
+                <event-block sid="7130471172592306">
+                    <conditions>
+                        <condition id="0" name="On click" sid="7011634538569087" type="Mouse">
+                            <param id="0" name="Mouse button">2</param>
+                            <param id="1" name="Click type">0</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Set value" sid="9127287828593366" type="System">
+                            <param id="0" name="Variable">sliding_kancil</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="3493698517732712">
+                    <conditions>
+                        <condition id="3" name="On button released" sid="7366664125919831" type="Mouse">
+                            <param id="0" name="Mouse button">2</param>
+                        </condition>
+                        <condition id="-14" name="Compare variable" sid="5216254546518668" type="System">
+                            <param id="0" name="Variable">sliding_kancil</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">1</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="4" name="Set animation" sid="6898902580811626" type="kancil">
+                            <param id="0" name="Animation">&quot;lari&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="4149286120363341" type="System">
+                            <param id="0" name="Variable">sliding_kancil</param>
+                            <param id="1" name="Value">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="4099303789598312">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="8824098774865828" type="System">
+                            <param id="0" name="Variable">sliding_kancil</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">1</param>
+                        </condition>
+                        <condition behavior="Platform" id="2" name="Is on floor" sid="4861075345191489" type="kancil" />
+                    </conditions>
+                    <actions>
+                        <action id="4" name="Set animation" sid="6317111571024257" type="kancil">
+                            <param id="0" name="Animation">&quot;slide&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-group description="" sid="7497139362254449" title="camera player">
+            <sub-events>
+                <event-block sid="554867006860311">
+                    <conditions>
+                        <condition behavior="CustomMovement" id="0" name="Is moving" sid="3031007932728547" type="kancil" />
+                    </conditions>
+                    <actions>
+                        <action id="-7" name="Scroll to position" sid="6700668330087941" type="System">
+                            <param id="0" name="X">kancil.X + 100</param>
+                            <param id="1" name="Y">kancil.Y - 200</param>
                         </action>
                     </actions>
                 </event-block>
