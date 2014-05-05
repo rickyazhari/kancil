@@ -134,13 +134,10 @@
                 </event-block>
                 <event-block sid="3493698517732712">
                     <conditions>
-                        <condition id="3" name="On button released" sid="7366664125919831" type="Mouse">
-                            <param id="0" name="Mouse button">2</param>
-                        </condition>
                         <condition id="-14" name="Compare variable" sid="5216254546518668" type="System">
                             <param id="0" name="Variable">sliding_kancil</param>
                             <param id="1" name="Comparison">0</param>
-                            <param id="2" name="Value">1</param>
+                            <param id="2" name="Value">2</param>
                         </condition>
                     </conditions>
                     <actions>
@@ -151,6 +148,10 @@
                         <action id="-9" name="Set value" sid="4149286120363341" type="System">
                             <param id="0" name="Variable">sliding_kancil</param>
                             <param id="1" name="Value">0</param>
+                        </action>
+                        <action behavior="CustomMovement" id="2" name="Set speed" sid="8418746502807744" type="kancil">
+                            <param id="0" name="Which">0</param>
+                            <param id="1" name="Speed">200</param>
                         </action>
                     </actions>
                 </event-block>
@@ -168,6 +169,23 @@
                             <param id="0" name="Animation">&quot;slide&quot;</param>
                             <param id="1" name="From">1</param>
                         </action>
+                        <action behavior="CustomMovement" id="2" name="Set speed" sid="8371718355575696" type="kancil">
+                            <param id="0" name="Which">0</param>
+                            <param id="1" name="Speed">250</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="6594970780142073">
+                    <conditions>
+                        <condition id="3" name="On button released" sid="7233552710042476" type="Mouse">
+                            <param id="0" name="Mouse button">2</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-10" name="Add to" sid="8678959482889839" type="System">
+                            <param id="0" name="Variable">sliding_kancil</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
                     </actions>
                 </event-block>
             </sub-events>
@@ -180,8 +198,8 @@
                     </conditions>
                     <actions>
                         <action id="-7" name="Scroll to position" sid="6700668330087941" type="System">
-                            <param id="0" name="X">kancil.X + 100</param>
-                            <param id="1" name="Y">kancil.Y - 200</param>
+                            <param id="0" name="X">kancil.X </param>
+                            <param id="1" name="Y">kancil.Y </param>
                         </action>
                     </actions>
                 </event-block>
