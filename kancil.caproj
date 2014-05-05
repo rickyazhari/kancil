@@ -10,6 +10,7 @@
     <unique-id>38o7xfc4zxkfj</unique-id>
     <saved-with-version>13900</saved-with-version>
     <used-plugins>
+        <plugin author="Scirra" id="Touch" version="1">Touch</plugin>
         <plugin author="Scirra" id="TiledBg" version="1">Tiled Background</plugin>
         <plugin author="Scirra" id="Mouse" version="1">Mouse</plugin>
         <plugin author="Scirra" id="Sprite" version="1">Sprite</plugin>
@@ -19,6 +20,7 @@
     <used-behaviors>
         <behavior author="Scirra" id="custom" version="1">Custom Movement</behavior>
         <behavior author="Scirra" id="Platform" version="1">Platform</behavior>
+        <behavior author="Scirra" id="Anchor" version="1">Anchor</behavior>
         <behavior author="Scirra" id="scrollto" version="1">Scroll To</behavior>
         <behavior author="Scirra" id="solid" version="1">Solid</behavior>
     </used-behaviors>
@@ -66,9 +68,6 @@
                 </behavior-type>
                 <behavior-type name="Platform" sid="7576331618088476">
                     <behavior id="Platform" />
-                </behavior-type>
-                <behavior-type name="ScrollTo" sid="6035067318887965">
-                    <behavior id="scrollto" />
                 </behavior-type>
             </behaviors>
             <animation-folder expanded="1">
@@ -500,6 +499,51 @@
         <object-type name="test" sid="5156788967424996">
             <plugin id="Text" />
         </object-type>
+        <object-type name="touch" sid="4135547164536966">
+            <plugin id="Touch" />
+        </object-type>
+        <object-type name="Sprite" sid="4760903210419143">
+            <plugin id="Sprite" />
+            <animation-folder expanded="1">
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="2533875437778037" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Sprite2" sid="1145249711081723">
+            <plugin id="Sprite" />
+            <animation-folder expanded="1">
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="210911131413337" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="jumpButton" sid="3813309496421984">
+            <plugin id="Sprite" />
+            <animation-folder expanded="1">
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="7035405721969184" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="jump_kontrol" sid="4465761682657897">
+            <plugin id="TiledBg" />
+            <behaviors>
+                <behavior-type name="Anchor" sid="8827523291763554">
+                    <behavior id="Anchor" />
+                </behavior-type>
+            </behaviors>
+            <texture />
+        </object-type>
+        <object-type name="slide_kontrol" sid="7600488856796041">
+            <plugin id="TiledBg" />
+            <behaviors>
+                <behavior-type name="Anchor" sid="2064719145381075">
+                    <behavior id="Anchor" />
+                </behavior-type>
+            </behaviors>
+            <texture />
+        </object-type>
     </object-folder>
     <families />
     <layout-folder expanded="1">
@@ -532,6 +576,11 @@
     <global-instances>
         <global-instance type="Keyboard" uid="3" />
         <global-instance type="Mouse" uid="2" />
+        <global-instance type="touch" uid="8">
+            <properties>
+                <use-mouse-input>Yes</use-mouse-input>
+            </properties>
+        </global-instance>
     </global-instances>
     <sounds-folder expanded="1" />
     <music-folder expanded="1" />
