@@ -11,13 +11,13 @@
                 </condition>
             </conditions>
             <actions>
-                <action behavior="CustomMovement" id="2" name="Set speed" sid="7464441037339865" type="kancil">
-                    <param id="0" name="Which">0</param>
-                    <param id="1" name="Speed">200</param>
-                </action>
                 <action behavior="CustomMovement" id="3" name="Accelerate" sid="6757865160480227" type="kancil">
                     <param id="0" name="Which">0</param>
                     <param id="1" name="Acceleration">500</param>
+                </action>
+                <action behavior="CustomMovement" id="2" name="Set speed" sid="6067524567609058" type="kancil">
+                    <param id="0" name="Which">1</param>
+                    <param id="1" name="Speed">300</param>
                 </action>
             </actions>
         </event-block>
@@ -161,10 +161,6 @@
                         <action id="4" name="Set animation" sid="6317111571024257" type="kancil">
                             <param id="0" name="Animation">&quot;slide&quot;</param>
                             <param id="1" name="From">1</param>
-                        </action>
-                        <action behavior="CustomMovement" id="2" name="Set speed" sid="8371718355575696" type="kancil">
-                            <param id="0" name="Which">0</param>
-                            <param id="1" name="Speed">250</param>
                         </action>
                     </actions>
                 </event-block>

@@ -10,20 +10,20 @@
     <unique-id>38o7xfc4zxkfj</unique-id>
     <saved-with-version>13900</saved-with-version>
     <used-plugins>
-        <plugin author="Scirra" id="Text" version="1">Text</plugin>
         <plugin author="Scirra" id="Keyboard" version="1">Keyboard</plugin>
         <plugin author="Scirra" id="Mouse" version="1">Mouse</plugin>
-        <plugin author="Scirra" id="Sprite" version="1">Sprite</plugin>
         <plugin author="Scirra" id="Touch" version="1">Touch</plugin>
+        <plugin author="Scirra" id="Sprite" version="1">Sprite</plugin>
         <plugin author="Scirra" id="TiledBg" version="1">Tiled Background</plugin>
+        <plugin author="Scirra" id="Text" version="1">Text</plugin>
     </used-plugins>
     <used-behaviors>
-        <behavior author="Scirra" id="scrollto" version="1">Scroll To</behavior>
-        <behavior author="Scirra" id="solid" version="1">Solid</behavior>
-        <behavior author="Scirra" id="Anchor" version="1">Anchor</behavior>
         <behavior author="Scirra" id="Platform" version="1">Platform</behavior>
-        <behavior author="Scirra" id="Sin" version="1">Sine</behavior>
         <behavior author="Scirra" id="custom" version="1">Custom Movement</behavior>
+        <behavior author="Scirra" id="Anchor" version="1">Anchor</behavior>
+        <behavior author="Scirra" id="Sin" version="1">Sine</behavior>
+        <behavior author="Scirra" id="solid" version="1">Solid</behavior>
+        <behavior author="Scirra" id="scrollto" version="1">Scroll To</behavior>
     </used-behaviors>
     <used-effects />
     <configurations>
@@ -47,7 +47,7 @@
         <prop name="Sampling">Linear</prop>
         <prop name="Use iOS retina display">All devices</prop>
     </configuration-settings>
-    <object-folder expanded="0">
+    <object-folder expanded="1">
         <object-type name="rumput" sid="3200280633005">
             <plugin id="TiledBg" />
             <behaviors>
@@ -83,12 +83,12 @@
                             <point x="0.406875" y="0.65375" />
                             <point x="0.502188" y="0.638125" />
                             <point x="0.584844" y="0.687812" />
-                            <point x="0.6025" y="0.5225" />
+                            <point x="0.59625" y="0.52" />
                             <point x="0.685" y="0.55875" />
                             <point x="0.74875" y="0.569375" />
                             <point x="0.798125" y="0.637188" />
                             <point x="0.812812" y="0.726094" />
-                            <point x="0.8725" y="0.755" />
+                            <point x="0.82375" y="0.77" />
                             <point x="0.82" y="0.8" />
                             <point x="0.69" y="0.795" />
                             <point x="0.665" y="0.86" />
@@ -114,7 +114,7 @@
                             <point x="0.776875" y="0.62875" />
                             <point x="0.820937" y="0.698125" />
                             <point x="0.825469" y="0.770313" />
-                            <point x="0.87" y="0.8125" />
+                            <point x="0.82" y="0.82125" />
                             <point x="0.725" y="1" />
                             <point x="0.6075" y="0.9175" />
                             <point x="0.47125" y="0.87875" />
@@ -128,12 +128,12 @@
                     <frame duration="1" hotspotX="0.5" hotspotY="0.5">
                         <collision-poly>
                             <point x="0.58" y="0.6825" />
-                            <point x="0.5825" y="0.5075" />
+                            <point x="0.5825" y="0.50625" />
                             <point x="0.67375" y="0.55875" />
                             <point x="0.756875" y="0.571875" />
                             <point x="0.810937" y="0.650937" />
                             <point x="0.820469" y="0.725469" />
-                            <point x="0.87" y="0.765" />
+                            <point x="0.815" y="0.7625" />
                             <point x="0.8125" y="0.795" />
                             <point x="0.69875" y="0.79" />
                             <point x="0.656875" y="0.865" />
@@ -254,35 +254,27 @@
                 <animation framecount="2" loop="0" name="slide" pingpong="0" repeatcount="1" repeatto="0" sid="7888991395973438" speed="5">
                     <frame duration="1" hotspotX="0.5" hotspotY="0.5">
                         <collision-poly>
-                            <point x="0.2675" y="0.8025" />
-                            <point x="0.2275" y="0.7575" />
-                            <point x="0.265" y="0.67" />
-                            <point x="0.6025" y="0.6075" />
-                            <point x="0.68875" y="0.66875" />
-                            <point x="0.774375" y="0.724375" />
-                            <point x="0.789688" y="0.832188" />
-                            <point x="0.83" y="0.895" />
-                            <point x="0.735" y="0.98" />
-                            <point x="0.5475" y="0.97" />
-                            <point x="0.52125" y="1" />
-                            <point x="0.3325" y="0.9875" />
+                            <point x="0.24875" y="0.69125" />
+                            <point x="0.29875" y="0.76625" />
+                            <point x="0.44625" y="0.75625" />
+                            <point x="0.55125" y="0.8075" />
+                            <point x="0.55625" y="0.66" />
+                            <point x="0.7325" y="0.73625" />
+                            <point x="0.7675" y="0.98125" />
+                            <point x="0.32875" y="1" />
                         </collision-poly>
                     </frame>
                     <frame duration="1" hotspotX="0.5" hotspotY="0.5">
                         <collision-poly>
-                            <point x="0.34" y="0.7425" />
-                            <point x="0.4225" y="0.7175" />
-                            <point x="0.57625" y="0.7725" />
-                            <point x="0.605" y="0.6175" />
-                            <point x="0.77" y="0.7225" />
-                            <point x="0.795" y="0.8325" />
-                            <point x="0.835" y="0.895" />
-                            <point x="0.73125" y="0.975" />
-                            <point x="0.546875" y="0.9675" />
-                            <point x="0.5025" y="1" />
-                            <point x="0.34" y="0.98625" />
-                            <point x="0.225" y="0.7675" />
-                            <point x="0.26" y="0.67875" />
+                            <point x="0.23375" y="0.793751" />
+                            <point x="0.2475" y="0.6975" />
+                            <point x="0.30875" y="0.774376" />
+                            <point x="0.39375" y="0.750937" />
+                            <point x="0.545" y="0.79125" />
+                            <point x="0.56" y="0.66" />
+                            <point x="0.775" y="0.79" />
+                            <point x="0.76875" y="0.98375" />
+                            <point x="0.34" y="1" />
                         </collision-poly>
                     </frame>
                 </animation>
@@ -650,7 +642,7 @@
                 </animation>
             </animation-folder>
         </object-type>
-        <object-type name="obs2" sid="8379543224068605">
+        <object-type name="kaktus" sid="8379543224068605">
             <plugin id="Sprite" />
             <behaviors>
                 <behavior-type name="Solid" sid="3843902053134072">
