@@ -710,6 +710,18 @@
             <plugin id="TiledBg" />
             <texture />
         </object-type>
+        <object-type name="TiledBackground7" sid="6608785633521173">
+            <plugin id="TiledBg" />
+            <texture />
+        </object-type>
+        <object-type name="TiledBackground8" sid="9444457012682812">
+            <plugin id="TiledBg" />
+            <texture />
+        </object-type>
+        <object-type name="TiledBackground9" sid="4251715041930396">
+            <plugin id="TiledBg" />
+            <texture />
+        </object-type>
     </object-folder>
     <families />
     <layout-folder expanded="1">
