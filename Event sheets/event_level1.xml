@@ -8,5 +8,36 @@
             <conditions />
             <actions />
         </event-block>
+        <event-block sid="4385349815422818">
+            <conditions>
+                <condition id="-25" name="On loader layout complete" sid="4999962854527458" type="System" />
+            </conditions>
+            <actions>
+                <action id="0" name="Set text" sid="7094269347117894" type="timer">
+                    <param id="0" name="Text">timer.waktu</param>
+                </action>
+                <action behavior="Timer" id="0" name="Start timer" sid="9196583976224751" type="timer">
+                    <param id="0" name="Duration">1.0</param>
+                    <param id="1" name="Type">1</param>
+                    <param id="2" name="Tag">&quot;test&quot;</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="6849879569509745">
+            <conditions>
+                <condition behavior="Timer" id="0" name="On timer" sid="2631851542591567" type="timer">
+                    <param id="0" name="Tag">&quot;test&quot;</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-10" name="Set value" sid="1215625651669781" type="timer">
+                    <param id="0" name="Instance variable">waktu</param>
+                    <param id="1" name="Value">timer.waktu-1</param>
+                </action>
+                <action id="0" name="Set text" sid="8061589857558726" type="timer">
+                    <param id="0" name="Text">timer.waktu</param>
+                </action>
+            </actions>
+        </event-block>
     </events>
 </c2eventsheet>

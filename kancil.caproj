@@ -10,20 +10,20 @@
     <unique-id>38o7xfc4zxkfj</unique-id>
     <saved-with-version>13900</saved-with-version>
     <used-plugins>
-        <plugin author="Scirra" id="Mouse" version="1">Mouse</plugin>
-        <plugin author="Scirra" id="Sprite" version="1">Sprite</plugin>
         <plugin author="Scirra" id="Keyboard" version="1">Keyboard</plugin>
-        <plugin author="Scirra" id="Touch" version="1">Touch</plugin>
-        <plugin author="Scirra" id="Text" version="1">Text</plugin>
         <plugin author="Scirra" id="TiledBg" version="1">Tiled Background</plugin>
+        <plugin author="Scirra" id="Sprite" version="1">Sprite</plugin>
+        <plugin author="Scirra" id="Mouse" version="1">Mouse</plugin>
+        <plugin author="Scirra" id="Text" version="1">Text</plugin>
+        <plugin author="Scirra" id="Touch" version="1">Touch</plugin>
     </used-plugins>
     <used-behaviors>
+        <behavior author="Scirra" id="custom" version="1">Custom Movement</behavior>
         <behavior author="Scirra" id="Platform" version="1">Platform</behavior>
         <behavior author="Scirra" id="Anchor" version="1">Anchor</behavior>
-        <behavior author="Scirra" id="custom" version="1">Custom Movement</behavior>
         <behavior author="Scirra" id="Sin" version="1">Sine</behavior>
+        <behavior author="Scirra" id="Timer" version="1">Timer</behavior>
         <behavior author="Scirra" id="solid" version="1">Solid</behavior>
-        <behavior author="Scirra" id="scrollto" version="1">Scroll To</behavior>
     </used-behaviors>
     <used-effects>
         <effect author="Viktor Korsun" id="water">Water</effect>
@@ -37,7 +37,7 @@
     </window-size>
     <pixel-rounding>1</pixel-rounding>
     <first-layout>level1</first-layout>
-    <use-loader-layout>0</use-loader-layout>
+    <use-loader-layout>1</use-loader-layout>
     <configuration-settings>
         <prop name="Clear background">Yes</prop>
         <prop name="Enable WebGL">On</prop>
@@ -67,6 +67,8 @@
             <instance-variables>
                 <instance-variable comment="lari cepat" name="booster" sid="5592287347887229" type="boolean" />
                 <instance-variable comment="mode perisai" name="perisai" sid="5208541145788497" type="boolean" />
+                <instance-variable comment="jump kancil" name="jumlah_jump" sid="8506970210499201" type="number" />
+                <instance-variable comment="karakter sliding" name="sliding" sid="6844717909452602" type="number" />
             </instance-variables>
             <behaviors>
                 <behavior-type name="CustomMovement" sid="8401330568994837">
@@ -361,135 +363,6 @@
         <object-type name="Keyboard" sid="7798635860827477">
             <plugin id="Keyboard" />
         </object-type>
-        <object-type name="kancil2" sid="8265738883059031">
-            <plugin id="Sprite" />
-            <behaviors>
-                <behavior-type name="ScrollTo" sid="5054334163974021">
-                    <behavior id="scrollto" />
-                </behavior-type>
-                <behavior-type name="Platform" sid="7683892119835564">
-                    <behavior id="Platform" />
-                </behavior-type>
-            </behaviors>
-            <animation-folder expanded="1">
-                <animation framecount="6" loop="1" name="lari" pingpong="0" repeatcount="1" repeatto="0" sid="563109189978975" speed="6">
-                    <frame duration="3" hotspotX="0.5" hotspotY="0.5">
-                        <collision-poly>
-                            <point x="0.475" y="0.47" />
-                            <point x="0.665" y="0.38" />
-                            <point x="0.765" y="0.48" />
-                            <point x="0.89" y="0.51" />
-                            <point x="0.735" y="0.6" />
-                            <point x="0.63" y="0.7975" />
-                            <point x="0.6525" y="0.95875" />
-                            <point x="0.60375" y="0.99" />
-                            <point x="0.554375" y="0.82" />
-                            <point x="0.404688" y="0.83" />
-                            <point x="0.329844" y="0.825" />
-                            <point x="0.402422" y="0.9625" />
-                            <point x="0.345" y="1" />
-                            <point x="0.24" y="0.83" />
-                            <point x="0.2775" y="0.7725" />
-                            <point x="0.265" y="0.705" />
-                            <point x="0.3175" y="0.60875" />
-                            <point x="0.53" y="0.6125" />
-                            <point x="0.595" y="0.57" />
-                        </collision-poly>
-                    </frame>
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.5">
-                        <collision-poly>
-                            <point x="0.565" y="0.685" />
-                            <point x="0.535" y="0.53" />
-                            <point x="0.64" y="0.47" />
-                            <point x="0.855" y="0.575" />
-                            <point x="0.715" y="0.695" />
-                            <point x="0.665" y="0.805" />
-                            <point x="0.8475" y="0.9575" />
-                            <point x="0.645" y="0.86" />
-                            <point x="0.51" y="0.905" />
-                            <point x="0.33" y="0.9025" />
-                            <point x="0.225" y="0.90125" />
-                            <point x="0.12" y="0.99" />
-                            <point x="0.22" y="0.8" />
-                            <point x="0.3275" y="0.6825" />
-                        </collision-poly>
-                    </frame>
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.5">
-                        <collision-poly>
-                            <point x="0.58" y="0.58" />
-                            <point x="0.495" y="0.45" />
-                            <point x="0.635" y="0.365" />
-                            <point x="0.855" y="0.525" />
-                            <point x="0.7" y="0.585" />
-                            <point x="0.625" y="0.765" />
-                            <point x="0.5125" y="0.99" />
-                            <point x="0.43625" y="0.94" />
-                            <point x="0.308125" y="0.85" />
-                            <point x="0.255" y="0.685" />
-                            <point x="0.3075" y="0.5775" />
-                            <point x="0.42" y="0.565" />
-                        </collision-poly>
-                    </frame>
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.5">
-                        <collision-poly>
-                            <point x="0.475" y="0.47" />
-                            <point x="0.665" y="0.38" />
-                            <point x="0.765" y="0.48" />
-                            <point x="0.89" y="0.51" />
-                            <point x="0.735" y="0.6" />
-                            <point x="0.63" y="0.7975" />
-                            <point x="0.6525" y="0.95875" />
-                            <point x="0.60375" y="0.99" />
-                            <point x="0.554375" y="0.82" />
-                            <point x="0.404688" y="0.83" />
-                            <point x="0.329844" y="0.825" />
-                            <point x="0.402422" y="0.9625" />
-                            <point x="0.345" y="1" />
-                            <point x="0.24" y="0.83" />
-                            <point x="0.2775" y="0.7725" />
-                            <point x="0.265" y="0.705" />
-                            <point x="0.3175" y="0.60875" />
-                            <point x="0.53" y="0.6125" />
-                            <point x="0.595" y="0.57" />
-                        </collision-poly>
-                    </frame>
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.5">
-                        <collision-poly>
-                            <point x="0.565" y="0.685" />
-                            <point x="0.535" y="0.53" />
-                            <point x="0.64" y="0.47" />
-                            <point x="0.855" y="0.575" />
-                            <point x="0.715" y="0.695" />
-                            <point x="0.665" y="0.805" />
-                            <point x="0.8475" y="0.9575" />
-                            <point x="0.645" y="0.86" />
-                            <point x="0.51" y="0.905" />
-                            <point x="0.33" y="0.9025" />
-                            <point x="0.225" y="0.90125" />
-                            <point x="0.12" y="0.99" />
-                            <point x="0.22" y="0.8" />
-                            <point x="0.3275" y="0.6825" />
-                        </collision-poly>
-                    </frame>
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.5">
-                        <collision-poly>
-                            <point x="0.58" y="0.58" />
-                            <point x="0.495" y="0.45" />
-                            <point x="0.635" y="0.365" />
-                            <point x="0.855" y="0.525" />
-                            <point x="0.7" y="0.585" />
-                            <point x="0.625" y="0.765" />
-                            <point x="0.5125" y="0.99" />
-                            <point x="0.43625" y="0.94" />
-                            <point x="0.308125" y="0.85" />
-                            <point x="0.255" y="0.685" />
-                            <point x="0.3075" y="0.5775" />
-                            <point x="0.42" y="0.565" />
-                        </collision-poly>
-                    </frame>
-                </animation>
-            </animation-folder>
-        </object-type>
         <object-type name="TiledBackground" sid="957791055876461">
             <plugin id="TiledBg" />
             <texture />
@@ -721,6 +594,20 @@
         <object-type name="TiledBackground9" sid="4251715041930396">
             <plugin id="TiledBg" />
             <texture />
+        </object-type>
+        <object-type name="timer" sid="1374458150031384">
+            <plugin id="Text" />
+            <instance-variables>
+                <instance-variable comment="limit waktu" name="waktu" sid="5531774324965689" type="number" />
+            </instance-variables>
+            <behaviors>
+                <behavior-type name="Timer" sid="1551057626336212">
+                    <behavior id="Timer" />
+                </behavior-type>
+                <behavior-type name="Anchor" sid="3309634904113852">
+                    <behavior id="Anchor" />
+                </behavior-type>
+            </behaviors>
         </object-type>
     </object-folder>
     <families />

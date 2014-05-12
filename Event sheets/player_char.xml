@@ -3,7 +3,6 @@
     <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
     <name>player_char</name>
     <events>
-        <variable constant="0" name="sliding_kancil" sid="5475212151970251" static="0" type="number">0</variable>
         <event-block sid="2082030108452163">
             <conditions>
                 <condition id="2" name="Is playing" sid="6532753351805753" type="kancil">
@@ -21,14 +20,13 @@
                 </action>
             </actions>
         </event-block>
-        <variable comment="jumlah kancil jump" constant="0" name="jumlah_jump" sid="1444527862761962" static="0" type="number">0</variable>
         <event-group description="" sid="5674974752222511" title="jump dan double jump">
             <sub-events>
                 <event-block sid="3877500833862058">
                     <conditions>
                         <condition behavior="Platform" id="2" inverted="1" name="Is on floor" sid="1325847959970513" type="kancil" />
-                        <condition id="-14" name="Compare variable" sid="2147269973984931" type="System">
-                            <param id="0" name="Variable">jumlah_jump</param>
+                        <condition id="-7" name="Compare instance variable" sid="2147269973984931" type="kancil">
+                            <param id="0" name="Instance variable">jumlah_jump</param>
                             <param id="1" name="Comparison">0</param>
                             <param id="2" name="Value">3</param>
                         </condition>
@@ -42,16 +40,16 @@
                         <action behavior="Platform" id="9" name="Set vector Y" sid="8382987116580486" type="kancil">
                             <param id="0" name="Vector Y">-(kancil.Platform.JumpStrength)</param>
                         </action>
-                        <action id="-10" name="Add to" sid="1795210879881362" type="System">
-                            <param id="0" name="Variable">jumlah_jump</param>
+                        <action id="-11" name="Add to" sid="1795210879881362" type="kancil">
+                            <param id="0" name="Instance variable">jumlah_jump</param>
                             <param id="1" name="Value">1</param>
                         </action>
                     </actions>
                 </event-block>
                 <event-block sid="5682214330082">
                     <conditions>
-                        <condition id="-14" name="Compare variable" sid="3840058661591135" type="System">
-                            <param id="0" name="Variable">jumlah_jump</param>
+                        <condition id="-7" name="Compare instance variable" sid="3840058661591135" type="kancil">
+                            <param id="0" name="Instance variable">jumlah_jump</param>
                             <param id="1" name="Comparison">0</param>
                             <param id="2" name="Value">1</param>
                         </condition>
@@ -64,8 +62,8 @@
                             <param id="0" name="Animation">&quot;jump&quot;</param>
                             <param id="1" name="From">1</param>
                         </action>
-                        <action id="-10" name="Add to" sid="8966892861716779" type="System">
-                            <param id="0" name="Variable">jumlah_jump</param>
+                        <action id="-11" name="Add to" sid="8966892861716779" type="kancil">
+                            <param id="0" name="Instance variable">jumlah_jump</param>
                             <param id="1" name="Value">1</param>
                         </action>
                     </actions>
@@ -73,8 +71,8 @@
                 <event-block sid="680709854194228">
                     <conditions>
                         <condition behavior="Platform" id="2" name="Is on floor" sid="9418388311345185" type="kancil" />
-                        <condition id="-14" name="Compare variable" sid="2235712967676668" type="System">
-                            <param id="0" name="Variable">jumlah_jump</param>
+                        <condition id="-7" name="Compare instance variable" sid="2235712967676668" type="kancil">
+                            <param id="0" name="Instance variable">jumlah_jump</param>
                             <param id="1" name="Comparison">4</param>
                             <param id="2" name="Value">0</param>
                         </condition>
@@ -84,8 +82,8 @@
                             <param id="0" name="Animation">&quot;lari&quot;</param>
                             <param id="1" name="From">1</param>
                         </action>
-                        <action id="-9" name="Set value" sid="2755218484605967" type="System">
-                            <param id="0" name="Variable">jumlah_jump</param>
+                        <action id="-10" name="Set value" sid="2755218484605967" type="kancil">
+                            <param id="0" name="Instance variable">jumlah_jump</param>
                             <param id="1" name="Value">0</param>
                         </action>
                     </actions>
@@ -101,8 +99,8 @@
                         </condition>
                     </conditions>
                     <actions>
-                        <action id="-10" name="Add to" sid="6383654765735218" type="System">
-                            <param id="0" name="Variable">jumlah_jump</param>
+                        <action id="-11" name="Add to" sid="6383654765735218" type="kancil">
+                            <param id="0" name="Instance variable">jumlah_jump</param>
                             <param id="1" name="Value">1</param>
                         </action>
                     </actions>
@@ -122,16 +120,16 @@
                         </condition>
                     </conditions>
                     <actions>
-                        <action id="-9" name="Set value" sid="9127287828593366" type="System">
-                            <param id="0" name="Variable">sliding_kancil</param>
+                        <action id="-10" name="Set value" sid="9127287828593366" type="kancil">
+                            <param id="0" name="Instance variable">sliding</param>
                             <param id="1" name="Value">1</param>
                         </action>
                     </actions>
                 </event-block>
                 <event-block sid="3493698517732712">
                     <conditions>
-                        <condition id="-14" name="Compare variable" sid="5216254546518668" type="System">
-                            <param id="0" name="Variable">sliding_kancil</param>
+                        <condition id="-7" name="Compare instance variable" sid="5216254546518668" type="kancil">
+                            <param id="0" name="Instance variable">sliding</param>
                             <param id="1" name="Comparison">0</param>
                             <param id="2" name="Value">2</param>
                         </condition>
@@ -142,16 +140,16 @@
                             <param id="0" name="Animation">&quot;lari&quot;</param>
                             <param id="1" name="From">1</param>
                         </action>
-                        <action id="-9" name="Set value" sid="4149286120363341" type="System">
-                            <param id="0" name="Variable">sliding_kancil</param>
+                        <action id="-10" name="Set value" sid="4149286120363341" type="kancil">
+                            <param id="0" name="Instance variable">sliding</param>
                             <param id="1" name="Value">0</param>
                         </action>
                     </actions>
                 </event-block>
                 <event-block sid="4099303789598312">
                     <conditions>
-                        <condition id="-14" name="Compare variable" sid="8824098774865828" type="System">
-                            <param id="0" name="Variable">sliding_kancil</param>
+                        <condition id="-7" name="Compare instance variable" sid="8824098774865828" type="kancil">
+                            <param id="0" name="Instance variable">sliding</param>
                             <param id="1" name="Comparison">0</param>
                             <param id="2" name="Value">1</param>
                         </condition>
@@ -172,8 +170,8 @@
                         <condition id="1" name="On any touch end" sid="1912421482317124" type="touch" />
                     </conditions>
                     <actions>
-                        <action id="-9" name="Set value" sid="1925806234018082" type="System">
-                            <param id="0" name="Variable">sliding_kancil</param>
+                        <action id="-10" name="Set value" sid="1925806234018082" type="kancil">
+                            <param id="0" name="Instance variable">sliding</param>
                             <param id="1" name="Value">2</param>
                         </action>
                     </actions>
