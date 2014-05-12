@@ -1,0 +1,46 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>timer</name>
+    <events>
+        <event-group description="" sid="1346589400302641" title="init waktu">
+            <sub-events>
+                <event-block sid="4783620517437255">
+                    <conditions>
+                        <condition id="-25" name="On loader layout complete" sid="87442553917389" type="System" />
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Set text" sid="6669366594870772" type="timer">
+                            <param id="0" name="Text">&quot;43&quot;</param>
+                        </action>
+                        <action behavior="Timer" id="0" name="Start timer" sid="5117833823314867" type="timer">
+                            <param id="0" name="Duration">1.0</param>
+                            <param id="1" name="Type">1</param>
+                            <param id="2" name="Tag">&quot;limit waktu&quot;</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-group description="" sid="6958644839144226" title="waktu jalan">
+            <sub-events>
+                <event-block sid="3088846102288194">
+                    <conditions>
+                        <condition behavior="Timer" id="0" name="On timer" sid="620806480165104" type="timer">
+                            <param id="0" name="Tag">&quot;limit waktu&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-10" name="Set value" sid="5877975189523885" type="timer">
+                            <param id="0" name="Instance variable">waktu</param>
+                            <param id="1" name="Value">timer.waktu - 1</param>
+                        </action>
+                        <action id="0" name="Set text" sid="9478979109345065" type="timer">
+                            <param id="0" name="Text">timer.waktu</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+    </events>
+</c2eventsheet>
