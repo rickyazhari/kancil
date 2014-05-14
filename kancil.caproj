@@ -11,18 +11,18 @@
     <saved-with-version>13900</saved-with-version>
     <used-plugins>
         <plugin author="Scirra" id="Keyboard" version="1">Keyboard</plugin>
+        <plugin author="Scirra" id="TiledBg" version="1">Tiled Background</plugin>
+        <plugin author="Scirra" id="Mouse" version="1">Mouse</plugin>
+        <plugin author="Scirra" id="Touch" version="1">Touch</plugin>
         <plugin author="Scirra" id="Sprite" version="1">Sprite</plugin>
         <plugin author="Scirra" id="Text" version="1">Text</plugin>
-        <plugin author="Scirra" id="Mouse" version="1">Mouse</plugin>
-        <plugin author="Scirra" id="TiledBg" version="1">Tiled Background</plugin>
-        <plugin author="Scirra" id="Touch" version="1">Touch</plugin>
     </used-plugins>
     <used-behaviors>
-        <behavior author="Scirra" id="custom" version="1">Custom Movement</behavior>
         <behavior author="Scirra" id="Anchor" version="1">Anchor</behavior>
+        <behavior author="Scirra" id="Platform" version="1">Platform</behavior>
+        <behavior author="Scirra" id="custom" version="1">Custom Movement</behavior>
         <behavior author="Scirra" id="Sin" version="1">Sine</behavior>
         <behavior author="Scirra" id="Timer" version="1">Timer</behavior>
-        <behavior author="Scirra" id="Platform" version="1">Platform</behavior>
         <behavior author="Scirra" id="solid" version="1">Solid</behavior>
     </used-behaviors>
     <used-effects>
@@ -69,6 +69,7 @@
                 <instance-variable comment="mode perisai" name="perisai" sid="5208541145788497" type="boolean" />
                 <instance-variable comment="jump kancil" name="jumlah_jump" sid="8506970210499201" type="number" />
                 <instance-variable comment="karakter sliding" name="sliding" sid="6844717909452602" type="number" />
+                <instance-variable name="speed" sid="279016998020781" type="number" />
             </instance-variables>
             <behaviors>
                 <behavior-type name="CustomMovement" sid="8401330568994837">
@@ -76,6 +77,9 @@
                 </behavior-type>
                 <behavior-type name="Platform" sid="7576331618088476">
                     <behavior id="Platform" />
+                </behavior-type>
+                <behavior-type name="Timer" sid="8836083176660636">
+                    <behavior id="Timer" />
                 </behavior-type>
             </behaviors>
             <animation-folder expanded="1">

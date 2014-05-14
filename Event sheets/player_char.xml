@@ -12,11 +12,11 @@
             <actions>
                 <action behavior="CustomMovement" id="3" name="Accelerate" sid="6757865160480227" type="kancil">
                     <param id="0" name="Which">0</param>
-                    <param id="1" name="Acceleration">500</param>
+                    <param id="1" name="Acceleration">0</param>
                 </action>
                 <action behavior="CustomMovement" id="2" name="Set speed" sid="6067524567609058" type="kancil">
                     <param id="0" name="Which">1</param>
-                    <param id="1" name="Speed">300</param>
+                    <param id="1" name="Speed">kancil.speed</param>
                 </action>
             </actions>
         </event-block>
@@ -124,6 +124,11 @@
                             <param id="0" name="Instance variable">sliding</param>
                             <param id="1" name="Value">1</param>
                         </action>
+                        <action behavior="Timer" id="0" name="Start timer" sid="9837146790205051" type="kancil">
+                            <param id="0" name="Duration">0.3</param>
+                            <param id="1" name="Type">1</param>
+                            <param id="2" name="Tag">&quot;sliding&quot;</param>
+                        </action>
                     </actions>
                 </event-block>
                 <event-block sid="3493698517732712">
@@ -174,6 +179,14 @@
                             <param id="0" name="Instance variable">sliding</param>
                             <param id="1" name="Value">2</param>
                         </action>
+                        <action behavior="Timer" id="1" name="Stop timer" sid="662685035339883" type="kancil">
+                            <param id="0" name="Tag">&quot;sliding&quot;</param>
+                        </action>
+                        <action behavior="Timer" id="0" name="Start timer" sid="9075534901279026" type="kancil">
+                            <param id="0" name="Duration">0.2</param>
+                            <param id="1" name="Type">1</param>
+                            <param id="2" name="Tag">&quot;run&quot;</param>
+                        </action>
                     </actions>
                 </event-block>
             </sub-events>
@@ -188,6 +201,131 @@
                         <action id="-7" name="Scroll to position" sid="6700668330087941" type="System">
                             <param id="0" name="X">kancil.X +200</param>
                             <param id="1" name="Y">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-group description="" sid="2419779077753352" title="motion speed">
+            <sub-events>
+                <event-block sid="5215615571930185">
+                    <conditions>
+                        <condition behavior="Timer" id="0" name="On timer" sid="6819652888150616" type="kancil">
+                            <param id="0" name="Tag">&quot;sliding&quot;</param>
+                        </condition>
+                        <condition id="-7" name="Compare instance variable" sid="6670581395633974" type="kancil">
+                            <param id="0" name="Instance variable">speed</param>
+                            <param id="1" name="Comparison">4</param>
+                            <param id="2" name="Value">0</param>
+                        </condition>
+                        <condition id="-7" name="Compare instance variable" sid="3439200973602576" type="kancil">
+                            <param id="0" name="Instance variable">sliding</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">1</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-10" name="Set value" sid="8465124713296045" type="kancil">
+                            <param id="0" name="Instance variable">speed</param>
+                            <param id="1" name="Value">kancil.speed - 20</param>
+                        </action>
+                        <action behavior="CustomMovement" id="2" name="Set speed" sid="2080243351312472" type="kancil">
+                            <param id="0" name="Which">1</param>
+                            <param id="1" name="Speed">kancil.speed</param>
+                        </action>
+                        <action behavior="Timer" id="1" name="Stop timer" sid="3881896394716778" type="kancil">
+                            <param id="0" name="Tag">&quot;run&quot;</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="3480551373413152">
+                    <conditions>
+                        <condition behavior="Timer" id="0" name="On timer" sid="8858659397917574" type="kancil">
+                            <param id="0" name="Tag">&quot;run&quot;</param>
+                        </condition>
+                        <condition id="-7" name="Compare instance variable" sid="7930958422731429" type="kancil">
+                            <param id="0" name="Instance variable">speed</param>
+                            <param id="1" name="Comparison">2</param>
+                            <param id="2" name="Value">300</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-10" name="Set value" sid="1210547449849702" type="kancil">
+                            <param id="0" name="Instance variable">speed</param>
+                            <param id="1" name="Value">kancil.speed + 20</param>
+                        </action>
+                        <action behavior="CustomMovement" id="2" name="Set speed" sid="3801004458844326" type="kancil">
+                            <param id="0" name="Which">1</param>
+                            <param id="1" name="Speed">kancil.speed</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="3861588416818354">
+                    <conditions>
+                        <condition id="-7" name="Compare instance variable" sid="6385458557627071" type="kancil">
+                            <param id="0" name="Instance variable">speed</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">300</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action behavior="Timer" id="1" name="Stop timer" sid="9521230897575839" type="kancil">
+                            <param id="0" name="Tag">&quot;run&quot;</param>
+                        </action>
+                        <action id="6" name="Set speed" sid="7328387552877855" type="kancil">
+                            <param id="0" name="Speed">9</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="6588397430386161">
+                    <conditions>
+                        <condition id="-7" name="Compare instance variable" sid="3343358228765056" type="kancil">
+                            <param id="0" name="Instance variable">speed</param>
+                            <param id="1" name="Comparison">3</param>
+                            <param id="2" name="Value">100</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="6" name="Set speed" sid="3272123198793482" type="kancil">
+                            <param id="0" name="Speed">3</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="8064155195163955">
+                    <conditions>
+                        <condition id="-7" name="Compare instance variable" sid="901275348281931" type="kancil">
+                            <param id="0" name="Instance variable">speed</param>
+                            <param id="1" name="Comparison">2</param>
+                            <param id="2" name="Value">200</param>
+                        </condition>
+                        <condition id="-7" name="Compare instance variable" sid="74400633773027" type="kancil">
+                            <param id="0" name="Instance variable">speed</param>
+                            <param id="1" name="Comparison">4</param>
+                            <param id="2" name="Value">100</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="6" name="Set speed" sid="2580443442940935" type="kancil">
+                            <param id="0" name="Speed">5</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="12013207707706">
+                    <conditions>
+                        <condition id="-7" name="Compare instance variable" sid="5243619035912299" type="kancil">
+                            <param id="0" name="Instance variable">speed</param>
+                            <param id="1" name="Comparison">2</param>
+                            <param id="2" name="Value">300</param>
+                        </condition>
+                        <condition id="-7" name="Compare instance variable" sid="7506432522770703" type="kancil">
+                            <param id="0" name="Instance variable">speed</param>
+                            <param id="1" name="Comparison">5</param>
+                            <param id="2" name="Value">200</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="6" name="Set speed" sid="5394229994037497" type="kancil">
+                            <param id="0" name="Speed">7</param>
                         </action>
                     </actions>
                 </event-block>
