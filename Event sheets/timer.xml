@@ -35,9 +35,6 @@
                             <param id="0" name="Instance variable">waktu</param>
                             <param id="1" name="Value">timer.waktu - 1</param>
                         </action>
-                        <action id="0" name="Set text" sid="9478979109345065" type="timer">
-                            <param id="0" name="Text">timer.waktu</param>
-                        </action>
                     </actions>
                 </event-block>
             </sub-events>

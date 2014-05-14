@@ -3,23 +3,57 @@
     <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
     <name>player_char</name>
     <events>
-        <event-block sid="2082030108452163">
-            <conditions>
-                <condition id="2" name="Is playing" sid="6532753351805753" type="kancil">
-                    <param id="0" name="Animation">&quot;lari&quot;</param>
-                </condition>
-            </conditions>
-            <actions>
-                <action behavior="CustomMovement" id="3" name="Accelerate" sid="6757865160480227" type="kancil">
-                    <param id="0" name="Which">0</param>
-                    <param id="1" name="Acceleration">0</param>
-                </action>
-                <action behavior="CustomMovement" id="2" name="Set speed" sid="6067524567609058" type="kancil">
-                    <param id="0" name="Which">1</param>
-                    <param id="1" name="Speed">kancil.speed</param>
-                </action>
-            </actions>
-        </event-block>
+        <event-group description="" sid="386286963284222" title="general">
+            <sub-events>
+                <event-block any="1" sid="2082030108452163">
+                    <conditions>
+                        <condition id="2" name="Is playing" sid="6532753351805753" type="kancil">
+                            <param id="0" name="Animation">&quot;lari&quot;</param>
+                        </condition>
+                        <condition id="2" name="Is playing" sid="233588814590417" type="kancil">
+                            <param id="0" name="Animation">&quot;boost&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action behavior="CustomMovement" id="3" name="Accelerate" sid="6757865160480227" type="kancil">
+                            <param id="0" name="Which">0</param>
+                            <param id="1" name="Acceleration">500</param>
+                        </action>
+                        <action behavior="CustomMovement" id="2" name="Set speed" sid="6067524567609058" type="kancil">
+                            <param id="0" name="Which">1</param>
+                            <param id="1" name="Speed">kancil.speed</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="8740307608762291">
+                    <conditions>
+                        <condition id="0" name="On collision with another object" sid="2323313868145387" type="kancil">
+                            <param id="0" name="Object">item_lari</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-10" name="Set value" sid="9106289508593849" type="kancil">
+                            <param id="0" name="Instance variable">boost_count</param>
+                            <param id="1" name="Value">8</param>
+                        </action>
+                        <action behavior="Timer" id="0" name="Start timer" sid="4357329800940252" type="kancil">
+                            <param id="0" name="Duration">0.5</param>
+                            <param id="1" name="Type">1</param>
+                            <param id="2" name="Tag">&quot;boost_speed&quot;</param>
+                        </action>
+                        <action id="-9" name="Destroy" sid="7599200861451151" type="item_lari" />
+                        <action id="4" name="Set animation" sid="2811706051067217" type="kancil">
+                            <param id="0" name="Animation">&quot;boost&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                        <action id="-13" name="Set boolean" sid="4256225336014619" type="kancil">
+                            <param id="0" name="Instance variable">booster</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
         <event-group description="" sid="5674974752222511" title="jump dan double jump">
             <sub-events>
                 <event-block sid="3877500833862058">
@@ -70,6 +104,9 @@
                 </event-block>
                 <event-block sid="680709854194228">
                     <conditions>
+                        <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="6556492379536021" type="kancil">
+                            <param id="0" name="Instance variable">booster</param>
+                        </condition>
                         <condition behavior="Platform" id="2" name="Is on floor" sid="9418388311345185" type="kancil" />
                         <condition id="-7" name="Compare instance variable" sid="2235712967676668" type="kancil">
                             <param id="0" name="Instance variable">jumlah_jump</param>
@@ -85,6 +122,29 @@
                         <action id="-10" name="Set value" sid="2755218484605967" type="kancil">
                             <param id="0" name="Instance variable">jumlah_jump</param>
                             <param id="1" name="Value">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="162540611886201">
+                    <conditions>
+                        <condition id="-8" name="Is boolean instance variable set" sid="4492862151800651" type="kancil">
+                            <param id="0" name="Instance variable">booster</param>
+                        </condition>
+                        <condition behavior="Platform" id="2" name="Is on floor" sid="7592499359851953" type="kancil" />
+                        <condition id="-7" name="Compare instance variable" sid="6107609805011362" type="kancil">
+                            <param id="0" name="Instance variable">jumlah_jump</param>
+                            <param id="1" name="Comparison">4</param>
+                            <param id="2" name="Value">0</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-10" name="Set value" sid="8007564881160288" type="kancil">
+                            <param id="0" name="Instance variable">jumlah_jump</param>
+                            <param id="1" name="Value">0</param>
+                        </action>
+                        <action id="4" name="Set animation" sid="7919946275776678" type="kancil">
+                            <param id="0" name="Animation">&quot;boost&quot;</param>
+                            <param id="1" name="From">1</param>
                         </action>
                     </actions>
                 </event-block>
@@ -139,6 +199,9 @@
                             <param id="2" name="Value">2</param>
                         </condition>
                         <condition behavior="Platform" id="2" name="Is on floor" sid="993426644177463" type="kancil" />
+                        <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="6213864404483578" type="kancil">
+                            <param id="0" name="Instance variable">booster</param>
+                        </condition>
                     </conditions>
                     <actions>
                         <action id="4" name="Set animation" sid="6898902580811626" type="kancil">
@@ -275,6 +338,10 @@
                         <action id="6" name="Set speed" sid="7328387552877855" type="kancil">
                             <param id="0" name="Speed">9</param>
                         </action>
+                        <action id="4" name="Set animation" sid="4959764315697716" type="kancil">
+                            <param id="0" name="Animation">&quot;run&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
                     </actions>
                 </event-block>
                 <event-block sid="6588397430386161">
@@ -326,6 +393,156 @@
                     <actions>
                         <action id="6" name="Set speed" sid="5394229994037497" type="kancil">
                             <param id="0" name="Speed">7</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="9389570192791791">
+                    <conditions>
+                        <condition id="-7" name="Compare instance variable" sid="5426149583967197" type="kancil">
+                            <param id="0" name="Instance variable">speed</param>
+                            <param id="1" name="Comparison">4</param>
+                            <param id="2" name="Value">300</param>
+                        </condition>
+                        <condition id="-7" name="Compare instance variable" sid="6875631605645979" type="kancil">
+                            <param id="0" name="Instance variable">speed</param>
+                            <param id="1" name="Comparison">2</param>
+                            <param id="2" name="Value">400</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="6" name="Set speed" sid="9326934889009262" type="kancil">
+                            <param id="0" name="Speed">12</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="1133415938880149">
+                    <conditions>
+                        <condition id="-7" name="Compare instance variable" sid="5927258872625292" type="kancil">
+                            <param id="0" name="Instance variable">speed</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">450</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="6" name="Set speed" sid="4403183868476269" type="kancil">
+                            <param id="0" name="Speed">15</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-group description="" sid="8649669690295955" title="boost speed">
+            <sub-events>
+                <event-block sid="7607901261059213">
+                    <conditions>
+                        <condition behavior="Timer" id="0" name="On timer" sid="3787501241229624" type="kancil">
+                            <param id="0" name="Tag">&quot;boost_speed&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-10" name="Set value" sid="700795231036718" type="kancil">
+                            <param id="0" name="Instance variable">boost_count</param>
+                            <param id="1" name="Value">kancil.boost_count -1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="312974172070727">
+                    <conditions>
+                        <condition behavior="Timer" id="0" name="On timer" sid="2688990080725362" type="kancil">
+                            <param id="0" name="Tag">&quot;boost_speed&quot;</param>
+                        </condition>
+                        <condition id="-7" name="Compare instance variable" sid="913077686962381" type="kancil">
+                            <param id="0" name="Instance variable">speed</param>
+                            <param id="1" name="Comparison">2</param>
+                            <param id="2" name="Value">450</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-10" name="Set value" sid="3687039059785027" type="kancil">
+                            <param id="0" name="Instance variable">speed</param>
+                            <param id="1" name="Value">kancil.speed + 50</param>
+                        </action>
+                        <action behavior="CustomMovement" id="2" name="Set speed" sid="3957247213172716" type="kancil">
+                            <param id="0" name="Which">1</param>
+                            <param id="1" name="Speed">kancil.speed</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="7794652266556589">
+                    <conditions>
+                        <condition behavior="Timer" id="0" name="On timer" sid="2070529998828813" type="kancil">
+                            <param id="0" name="Tag">&quot;boost_speed&quot;</param>
+                        </condition>
+                        <condition id="-7" name="Compare instance variable" sid="4935934076932058" type="kancil">
+                            <param id="0" name="Instance variable">boost_count</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">0</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action behavior="Timer" id="1" name="Stop timer" sid="8760658851232973" type="kancil">
+                            <param id="0" name="Tag">&quot;boost_speed&quot;</param>
+                        </action>
+                        <action behavior="Timer" id="0" name="Start timer" sid="4465521642902964" type="kancil">
+                            <param id="0" name="Duration">0.5</param>
+                            <param id="1" name="Type">1</param>
+                            <param id="2" name="Tag">&quot;reduce_boost&quot;</param>
+                        </action>
+                        <action id="-10" name="Set value" sid="5164229591383807" type="kancil">
+                            <param id="0" name="Instance variable">reduce</param>
+                            <param id="1" name="Value">3</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="9163095846484284">
+                    <conditions>
+                        <condition behavior="Timer" id="0" name="On timer" sid="8462328083028721" type="kancil">
+                            <param id="0" name="Tag">&quot;reduce_boost&quot;</param>
+                        </condition>
+                        <condition id="-7" name="Compare instance variable" sid="49115621676313" type="kancil">
+                            <param id="0" name="Instance variable">reduce</param>
+                            <param id="1" name="Comparison">4</param>
+                            <param id="2" name="Value">0</param>
+                        </condition>
+                        <condition id="-7" name="Compare instance variable" sid="1092695250506955" type="kancil">
+                            <param id="0" name="Instance variable">speed</param>
+                            <param id="1" name="Comparison">4</param>
+                            <param id="2" name="Value">300</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-10" name="Set value" sid="3334450818539127" type="kancil">
+                            <param id="0" name="Instance variable">speed</param>
+                            <param id="1" name="Value">kancil.speed - 50</param>
+                        </action>
+                        <action id="-10" name="Set value" sid="8553632090247121" type="kancil">
+                            <param id="0" name="Instance variable">reduce</param>
+                            <param id="1" name="Value">kancil.reduce -1</param>
+                        </action>
+                        <action behavior="CustomMovement" id="2" name="Set speed" sid="6807528374435027" type="kancil">
+                            <param id="0" name="Which">1</param>
+                            <param id="1" name="Speed">kancil.speed</param>
+                        </action>
+                        <action id="-13" name="Set boolean" sid="2861817480931957" type="kancil">
+                            <param id="0" name="Instance variable">booster</param>
+                            <param id="1" name="Value">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="369939811025989">
+                    <conditions>
+                        <condition behavior="Timer" id="0" name="On timer" sid="3362303793473259" type="kancil">
+                            <param id="0" name="Tag">&quot;reduce_boost&quot;</param>
+                        </condition>
+                        <condition id="-7" name="Compare instance variable" sid="5091264331380085" type="kancil">
+                            <param id="0" name="Instance variable">reduce</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">0</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action behavior="Timer" id="1" name="Stop timer" sid="3977776347258202" type="kancil">
+                            <param id="0" name="Tag">&quot;reduce_boost&quot;</param>
                         </action>
                     </actions>
                 </event-block>
