@@ -13,7 +13,9 @@ you probably do not want to add any .uistate.xml files to the repository.-->
         <layout>splash_screen</layout>
         <layout>menu</layout>
         <layout>level_map</layout>
-        <layout active="1">level1</layout>
+        <layout>level1</layout>
+        <layout>level7</layout>
+        <layout active="1">level8</layout>
         <event-sheet>player_char</event-sheet>
         <event-sheet>event_level1</event-sheet>
         <event-sheet>event_level_map</event-sheet>
