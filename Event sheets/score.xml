@@ -1,0 +1,29 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>score</name>
+    <events>
+        <variable constant="0" name="Total_score" sid="894782265436112" static="0" type="number">0</variable>
+        <event-group description="" sid="9285368511516167" title="timun collision">
+            <sub-events>
+                <event-block sid="126185081128202">
+                    <conditions>
+                        <condition id="0" name="On collision with another object" sid="7341857198846324" type="timun">
+                            <param id="0" name="Object">kancil</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Destroy" sid="4663205891619171" type="timun" />
+                        <action id="-10" name="Add to" sid="2405252246457561" type="System">
+                            <param id="0" name="Variable">Total_score</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                        <action id="0" name="Set text" sid="2399527620262925" type="score">
+                            <param id="0" name="Text">Total_score</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+    </events>
+</c2eventsheet>

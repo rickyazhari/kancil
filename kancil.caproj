@@ -10,16 +10,16 @@
     <unique-id>38o7xfc4zxkfj</unique-id>
     <saved-with-version>13900</saved-with-version>
     <used-plugins>
-        <plugin author="Scirra" id="Sprite" version="1">Sprite</plugin>
-        <plugin author="Scirra" id="Text" version="1">Text</plugin>
         <plugin author="Scirra" id="Keyboard" version="1">Keyboard</plugin>
-        <plugin author="Scirra" id="Mouse" version="1">Mouse</plugin>
         <plugin author="Scirra" id="TiledBg" version="1">Tiled Background</plugin>
+        <plugin author="Scirra" id="Text" version="1">Text</plugin>
         <plugin author="Scirra" id="Touch" version="1">Touch</plugin>
+        <plugin author="Scirra" id="Mouse" version="1">Mouse</plugin>
+        <plugin author="Scirra" id="Sprite" version="1">Sprite</plugin>
     </used-plugins>
     <used-behaviors>
-        <behavior author="Scirra" id="custom" version="1">Custom Movement</behavior>
         <behavior author="Scirra" id="Anchor" version="1">Anchor</behavior>
+        <behavior author="Scirra" id="custom" version="1">Custom Movement</behavior>
         <behavior author="Scirra" id="Platform" version="1">Platform</behavior>
         <behavior author="Scirra" id="Sin" version="1">Sine</behavior>
         <behavior author="Scirra" id="Timer" version="1">Timer</behavior>
@@ -696,8 +696,16 @@
         <object-type name="Mouse" sid="3045343836546517">
             <plugin id="Mouse" />
         </object-type>
-        <object-type name="test" sid="5156788967424996">
+        <object-type name="score" sid="5156788967424996">
             <plugin id="Text" />
+            <behaviors>
+                <behavior-type name="Anchor" sid="6175880452152176">
+                    <behavior id="Anchor" />
+                </behavior-type>
+                <behavior-type name="Solid" sid="5444895525329846">
+                    <behavior id="solid" />
+                </behavior-type>
+            </behaviors>
         </object-type>
         <object-type name="touch" sid="4135547164536966">
             <plugin id="Touch" />
@@ -1025,6 +1033,52 @@
             <plugin id="TiledBg" />
             <texture />
         </object-type>
+        <object-type name="timun" sid="3035188127257212">
+            <plugin id="Sprite" />
+            <animation-folder expanded="1">
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="81927107329661" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.505618">
+                        <collision-poly>
+                            <point x="0.392857" y="0.247191" />
+                            <point x="0.5" y="0.168539" />
+                            <point x="0.875" y="0.0786517" />
+                            <point x="0.803571" y="0.494382" />
+                            <point x="0.589286" y="0.741573" />
+                            <point x="0.5" y="0.797753" />
+                            <point x="0.142857" y="0.910112" />
+                            <point x="0.178571" y="0.494382" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="timun_score" sid="24792246128785">
+            <plugin id="Sprite" />
+            <behaviors>
+                <behavior-type name="Anchor" sid="3786205349090856">
+                    <behavior id="Anchor" />
+                </behavior-type>
+                <behavior-type name="Solid" sid="510572700218867">
+                    <behavior id="solid" />
+                </behavior-type>
+            </behaviors>
+            <animation-folder expanded="1">
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="7609181777369889" speed="5">
+                    <frame duration="1" hotspotX="0.517857" hotspotY="0.539326">
+                        <collision-poly>
+                            <point x="0.392857" y="0.247191" />
+                            <point x="0.5" y="0.168539" />
+                            <point x="0.875" y="0.0786517" />
+                            <point x="0.803571" y="0.494382" />
+                            <point x="0.589286" y="0.741573" />
+                            <point x="0.5" y="0.797753" />
+                            <point x="0.142857" y="0.910112" />
+                            <point x="0.178571" y="0.494382" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
     </object-folder>
     <families />
     <layout-folder expanded="1">
@@ -1041,7 +1095,7 @@
         <layout>level7.xml</layout>
         <layout>level8.xml</layout>
     </layout-folder>
-    <event-folder expanded="0">
+    <event-folder expanded="1">
         <event-sheet>Event_splash_screen.xml</event-sheet>
         <event-sheet>event_menu.xml</event-sheet>
         <event-sheet>event_level_map.xml</event-sheet>
@@ -1055,6 +1109,7 @@
         <event-sheet>event_level8.xml</event-sheet>
         <event-sheet>player_char.xml</event-sheet>
         <event-sheet>timer.xml</event-sheet>
+        <event-sheet>score.xml</event-sheet>
     </event-folder>
     <global-instances>
         <global-instance type="Keyboard" uid="3" />

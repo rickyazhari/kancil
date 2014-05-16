@@ -3,6 +3,7 @@
     <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
     <name>event_level1</name>
     <events>
+        <include>score</include>
         <include>timer</include>
         <include>player_char</include>
     </events>
