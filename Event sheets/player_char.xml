@@ -47,27 +47,150 @@
                             <param id="1" name="Type">1</param>
                             <param id="2" name="Tag">&quot;boost_speed&quot;</param>
                         </action>
-                        <action id="-9" name="Destroy" sid="7599200861451151" type="item_lari" />
-                        <action id="4" name="Set animation" sid="2811706051067217" type="kancil">
-                            <param id="0" name="Animation">&quot;boost&quot;</param>
-                            <param id="1" name="From">1</param>
-                        </action>
-                        <action id="-13" name="Set boolean" sid="4256225336014619" type="kancil">
+                        <action id="-13" name="Set boolean" sid="6905950238474202" type="kancil">
                             <param id="0" name="Instance variable">booster</param>
                             <param id="1" name="Value">1</param>
                         </action>
+                        <action id="-9" name="Destroy" sid="7599200861451151" type="item_lari" />
                     </actions>
+                    <sub-events>
+                        <event-block sid="8322334881537851">
+                            <conditions>
+                                <condition behavior="Platform" id="2" name="Is on floor" sid="2083802593937833" type="kancil" />
+                            </conditions>
+                            <actions />
+                            <sub-events>
+                                <event-block sid="3535496948363015">
+                                    <conditions>
+                                        <condition id="-8" name="Is boolean instance variable set" sid="3542404821788448" type="kancil">
+                                            <param id="0" name="Instance variable">perisai</param>
+                                        </condition>
+                                        <condition id="-7" name="Compare instance variable" sid="4551799695747951" type="kancil">
+                                            <param id="0" name="Instance variable">sliding</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">0</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="4" name="Set animation" sid="160238543788645" type="kancil">
+                                            <param id="0" name="Animation">&quot;boost_shield&quot;</param>
+                                            <param id="1" name="From">1</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="3462367509341201">
+                                    <conditions>
+                                        <condition id="-7" name="Compare instance variable" sid="3497946537040267" type="kancil">
+                                            <param id="0" name="Instance variable">sliding</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">0</param>
+                                        </condition>
+                                        <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="1036650605573796" type="kancil">
+                                            <param id="0" name="Instance variable">perisai</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="4" name="Set animation" sid="2810123395122051" type="kancil">
+                                            <param id="0" name="Animation">&quot;boost&quot;</param>
+                                            <param id="1" name="From">1</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="7227179918094843">
+                                    <conditions>
+                                        <condition id="-7" name="Compare instance variable" sid="576484301666409" type="kancil">
+                                            <param id="0" name="Instance variable">sliding</param>
+                                            <param id="1" name="Comparison">4</param>
+                                            <param id="2" name="Value">0</param>
+                                        </condition>
+                                        <condition id="-8" name="Is boolean instance variable set" sid="1592418441462678" type="kancil">
+                                            <param id="0" name="Instance variable">perisai</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="4" name="Set animation" sid="8350307450587203" type="kancil">
+                                            <param id="0" name="Animation">&quot;slide_shield&quot;</param>
+                                            <param id="1" name="From">1</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="1077459872168839">
+                                    <conditions>
+                                        <condition id="-7" name="Compare instance variable" sid="4521900045218899" type="kancil">
+                                            <param id="0" name="Instance variable">sliding</param>
+                                            <param id="1" name="Comparison">4</param>
+                                            <param id="2" name="Value">0</param>
+                                        </condition>
+                                        <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="3056638168264013" type="kancil">
+                                            <param id="0" name="Instance variable">perisai</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="4" name="Set animation" sid="8980183683120775" type="kancil">
+                                            <param id="0" name="Animation">&quot;slide&quot;</param>
+                                            <param id="1" name="From">1</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                        <event-block sid="3311047607186629">
+                            <conditions>
+                                <condition behavior="Platform" id="2" inverted="1" name="Is on floor" sid="5449466336554301" type="kancil" />
+                            </conditions>
+                            <actions />
+                            <sub-events>
+                                <event-block any="1" sid="7772592329765035">
+                                    <conditions>
+                                        <condition id="-7" name="Compare instance variable" sid="7170068133516961" type="kancil">
+                                            <param id="0" name="Instance variable">sliding</param>
+                                            <param id="1" name="Comparison">4</param>
+                                            <param id="2" name="Value">1</param>
+                                        </condition>
+                                        <condition id="-7" name="Compare instance variable" sid="5668817773883929" type="kancil">
+                                            <param id="0" name="Instance variable">sliding</param>
+                                            <param id="1" name="Comparison">2</param>
+                                            <param id="2" name="Value">1</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions />
+                                    <sub-events>
+                                        <event-block sid="5836882538838771">
+                                            <conditions>
+                                                <condition id="-8" name="Is boolean instance variable set" sid="7894478419621296" type="kancil">
+                                                    <param id="0" name="Instance variable">perisai</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions>
+                                                <action id="4" name="Set animation" sid="9517694508370706" type="kancil">
+                                                    <param id="0" name="Animation">&quot;jump_boost_shield&quot;</param>
+                                                    <param id="1" name="From">0</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                        <event-block sid="3116798197204193">
+                                            <conditions>
+                                                <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="6611317621372044" type="kancil">
+                                                    <param id="0" name="Instance variable">perisai</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions>
+                                                <action id="4" name="Set animation" sid="966319908626593" type="kancil">
+                                                    <param id="0" name="Animation">&quot;jump_boost&quot;</param>
+                                                    <param id="1" name="From">0</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                    </sub-events>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                    </sub-events>
                 </event-block>
                 <event-block sid="3973700184878788">
                     <conditions>
                         <condition id="0" name="On collision with another object" sid="7318718857254578" type="kancil">
                             <param id="0" name="Object">item_shield</param>
-                        </condition>
-                        <condition behavior="Platform" id="2" name="Is on floor" sid="8791974689319605" type="kancil" />
-                        <condition id="-7" name="Compare instance variable" sid="7547396302693239" type="kancil">
-                            <param id="0" name="Instance variable">sliding</param>
-                            <param id="1" name="Comparison">0</param>
-                            <param id="2" name="Value">0</param>
                         </condition>
                     </conditions>
                     <actions>
@@ -85,168 +208,207 @@
                             <param id="0" name="Instance variable">perisai</param>
                             <param id="1" name="Value">1</param>
                         </action>
-                        <action id="4" name="Set animation" sid="2612234294166719" type="kancil">
-                            <param id="0" name="Animation">&quot;lari_shield&quot;</param>
-                            <param id="1" name="From">1</param>
-                        </action>
                     </actions>
-                </event-block>
-                <event-block sid="5125867469254225">
-                    <conditions>
-                        <condition id="0" name="On collision with another object" sid="8342969326254226" type="kancil">
-                            <param id="0" name="Object">item_shield</param>
-                        </condition>
-                        <condition behavior="Platform" id="2" inverted="1" name="Is on floor" sid="497028315225049" type="kancil" />
-                        <condition id="-7" name="Compare instance variable" sid="6656065965782852" type="kancil">
-                            <param id="0" name="Instance variable">sliding</param>
-                            <param id="1" name="Comparison">2</param>
-                            <param id="2" name="Value">1</param>
-                        </condition>
-                    </conditions>
-                    <actions>
-                        <action behavior="Timer" id="0" name="Start timer" sid="4651069725895035" type="kancil">
-                            <param id="0" name="Duration">0.5</param>
-                            <param id="1" name="Type">1</param>
-                            <param id="2" name="Tag">&quot;mode_shield&quot;</param>
-                        </action>
-                        <action id="-10" name="Set value" sid="3202287681708113" type="kancil">
-                            <param id="0" name="Instance variable">boost_shield</param>
-                            <param id="1" name="Value">12</param>
-                        </action>
-                        <action id="-9" name="Destroy" sid="9552435926812242" type="item_shield" />
-                        <action id="-13" name="Set boolean" sid="8044143245351979" type="kancil">
-                            <param id="0" name="Instance variable">perisai</param>
-                            <param id="1" name="Value">1</param>
-                        </action>
-                        <action id="4" name="Set animation" sid="430171232166576" type="kancil">
-                            <param id="0" name="Animation">&quot;jump_shield&quot;</param>
-                            <param id="1" name="From">0</param>
-                        </action>
-                    </actions>
-                </event-block>
-                <event-block sid="8588124630422534">
-                    <conditions>
-                        <condition id="0" name="On collision with another object" sid="4462268816631189" type="kancil">
-                            <param id="0" name="Object">item_shield</param>
-                        </condition>
-                        <condition behavior="Platform" id="2" inverted="1" name="Is on floor" sid="9751344262255136" type="kancil" />
-                        <condition id="-7" name="Compare instance variable" sid="1725849808628266" type="kancil">
-                            <param id="0" name="Instance variable">sliding</param>
-                            <param id="1" name="Comparison">4</param>
-                            <param id="2" name="Value">1</param>
-                        </condition>
-                    </conditions>
-                    <actions>
-                        <action behavior="Timer" id="0" name="Start timer" sid="1328426881431711" type="kancil">
-                            <param id="0" name="Duration">0.5</param>
-                            <param id="1" name="Type">1</param>
-                            <param id="2" name="Tag">&quot;mode_shield&quot;</param>
-                        </action>
-                        <action id="-10" name="Set value" sid="8937061744604743" type="kancil">
-                            <param id="0" name="Instance variable">boost_shield</param>
-                            <param id="1" name="Value">12</param>
-                        </action>
-                        <action id="-9" name="Destroy" sid="5905849389569789" type="item_shield" />
-                        <action id="-13" name="Set boolean" sid="7044603753431398" type="kancil">
-                            <param id="0" name="Instance variable">perisai</param>
-                            <param id="1" name="Value">1</param>
-                        </action>
-                        <action id="4" name="Set animation" sid="9256978211070804" type="kancil">
-                            <param id="0" name="Animation">&quot;jump_shield&quot;</param>
-                            <param id="1" name="From">0</param>
-                        </action>
-                    </actions>
-                </event-block>
-                <event-block sid="3435402759520708">
-                    <conditions>
-                        <condition id="0" name="On collision with another object" sid="1566853707248716" type="kancil">
-                            <param id="0" name="Object">item_shield</param>
-                        </condition>
-                        <condition behavior="Platform" id="2" name="Is on floor" sid="3781582027198816" type="kancil" />
-                        <condition id="-7" name="Compare instance variable" sid="6058469816385196" type="kancil">
-                            <param id="0" name="Instance variable">sliding</param>
-                            <param id="1" name="Comparison">4</param>
-                            <param id="2" name="Value">0</param>
-                        </condition>
-                    </conditions>
-                    <actions>
-                        <action behavior="Timer" id="0" name="Start timer" sid="6252689690091636" type="kancil">
-                            <param id="0" name="Duration">0.5</param>
-                            <param id="1" name="Type">1</param>
-                            <param id="2" name="Tag">&quot;mode_shield&quot;</param>
-                        </action>
-                        <action id="-10" name="Set value" sid="6665079866100464" type="kancil">
-                            <param id="0" name="Instance variable">boost_shield</param>
-                            <param id="1" name="Value">12</param>
-                        </action>
-                        <action id="-9" name="Destroy" sid="3544944131794056" type="item_shield" />
-                        <action id="-13" name="Set boolean" sid="4460779751775586" type="kancil">
-                            <param id="0" name="Instance variable">perisai</param>
-                            <param id="1" name="Value">1</param>
-                        </action>
-                        <action id="4" name="Set animation" sid="9001187453618024" type="kancil">
-                            <param id="0" name="Animation">&quot;slide_shield&quot;</param>
-                            <param id="1" name="From">0</param>
-                        </action>
-                    </actions>
+                    <sub-events>
+                        <event-block sid="205358419594158">
+                            <conditions>
+                                <condition behavior="Platform" id="2" name="Is on floor" sid="5234930764655311" type="kancil" />
+                            </conditions>
+                            <actions />
+                            <sub-events>
+                                <event-block sid="8927331010050369">
+                                    <conditions>
+                                        <condition id="-8" name="Is boolean instance variable set" sid="3951702091060624" type="kancil">
+                                            <param id="0" name="Instance variable">booster</param>
+                                        </condition>
+                                        <condition id="-7" name="Compare instance variable" sid="6448213820874038" type="kancil">
+                                            <param id="0" name="Instance variable">sliding</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">0</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="4" name="Set animation" sid="1248022716847234" type="kancil">
+                                            <param id="0" name="Animation">&quot;boost_shield&quot;</param>
+                                            <param id="1" name="From">1</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="3663759612794885">
+                                    <conditions>
+                                        <condition id="-7" name="Compare instance variable" sid="897639567852433" type="kancil">
+                                            <param id="0" name="Instance variable">sliding</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">0</param>
+                                        </condition>
+                                        <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="5943852588480831" type="kancil">
+                                            <param id="0" name="Instance variable">booster</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="4" name="Set animation" sid="2846168663246203" type="kancil">
+                                            <param id="0" name="Animation">&quot;lari_shield&quot;</param>
+                                            <param id="1" name="From">1</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="5026574865521422">
+                                    <conditions>
+                                        <condition id="-7" name="Compare instance variable" sid="9499449014889837" type="kancil">
+                                            <param id="0" name="Instance variable">sliding</param>
+                                            <param id="1" name="Comparison">4</param>
+                                            <param id="2" name="Value">0</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="4" name="Set animation" sid="553970066313867" type="kancil">
+                                            <param id="0" name="Animation">&quot;slide_shield&quot;</param>
+                                            <param id="1" name="From">1</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                        <event-block sid="125391960766191">
+                            <conditions>
+                                <condition behavior="Platform" id="2" inverted="1" name="Is on floor" sid="2793626962024748" type="kancil" />
+                            </conditions>
+                            <actions />
+                            <sub-events>
+                                <event-block any="1" sid="8588124630422534">
+                                    <conditions>
+                                        <condition id="-7" name="Compare instance variable" sid="1725849808628266" type="kancil">
+                                            <param id="0" name="Instance variable">sliding</param>
+                                            <param id="1" name="Comparison">4</param>
+                                            <param id="2" name="Value">1</param>
+                                        </condition>
+                                        <condition id="-7" name="Compare instance variable" sid="6656065965782852" type="kancil">
+                                            <param id="0" name="Instance variable">sliding</param>
+                                            <param id="1" name="Comparison">2</param>
+                                            <param id="2" name="Value">1</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions />
+                                    <sub-events>
+                                        <event-block sid="4689769212327858">
+                                            <conditions>
+                                                <condition id="-8" name="Is boolean instance variable set" sid="1706318518875774" type="kancil">
+                                                    <param id="0" name="Instance variable">booster</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions>
+                                                <action id="4" name="Set animation" sid="2284228669545275" type="kancil">
+                                                    <param id="0" name="Animation">&quot;jump_boost_shield&quot;</param>
+                                                    <param id="1" name="From">0</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                        <event-block sid="5566519687371314">
+                                            <conditions>
+                                                <condition id="-22" name="Else" sid="5421607275603289" type="System" />
+                                            </conditions>
+                                            <actions>
+                                                <action id="4" name="Set animation" sid="430171232166576" type="kancil">
+                                                    <param id="0" name="Animation">&quot;jump_shield&quot;</param>
+                                                    <param id="1" name="From">0</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                    </sub-events>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                    </sub-events>
                 </event-block>
             </sub-events>
         </event-group>
         <event-group description="" sid="5674974752222511" title="jump dan double jump">
             <sub-events>
-                <event-block sid="3877500833862058">
+                <event-block sid="9459400969129721">
                     <conditions>
-                        <condition behavior="Platform" id="2" inverted="1" name="Is on floor" sid="1325847959970513" type="kancil" />
-                        <condition id="-7" name="Compare instance variable" sid="2147269973984931" type="kancil">
+                        <condition behavior="Platform" id="2" inverted="1" name="Is on floor" sid="2634858999661268" type="kancil" />
+                        <condition id="-7" name="Compare instance variable" sid="9065008102572462" type="kancil">
                             <param id="0" name="Instance variable">jumlah_jump</param>
                             <param id="1" name="Comparison">0</param>
                             <param id="2" name="Value">3</param>
                         </condition>
-                        <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="8115406582763952" type="kancil">
-                            <param id="0" name="Instance variable">perisai</param>
-                        </condition>
                     </conditions>
                     <actions>
-                        <action id="2" name="Stop" sid="4051209349911956" type="kancil" />
-                        <action id="4" name="Set animation" sid="7817495712950721" type="kancil">
-                            <param id="0" name="Animation">&quot;jump&quot;</param>
-                            <param id="1" name="From">1</param>
-                        </action>
-                        <action behavior="Platform" id="9" name="Set vector Y" sid="8382987116580486" type="kancil">
-                            <param id="0" name="Vector Y">-(kancil.Platform.JumpStrength)</param>
-                        </action>
-                        <action id="-11" name="Add to" sid="1795210879881362" type="kancil">
+                        <action id="-11" name="Add to" sid="5554735707997734" type="kancil">
                             <param id="0" name="Instance variable">jumlah_jump</param>
                             <param id="1" name="Value">1</param>
                         </action>
-                    </actions>
-                </event-block>
-                <event-block sid="9264754794053408">
-                    <conditions>
-                        <condition behavior="Platform" id="2" inverted="1" name="Is on floor" sid="3780005148338944" type="kancil" />
-                        <condition id="-7" name="Compare instance variable" sid="1485208825119276" type="kancil">
-                            <param id="0" name="Instance variable">jumlah_jump</param>
-                            <param id="1" name="Comparison">0</param>
-                            <param id="2" name="Value">3</param>
-                        </condition>
-                        <condition id="-8" name="Is boolean instance variable set" sid="9768734263566153" type="kancil">
-                            <param id="0" name="Instance variable">perisai</param>
-                        </condition>
-                    </conditions>
-                    <actions>
-                        <action id="2" name="Stop" sid="3905056933670901" type="kancil" />
-                        <action id="4" name="Set animation" sid="4563460373165634" type="kancil">
-                            <param id="0" name="Animation">&quot;jump_shield&quot;</param>
-                            <param id="1" name="From">1</param>
-                        </action>
-                        <action behavior="Platform" id="9" name="Set vector Y" sid="77416915447237" type="kancil">
+                        <action behavior="Platform" id="9" name="Set vector Y" sid="3203707720341958" type="kancil">
                             <param id="0" name="Vector Y">-(kancil.Platform.JumpStrength)</param>
                         </action>
-                        <action id="-11" name="Add to" sid="1691823640625836" type="kancil">
-                            <param id="0" name="Instance variable">jumlah_jump</param>
-                            <param id="1" name="Value">1</param>
-                        </action>
+                        <action id="2" name="Stop" sid="9320896808094709" type="kancil" />
                     </actions>
+                    <sub-events>
+                        <event-block sid="13861567029254">
+                            <conditions>
+                                <condition id="-8" name="Is boolean instance variable set" sid="6198917059242834" type="kancil">
+                                    <param id="0" name="Instance variable">perisai</param>
+                                </condition>
+                                <condition id="-8" name="Is boolean instance variable set" sid="9059142530708792" type="kancil">
+                                    <param id="0" name="Instance variable">booster</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="4" name="Set animation" sid="2505597258028157" type="kancil">
+                                    <param id="0" name="Animation">&quot;jump_boost_shield&quot;</param>
+                                    <param id="1" name="From">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="543838898787503">
+                            <conditions>
+                                <condition id="-8" name="Is boolean instance variable set" sid="5134933837785474" type="kancil">
+                                    <param id="0" name="Instance variable">booster</param>
+                                </condition>
+                                <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="759703487362474" type="kancil">
+                                    <param id="0" name="Instance variable">perisai</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="4" name="Set animation" sid="8011285458948127" type="kancil">
+                                    <param id="0" name="Animation">&quot;jump_boost&quot;</param>
+                                    <param id="1" name="From">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="9264754794053408">
+                            <conditions>
+                                <condition id="-8" name="Is boolean instance variable set" sid="9768734263566153" type="kancil">
+                                    <param id="0" name="Instance variable">perisai</param>
+                                </condition>
+                                <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="2000892488661468" type="kancil">
+                                    <param id="0" name="Instance variable">booster</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="4" name="Set animation" sid="4563460373165634" type="kancil">
+                                    <param id="0" name="Animation">&quot;jump_shield&quot;</param>
+                                    <param id="1" name="From">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="3877500833862058">
+                            <conditions>
+                                <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="8115406582763952" type="kancil">
+                                    <param id="0" name="Instance variable">perisai</param>
+                                </condition>
+                                <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="4220808347838918" type="kancil">
+                                    <param id="0" name="Instance variable">booster</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="4" name="Set animation" sid="7817495712950721" type="kancil">
+                                    <param id="0" name="Animation">&quot;jump&quot;</param>
+                                    <param id="1" name="From">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
                 </event-block>
                 <event-block sid="5682214330082">
                     <conditions>
@@ -255,62 +417,91 @@
                             <param id="1" name="Comparison">0</param>
                             <param id="2" name="Value">1</param>
                         </condition>
-                        <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="7939835922371324" type="kancil">
-                            <param id="0" name="Instance variable">perisai</param>
-                        </condition>
                     </conditions>
                     <actions>
                         <action behavior="Platform" id="9" name="Set vector Y" sid="9146685693978255" type="kancil">
                             <param id="0" name="Vector Y">-(kancil.Platform.JumpStrength)</param>
                         </action>
-                        <action id="4" name="Set animation" sid="3583225146798142" type="kancil">
-                            <param id="0" name="Animation">&quot;jump&quot;</param>
-                            <param id="1" name="From">1</param>
-                        </action>
                         <action id="-11" name="Add to" sid="8966892861716779" type="kancil">
                             <param id="0" name="Instance variable">jumlah_jump</param>
                             <param id="1" name="Value">1</param>
                         </action>
+                        <action id="2" name="Stop" sid="9956794602170567" type="kancil" />
                     </actions>
-                </event-block>
-                <event-block sid="9235744685959309">
-                    <conditions>
-                        <condition id="-7" name="Compare instance variable" sid="4799649273754218" type="kancil">
-                            <param id="0" name="Instance variable">jumlah_jump</param>
-                            <param id="1" name="Comparison">0</param>
-                            <param id="2" name="Value">1</param>
-                        </condition>
-                        <condition id="-8" name="Is boolean instance variable set" sid="2631763572376677" type="kancil">
-                            <param id="0" name="Instance variable">perisai</param>
-                        </condition>
-                    </conditions>
-                    <actions>
-                        <action behavior="Platform" id="9" name="Set vector Y" sid="1930514101619387" type="kancil">
-                            <param id="0" name="Vector Y">-(kancil.Platform.JumpStrength)</param>
-                        </action>
-                        <action id="4" name="Set animation" sid="7934059618101802" type="kancil">
-                            <param id="0" name="Animation">&quot;jump_shield&quot;</param>
-                            <param id="1" name="From">1</param>
-                        </action>
-                        <action id="-11" name="Add to" sid="3106884112604343" type="kancil">
-                            <param id="0" name="Instance variable">jumlah_jump</param>
-                            <param id="1" name="Value">1</param>
-                        </action>
-                    </actions>
+                    <sub-events>
+                        <event-block sid="3215209894534008">
+                            <conditions>
+                                <condition id="-8" name="Is boolean instance variable set" sid="5557619954294485" type="kancil">
+                                    <param id="0" name="Instance variable">booster</param>
+                                </condition>
+                                <condition id="-8" name="Is boolean instance variable set" sid="2631763572376677" type="kancil">
+                                    <param id="0" name="Instance variable">perisai</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="4" name="Set animation" sid="7934059618101802" type="kancil">
+                                    <param id="0" name="Animation">&quot;jump_boost_shield&quot;</param>
+                                    <param id="1" name="From">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="4886360971158423">
+                            <conditions>
+                                <condition id="-8" name="Is boolean instance variable set" sid="1740101896318584" type="kancil">
+                                    <param id="0" name="Instance variable">booster</param>
+                                </condition>
+                                <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="6678289807258416" type="kancil">
+                                    <param id="0" name="Instance variable">perisai</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="4" name="Set animation" sid="8602830187941406" type="kancil">
+                                    <param id="0" name="Animation">&quot;jump_boost&quot;</param>
+                                    <param id="1" name="From">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="5604806733971061">
+                            <conditions>
+                                <condition id="-8" name="Is boolean instance variable set" sid="2628057528326046" type="kancil">
+                                    <param id="0" name="Instance variable">perisai</param>
+                                </condition>
+                                <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="888161797165533" type="kancil">
+                                    <param id="0" name="Instance variable">booster</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="4" name="Set animation" sid="110475155559143" type="kancil">
+                                    <param id="0" name="Animation">&quot;jump_shield&quot;</param>
+                                    <param id="1" name="From">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="8730044559353002">
+                            <conditions>
+                                <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="6532188754789528" type="kancil">
+                                    <param id="0" name="Instance variable">booster</param>
+                                </condition>
+                                <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="9312757032587098" type="kancil">
+                                    <param id="0" name="Instance variable">perisai</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="4" name="Set animation" sid="2742472789833374" type="kancil">
+                                    <param id="0" name="Animation">&quot;jump&quot;</param>
+                                    <param id="1" name="From">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
                 </event-block>
                 <event-block sid="680709854194228">
                     <conditions>
-                        <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="6556492379536021" type="kancil">
-                            <param id="0" name="Instance variable">booster</param>
-                        </condition>
                         <condition behavior="Platform" id="2" name="Is on floor" sid="9418388311345185" type="kancil" />
                         <condition id="-7" name="Compare instance variable" sid="2235712967676668" type="kancil">
                             <param id="0" name="Instance variable">jumlah_jump</param>
                             <param id="1" name="Comparison">4</param>
                             <param id="2" name="Value">0</param>
-                        </condition>
-                        <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="6564908158819821" type="kancil">
-                            <param id="0" name="Instance variable">perisai</param>
                         </condition>
                     </conditions>
                     <actions>
@@ -322,59 +513,74 @@
                             <param id="0" name="Instance variable">jumlah_jump</param>
                             <param id="1" name="Value">0</param>
                         </action>
+                        <action id="2" name="Stop" sid="8131065742689217" type="kancil" />
                     </actions>
-                </event-block>
-                <event-block sid="162540611886201">
-                    <conditions>
-                        <condition id="-8" name="Is boolean instance variable set" sid="4492862151800651" type="kancil">
-                            <param id="0" name="Instance variable">booster</param>
-                        </condition>
-                        <condition behavior="Platform" id="2" name="Is on floor" sid="7592499359851953" type="kancil" />
-                        <condition id="-7" name="Compare instance variable" sid="6107609805011362" type="kancil">
-                            <param id="0" name="Instance variable">jumlah_jump</param>
-                            <param id="1" name="Comparison">4</param>
-                            <param id="2" name="Value">0</param>
-                        </condition>
-                        <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="2910958356097799" type="kancil">
-                            <param id="0" name="Instance variable">perisai</param>
-                        </condition>
-                    </conditions>
-                    <actions>
-                        <action id="-10" name="Set value" sid="8007564881160288" type="kancil">
-                            <param id="0" name="Instance variable">jumlah_jump</param>
-                            <param id="1" name="Value">0</param>
-                        </action>
-                        <action id="4" name="Set animation" sid="7919946275776678" type="kancil">
-                            <param id="0" name="Animation">&quot;boost&quot;</param>
-                            <param id="1" name="From">1</param>
-                        </action>
-                    </actions>
-                </event-block>
-                <event-block sid="1357737867718126">
-                    <conditions>
-                        <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="8476356188337165" type="kancil">
-                            <param id="0" name="Instance variable">booster</param>
-                        </condition>
-                        <condition behavior="Platform" id="2" name="Is on floor" sid="9880895229230094" type="kancil" />
-                        <condition id="-7" name="Compare instance variable" sid="3658571732979315" type="kancil">
-                            <param id="0" name="Instance variable">jumlah_jump</param>
-                            <param id="1" name="Comparison">4</param>
-                            <param id="2" name="Value">0</param>
-                        </condition>
-                        <condition id="-8" name="Is boolean instance variable set" sid="3276023561846983" type="kancil">
-                            <param id="0" name="Instance variable">perisai</param>
-                        </condition>
-                    </conditions>
-                    <actions>
-                        <action id="-10" name="Set value" sid="3105318932511427" type="kancil">
-                            <param id="0" name="Instance variable">jumlah_jump</param>
-                            <param id="1" name="Value">0</param>
-                        </action>
-                        <action id="4" name="Set animation" sid="4119991974269103" type="kancil">
-                            <param id="0" name="Animation">&quot;lari_shield&quot;</param>
-                            <param id="1" name="From">1</param>
-                        </action>
-                    </actions>
+                    <sub-events>
+                        <event-block sid="162540611886201">
+                            <conditions>
+                                <condition id="-8" name="Is boolean instance variable set" sid="4492862151800651" type="kancil">
+                                    <param id="0" name="Instance variable">booster</param>
+                                </condition>
+                                <condition id="-8" name="Is boolean instance variable set" sid="2910958356097799" type="kancil">
+                                    <param id="0" name="Instance variable">perisai</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="4" name="Set animation" sid="7919946275776678" type="kancil">
+                                    <param id="0" name="Animation">&quot;boost_shield&quot;</param>
+                                    <param id="1" name="From">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="2182867411638562">
+                            <conditions>
+                                <condition id="-8" name="Is boolean instance variable set" sid="490839004094278" type="kancil">
+                                    <param id="0" name="Instance variable">booster</param>
+                                </condition>
+                                <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="9966001636072496" type="kancil">
+                                    <param id="0" name="Instance variable">perisai</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="4" name="Set animation" sid="6460657631469408" type="kancil">
+                                    <param id="0" name="Animation">&quot;boost&quot;</param>
+                                    <param id="1" name="From">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="3877284129369394">
+                            <conditions>
+                                <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="8490394274531444" type="kancil">
+                                    <param id="0" name="Instance variable">booster</param>
+                                </condition>
+                                <condition id="-8" name="Is boolean instance variable set" sid="3078421077629663" type="kancil">
+                                    <param id="0" name="Instance variable">perisai</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="4" name="Set animation" sid="6036701229450436" type="kancil">
+                                    <param id="0" name="Animation">&quot;lari_shield&quot;</param>
+                                    <param id="1" name="From">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="2459475816156894">
+                            <conditions>
+                                <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="53554439735134" type="kancil">
+                                    <param id="0" name="Instance variable">booster</param>
+                                </condition>
+                                <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="3172353455910993" type="kancil">
+                                    <param id="0" name="Instance variable">perisai</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="4" name="Set animation" sid="3529261316428451" type="kancil">
+                                    <param id="0" name="Animation">&quot;lari&quot;</param>
+                                    <param id="1" name="From">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
                 </event-block>
                 <event-block any="1" sid="2536854141002692">
                     <conditions>
@@ -421,119 +627,168 @@
                 </event-block>
                 <event-block sid="3493698517732712">
                     <conditions>
-                        <condition id="-7" name="Compare instance variable" sid="5216254546518668" type="kancil">
-                            <param id="0" name="Instance variable">sliding</param>
-                            <param id="1" name="Comparison">0</param>
-                            <param id="2" name="Value">2</param>
-                        </condition>
                         <condition behavior="Platform" id="2" name="Is on floor" sid="993426644177463" type="kancil" />
-                        <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="6213864404483578" type="kancil">
-                            <param id="0" name="Instance variable">booster</param>
-                        </condition>
-                        <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="7772896971711311" type="kancil">
-                            <param id="0" name="Instance variable">perisai</param>
-                        </condition>
                     </conditions>
-                    <actions>
-                        <action id="4" name="Set animation" sid="6898902580811626" type="kancil">
-                            <param id="0" name="Animation">&quot;lari&quot;</param>
-                            <param id="1" name="From">1</param>
-                        </action>
-                        <action id="-10" name="Set value" sid="4149286120363341" type="kancil">
-                            <param id="0" name="Instance variable">sliding</param>
-                            <param id="1" name="Value">0</param>
-                        </action>
-                    </actions>
-                </event-block>
-                <event-block sid="1015723153725252">
-                    <conditions>
-                        <condition id="-7" name="Compare instance variable" sid="4343402055679847" type="kancil">
-                            <param id="0" name="Instance variable">sliding</param>
-                            <param id="1" name="Comparison">0</param>
-                            <param id="2" name="Value">2</param>
-                        </condition>
-                        <condition behavior="Platform" id="2" name="Is on floor" sid="2379291798103912" type="kancil" />
-                        <condition id="-8" name="Is boolean instance variable set" sid="3785502733822213" type="kancil">
-                            <param id="0" name="Instance variable">booster</param>
-                        </condition>
-                        <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="8949828130796506" type="kancil">
-                            <param id="0" name="Instance variable">perisai</param>
-                        </condition>
-                    </conditions>
-                    <actions>
-                        <action id="4" name="Set animation" sid="7976796085112185" type="kancil">
-                            <param id="0" name="Animation">&quot;boost&quot;</param>
-                            <param id="1" name="From">1</param>
-                        </action>
-                        <action id="-10" name="Set value" sid="1831682877386534" type="kancil">
-                            <param id="0" name="Instance variable">sliding</param>
-                            <param id="1" name="Value">0</param>
-                        </action>
-                    </actions>
-                </event-block>
-                <event-block sid="4798576920437318">
-                    <conditions>
-                        <condition id="-7" name="Compare instance variable" sid="588035231229293" type="kancil">
-                            <param id="0" name="Instance variable">sliding</param>
-                            <param id="1" name="Comparison">0</param>
-                            <param id="2" name="Value">2</param>
-                        </condition>
-                        <condition behavior="Platform" id="2" name="Is on floor" sid="7021796051598833" type="kancil" />
-                        <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="1042179903196329" type="kancil">
-                            <param id="0" name="Instance variable">booster</param>
-                        </condition>
-                        <condition id="-8" name="Is boolean instance variable set" sid="1008404749448184" type="kancil">
-                            <param id="0" name="Instance variable">perisai</param>
-                        </condition>
-                    </conditions>
-                    <actions>
-                        <action id="4" name="Set animation" sid="7035989705774901" type="kancil">
-                            <param id="0" name="Animation">&quot;lari_shield&quot;</param>
-                            <param id="1" name="From">1</param>
-                        </action>
-                        <action id="-10" name="Set value" sid="1171412421560503" type="kancil">
-                            <param id="0" name="Instance variable">sliding</param>
-                            <param id="1" name="Value">0</param>
-                        </action>
-                    </actions>
-                </event-block>
-                <event-block sid="2227082843256204">
-                    <conditions>
-                        <condition id="-7" name="Compare instance variable" sid="3762708376175426" type="kancil">
-                            <param id="0" name="Instance variable">sliding</param>
-                            <param id="1" name="Comparison">0</param>
-                            <param id="2" name="Value">1</param>
-                        </condition>
-                        <condition behavior="Platform" id="2" name="Is on floor" sid="4537805018900023" type="kancil" />
-                        <condition id="-8" name="Is boolean instance variable set" sid="5964618814347231" type="kancil">
-                            <param id="0" name="Instance variable">perisai</param>
-                        </condition>
-                    </conditions>
-                    <actions>
-                        <action id="4" name="Set animation" sid="925074305157332" type="kancil">
-                            <param id="0" name="Animation">&quot;slide_shield&quot;</param>
-                            <param id="1" name="From">1</param>
-                        </action>
-                    </actions>
-                </event-block>
-                <event-block sid="4099303789598312">
-                    <conditions>
-                        <condition id="-7" name="Compare instance variable" sid="8824098774865828" type="kancil">
-                            <param id="0" name="Instance variable">sliding</param>
-                            <param id="1" name="Comparison">0</param>
-                            <param id="2" name="Value">1</param>
-                        </condition>
-                        <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="382344444624466" type="kancil">
-                            <param id="0" name="Instance variable">perisai</param>
-                        </condition>
-                        <condition behavior="Platform" id="2" name="Is on floor" sid="4861075345191489" type="kancil" />
-                    </conditions>
-                    <actions>
-                        <action id="4" name="Set animation" sid="6317111571024257" type="kancil">
-                            <param id="0" name="Animation">&quot;slide&quot;</param>
-                            <param id="1" name="From">1</param>
-                        </action>
-                    </actions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="2227082843256204">
+                            <conditions>
+                                <condition id="-7" name="Compare instance variable" sid="3762708376175426" type="kancil">
+                                    <param id="0" name="Instance variable">sliding</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">1</param>
+                                </condition>
+                            </conditions>
+                            <actions />
+                            <sub-events>
+                                <event-block sid="4916304067685077">
+                                    <conditions>
+                                        <condition id="-8" name="Is boolean instance variable set" sid="5919599025916642" type="kancil">
+                                            <param id="0" name="Instance variable">booster</param>
+                                        </condition>
+                                        <condition id="-8" name="Is boolean instance variable set" sid="6866286132371929" type="kancil">
+                                            <param id="0" name="Instance variable">perisai</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="4" name="Set animation" sid="9754502812002596" type="kancil">
+                                            <param id="0" name="Animation">&quot;slide_shield&quot;</param>
+                                            <param id="1" name="From">1</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="3776940854905363">
+                                    <conditions>
+                                        <condition id="-8" name="Is boolean instance variable set" sid="7252186490271839" type="kancil">
+                                            <param id="0" name="Instance variable">booster</param>
+                                        </condition>
+                                        <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="4083709932669062" type="kancil">
+                                            <param id="0" name="Instance variable">perisai</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="4" name="Set animation" sid="7227509462062977" type="kancil">
+                                            <param id="0" name="Animation">&quot;slide&quot;</param>
+                                            <param id="1" name="From">1</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="4001446953421752">
+                                    <conditions>
+                                        <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="6505092434912282" type="kancil">
+                                            <param id="0" name="Instance variable">booster</param>
+                                        </condition>
+                                        <condition id="-8" name="Is boolean instance variable set" sid="3594645608041821" type="kancil">
+                                            <param id="0" name="Instance variable">perisai</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="4" name="Set animation" sid="266720261321253" type="kancil">
+                                            <param id="0" name="Animation">&quot;slide_shield&quot;</param>
+                                            <param id="1" name="From">1</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="1226800594155816">
+                                    <conditions>
+                                        <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="4318476951130531" type="kancil">
+                                            <param id="0" name="Instance variable">booster</param>
+                                        </condition>
+                                        <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="7973393196188008" type="kancil">
+                                            <param id="0" name="Instance variable">perisai</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="4" name="Set animation" sid="9766316999120091" type="kancil">
+                                            <param id="0" name="Animation">&quot;slide&quot;</param>
+                                            <param id="1" name="From">1</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                        <event-block sid="7248820942846599">
+                            <conditions>
+                                <condition id="-7" name="Compare instance variable" sid="8131049368458633" type="kancil">
+                                    <param id="0" name="Instance variable">sliding</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">2</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-10" name="Set value" sid="469751099786363" type="kancil">
+                                    <param id="0" name="Instance variable">sliding</param>
+                                    <param id="1" name="Value">0</param>
+                                </action>
+                            </actions>
+                            <sub-events>
+                                <event-block sid="4184224564636146">
+                                    <conditions>
+                                        <condition id="-8" name="Is boolean instance variable set" sid="5475970204994456" type="kancil">
+                                            <param id="0" name="Instance variable">booster</param>
+                                        </condition>
+                                        <condition id="-8" name="Is boolean instance variable set" sid="7772896971711311" type="kancil">
+                                            <param id="0" name="Instance variable">perisai</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="4" name="Set animation" sid="6898902580811626" type="kancil">
+                                            <param id="0" name="Animation">&quot;boost_shield&quot;</param>
+                                            <param id="1" name="From">1</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="1015723153725252">
+                                    <conditions>
+                                        <condition id="-8" name="Is boolean instance variable set" sid="3785502733822213" type="kancil">
+                                            <param id="0" name="Instance variable">booster</param>
+                                        </condition>
+                                        <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="8949828130796506" type="kancil">
+                                            <param id="0" name="Instance variable">perisai</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="4" name="Set animation" sid="7976796085112185" type="kancil">
+                                            <param id="0" name="Animation">&quot;boost&quot;</param>
+                                            <param id="1" name="From">1</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="4798576920437318">
+                                    <conditions>
+                                        <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="1042179903196329" type="kancil">
+                                            <param id="0" name="Instance variable">booster</param>
+                                        </condition>
+                                        <condition id="-8" name="Is boolean instance variable set" sid="1008404749448184" type="kancil">
+                                            <param id="0" name="Instance variable">perisai</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="4" name="Set animation" sid="7035989705774901" type="kancil">
+                                            <param id="0" name="Animation">&quot;lari_shield&quot;</param>
+                                            <param id="1" name="From">1</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="9359913742291467">
+                                    <conditions>
+                                        <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="9651396811152151" type="kancil">
+                                            <param id="0" name="Instance variable">booster</param>
+                                        </condition>
+                                        <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="2298886976448927" type="kancil">
+                                            <param id="0" name="Instance variable">perisai</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="4" name="Set animation" sid="3799979197858833" type="kancil">
+                                            <param id="0" name="Animation">&quot;lari&quot;</param>
+                                            <param id="1" name="From">1</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                    </sub-events>
                 </event-block>
                 <event-block any="1" sid="1344734268228763">
                     <conditions>
@@ -750,106 +1005,110 @@
                             <param id="1" name="Value">kancil.boost_count -1</param>
                         </action>
                     </actions>
-                </event-block>
-                <event-block sid="312974172070727">
-                    <conditions>
-                        <condition behavior="Timer" id="0" name="On timer" sid="2688990080725362" type="kancil">
-                            <param id="0" name="Tag">&quot;boost_speed&quot;</param>
-                        </condition>
-                        <condition id="-7" name="Compare instance variable" sid="913077686962381" type="kancil">
-                            <param id="0" name="Instance variable">speed</param>
-                            <param id="1" name="Comparison">2</param>
-                            <param id="2" name="Value">450</param>
-                        </condition>
-                    </conditions>
-                    <actions>
-                        <action id="-10" name="Set value" sid="3687039059785027" type="kancil">
-                            <param id="0" name="Instance variable">speed</param>
-                            <param id="1" name="Value">kancil.speed + 50</param>
-                        </action>
-                        <action behavior="CustomMovement" id="2" name="Set speed" sid="3957247213172716" type="kancil">
-                            <param id="0" name="Which">1</param>
-                            <param id="1" name="Speed">kancil.speed</param>
-                        </action>
-                    </actions>
-                </event-block>
-                <event-block sid="7794652266556589">
-                    <conditions>
-                        <condition behavior="Timer" id="0" name="On timer" sid="2070529998828813" type="kancil">
-                            <param id="0" name="Tag">&quot;boost_speed&quot;</param>
-                        </condition>
-                        <condition id="-7" name="Compare instance variable" sid="4935934076932058" type="kancil">
-                            <param id="0" name="Instance variable">boost_count</param>
-                            <param id="1" name="Comparison">0</param>
-                            <param id="2" name="Value">0</param>
-                        </condition>
-                    </conditions>
-                    <actions>
-                        <action behavior="Timer" id="1" name="Stop timer" sid="8760658851232973" type="kancil">
-                            <param id="0" name="Tag">&quot;boost_speed&quot;</param>
-                        </action>
-                        <action behavior="Timer" id="0" name="Start timer" sid="4465521642902964" type="kancil">
-                            <param id="0" name="Duration">0.5</param>
-                            <param id="1" name="Type">1</param>
-                            <param id="2" name="Tag">&quot;reduce_boost&quot;</param>
-                        </action>
-                        <action id="-10" name="Set value" sid="5164229591383807" type="kancil">
-                            <param id="0" name="Instance variable">reduce</param>
-                            <param id="1" name="Value">3</param>
-                        </action>
-                    </actions>
+                    <sub-events>
+                        <event-block sid="6066626601068588">
+                            <conditions>
+                                <condition id="-7" name="Compare instance variable" sid="9083101526192118" type="kancil">
+                                    <param id="0" name="Instance variable">speed</param>
+                                    <param id="1" name="Comparison">2</param>
+                                    <param id="2" name="Value">450</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-10" name="Set value" sid="6615359657576336" type="kancil">
+                                    <param id="0" name="Instance variable">speed</param>
+                                    <param id="1" name="Value">kancil.speed + 50</param>
+                                </action>
+                                <action behavior="CustomMovement" id="2" name="Set speed" sid="3605936870662448" type="kancil">
+                                    <param id="0" name="Which">1</param>
+                                    <param id="1" name="Speed">kancil.speed</param>
+                                </action>
+                                <action id="0" name="Set text" sid="2092592894674581" type="timer">
+                                    <param id="0" name="Text">kancil.speed</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="7794652266556589">
+                            <conditions>
+                                <condition id="-7" name="Compare instance variable" sid="4935934076932058" type="kancil">
+                                    <param id="0" name="Instance variable">boost_count</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">0</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action behavior="Timer" id="1" name="Stop timer" sid="8760658851232973" type="kancil">
+                                    <param id="0" name="Tag">&quot;boost_speed&quot;</param>
+                                </action>
+                                <action behavior="Timer" id="0" name="Start timer" sid="4465521642902964" type="kancil">
+                                    <param id="0" name="Duration">0.3</param>
+                                    <param id="1" name="Type">1</param>
+                                    <param id="2" name="Tag">&quot;reduce_boost&quot;</param>
+                                </action>
+                                <action id="-10" name="Set value" sid="5164229591383807" type="kancil">
+                                    <param id="0" name="Instance variable">reduce</param>
+                                    <param id="1" name="Value">6</param>
+                                </action>
+                                <action id="-13" name="Set boolean" sid="3822042543849133" type="kancil">
+                                    <param id="0" name="Instance variable">booster</param>
+                                    <param id="1" name="Value">0</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
                 </event-block>
                 <event-block sid="9163095846484284">
                     <conditions>
                         <condition behavior="Timer" id="0" name="On timer" sid="8462328083028721" type="kancil">
                             <param id="0" name="Tag">&quot;reduce_boost&quot;</param>
                         </condition>
-                        <condition id="-7" name="Compare instance variable" sid="49115621676313" type="kancil">
-                            <param id="0" name="Instance variable">reduce</param>
-                            <param id="1" name="Comparison">4</param>
-                            <param id="2" name="Value">0</param>
-                        </condition>
-                        <condition id="-7" name="Compare instance variable" sid="1092695250506955" type="kancil">
-                            <param id="0" name="Instance variable">speed</param>
-                            <param id="1" name="Comparison">4</param>
-                            <param id="2" name="Value">300</param>
-                        </condition>
                     </conditions>
                     <actions>
-                        <action id="-10" name="Set value" sid="3334450818539127" type="kancil">
-                            <param id="0" name="Instance variable">speed</param>
-                            <param id="1" name="Value">kancil.speed - 50</param>
-                        </action>
                         <action id="-10" name="Set value" sid="8553632090247121" type="kancil">
                             <param id="0" name="Instance variable">reduce</param>
                             <param id="1" name="Value">kancil.reduce -1</param>
                         </action>
-                        <action behavior="CustomMovement" id="2" name="Set speed" sid="6807528374435027" type="kancil">
-                            <param id="0" name="Which">1</param>
-                            <param id="1" name="Speed">kancil.speed</param>
-                        </action>
-                        <action id="-13" name="Set boolean" sid="2861817480931957" type="kancil">
-                            <param id="0" name="Instance variable">booster</param>
-                            <param id="1" name="Value">0</param>
-                        </action>
                     </actions>
-                </event-block>
-                <event-block sid="369939811025989">
-                    <conditions>
-                        <condition behavior="Timer" id="0" name="On timer" sid="3362303793473259" type="kancil">
-                            <param id="0" name="Tag">&quot;reduce_boost&quot;</param>
-                        </condition>
-                        <condition id="-7" name="Compare instance variable" sid="5091264331380085" type="kancil">
-                            <param id="0" name="Instance variable">reduce</param>
-                            <param id="1" name="Comparison">0</param>
-                            <param id="2" name="Value">0</param>
-                        </condition>
-                    </conditions>
-                    <actions>
-                        <action behavior="Timer" id="1" name="Stop timer" sid="3977776347258202" type="kancil">
-                            <param id="0" name="Tag">&quot;reduce_boost&quot;</param>
-                        </action>
-                    </actions>
+                    <sub-events>
+                        <event-block sid="5057831602543061">
+                            <conditions>
+                                <condition id="-7" name="Compare instance variable" sid="1695012665311752" type="kancil">
+                                    <param id="0" name="Instance variable">reduce</param>
+                                    <param id="1" name="Comparison">4</param>
+                                    <param id="2" name="Value">0</param>
+                                </condition>
+                                <condition id="-7" name="Compare instance variable" sid="1092695250506955" type="kancil">
+                                    <param id="0" name="Instance variable">speed</param>
+                                    <param id="1" name="Comparison">4</param>
+                                    <param id="2" name="Value">300</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-10" name="Set value" sid="8151635105495851" type="kancil">
+                                    <param id="0" name="Instance variable">speed</param>
+                                    <param id="1" name="Value">kancil.speed - 50</param>
+                                </action>
+                                <action behavior="CustomMovement" id="2" name="Set speed" sid="6345940303680546" type="kancil">
+                                    <param id="0" name="Which">1</param>
+                                    <param id="1" name="Speed">kancil.speed</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="369939811025989">
+                            <conditions>
+                                <condition id="-7" name="Compare instance variable" sid="5091264331380085" type="kancil">
+                                    <param id="0" name="Instance variable">reduce</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">0</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action behavior="Timer" id="1" name="Stop timer" sid="3977776347258202" type="kancil">
+                                    <param id="0" name="Tag">&quot;reduce_boost&quot;</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
                 </event-block>
             </sub-events>
         </event-group>
@@ -860,24 +1119,28 @@
                         <condition behavior="Timer" id="0" name="On timer" sid="5474800968623426" type="kancil">
                             <param id="0" name="Tag">&quot;mode_shield&quot;</param>
                         </condition>
-                        <condition id="-7" name="Compare instance variable" sid="4315611751615727" type="kancil">
-                            <param id="0" name="Instance variable">boost_shield</param>
-                            <param id="1" name="Comparison">4</param>
-                            <param id="2" name="Value">0</param>
-                        </condition>
                     </conditions>
-                    <actions>
-                        <action id="-10" name="Set value" sid="3292352470272003" type="kancil">
-                            <param id="0" name="Instance variable">boost_shield</param>
-                            <param id="1" name="Value">kancil.boost_shield - 1</param>
-                        </action>
-                    </actions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="3535239211769417">
+                            <conditions>
+                                <condition id="-7" name="Compare instance variable" sid="5635448418374766" type="kancil">
+                                    <param id="0" name="Instance variable">boost_shield</param>
+                                    <param id="1" name="Comparison">4</param>
+                                    <param id="2" name="Value">0</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-10" name="Set value" sid="3292352470272003" type="kancil">
+                                    <param id="0" name="Instance variable">boost_shield</param>
+                                    <param id="1" name="Value">kancil.boost_shield - 1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
                 </event-block>
                 <event-block sid="4277514051277445">
                     <conditions>
-                        <condition behavior="Timer" id="0" name="On timer" sid="6940026275306137" type="kancil">
-                            <param id="0" name="Tag">&quot;mode_shield&quot;</param>
-                        </condition>
                         <condition id="-7" name="Compare instance variable" sid="6777629878302504" type="kancil">
                             <param id="0" name="Instance variable">boost_shield</param>
                             <param id="1" name="Comparison">0</param>
