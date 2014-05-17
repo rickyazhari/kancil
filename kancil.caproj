@@ -10,19 +10,19 @@
     <unique-id>38o7xfc4zxkfj</unique-id>
     <saved-with-version>13900</saved-with-version>
     <used-plugins>
-        <plugin author="Scirra" id="Keyboard" version="1">Keyboard</plugin>
-        <plugin author="Scirra" id="TiledBg" version="1">Tiled Background</plugin>
-        <plugin author="Scirra" id="Text" version="1">Text</plugin>
         <plugin author="Scirra" id="Touch" version="1">Touch</plugin>
-        <plugin author="Scirra" id="Mouse" version="1">Mouse</plugin>
+        <plugin author="Scirra" id="Text" version="1">Text</plugin>
         <plugin author="Scirra" id="Sprite" version="1">Sprite</plugin>
+        <plugin author="Scirra" id="Keyboard" version="1">Keyboard</plugin>
+        <plugin author="Scirra" id="Mouse" version="1">Mouse</plugin>
+        <plugin author="Scirra" id="TiledBg" version="1">Tiled Background</plugin>
     </used-plugins>
     <used-behaviors>
         <behavior author="Scirra" id="Anchor" version="1">Anchor</behavior>
-        <behavior author="Scirra" id="custom" version="1">Custom Movement</behavior>
-        <behavior author="Scirra" id="Platform" version="1">Platform</behavior>
-        <behavior author="Scirra" id="Sin" version="1">Sine</behavior>
         <behavior author="Scirra" id="Timer" version="1">Timer</behavior>
+        <behavior author="Scirra" id="Platform" version="1">Platform</behavior>
+        <behavior author="Scirra" id="custom" version="1">Custom Movement</behavior>
+        <behavior author="Scirra" id="Sin" version="1">Sine</behavior>
         <behavior author="Scirra" id="solid" version="1">Solid</behavior>
     </used-behaviors>
     <used-effects>
@@ -884,19 +884,19 @@
             </behaviors>
             <texture />
         </object-type>
-        <object-type name="TiledBackground2" sid="3417693080200389">
+        <object-type name="bg1" sid="3417693080200389">
             <plugin id="TiledBg" />
             <texture />
         </object-type>
-        <object-type name="TiledBackground3" sid="921389689075781">
+        <object-type name="bg2" sid="921389689075781">
             <plugin id="TiledBg" />
             <texture />
         </object-type>
-        <object-type name="TiledBackground4" sid="6080291278693997">
+        <object-type name="bg3" sid="6080291278693997">
             <plugin id="TiledBg" />
             <texture />
         </object-type>
-        <object-type name="TiledBackground5" sid="8246765010589097">
+        <object-type name="bg4" sid="8246765010589097">
             <plugin id="TiledBg" />
             <texture />
         </object-type>
@@ -913,15 +913,15 @@
                 </animation>
             </animation-folder>
         </object-type>
-        <object-type name="TiledBackground6" sid="6988966052531719">
+        <object-type name="bg5" sid="6988966052531719">
             <plugin id="TiledBg" />
             <texture />
         </object-type>
-        <object-type name="TiledBackground7" sid="6608785633521173">
+        <object-type name="bg6" sid="6608785633521173">
             <plugin id="TiledBg" />
             <texture />
         </object-type>
-        <object-type name="TiledBackground8" sid="9444457012682812">
+        <object-type name="bg_1" sid="9444457012682812">
             <plugin id="TiledBg" />
             <texture />
         </object-type>
@@ -1029,10 +1029,6 @@
             <plugin id="TiledBg" />
             <texture />
         </object-type>
-        <object-type name="bg7_3" sid="3121087536579812">
-            <plugin id="TiledBg" />
-            <texture />
-        </object-type>
         <object-type name="timun" sid="3035188127257212">
             <plugin id="Sprite" />
             <animation-folder expanded="1">
@@ -1078,6 +1074,18 @@
                     </frame>
                 </animation>
             </animation-folder>
+        </object-type>
+        <object-type name="bg_2" sid="2263083650073058">
+            <plugin id="TiledBg" />
+            <texture />
+        </object-type>
+        <object-type name="TiledBackground8" sid="6972177636044395">
+            <plugin id="TiledBg" />
+            <texture />
+        </object-type>
+        <object-type name="TiledBackground2" sid="8159250550537716">
+            <plugin id="TiledBg" />
+            <texture />
         </object-type>
     </object-folder>
     <families />
