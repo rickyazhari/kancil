@@ -1087,6 +1087,10 @@
             <plugin id="TiledBg" />
             <texture />
         </object-type>
+        <object-type name="TiledBackground3" sid="9945707631879945">
+            <plugin id="TiledBg" />
+            <texture />
+        </object-type>
     </object-folder>
     <families />
     <layout-folder expanded="1">
