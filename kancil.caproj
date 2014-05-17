@@ -11,7 +11,6 @@
     <saved-with-version>13900</saved-with-version>
     <used-plugins>
 <<<<<<< HEAD
-<<<<<<< HEAD
         <plugin author="Scirra" id="Mouse" version="1">Mouse</plugin>
         <plugin author="Scirra" id="Sprite" version="1">Sprite</plugin>
         <plugin author="Scirra" id="TiledBg" version="1">Tiled Background</plugin>
@@ -20,24 +19,18 @@
         <plugin author="Scirra" id="Keyboard" version="1">Keyboard</plugin>
 =======
         <plugin author="Scirra" id="Touch" version="1">Touch</plugin>
-=======
-<<<<<<< HEAD
-        <plugin author="Scirra" id="Touch" version="1">Touch</plugin>
->>>>>>> b82276877bcf053202b768a347a1b61ec5769805
-        <plugin author="Scirra" id="Text" version="1">Text</plugin>
-=======
->>>>>>> 7bc43b1b5d9c3345f23691dfbea8efebe345e55c
-        <plugin author="Scirra" id="Sprite" version="1">Sprite</plugin>
-        <plugin author="Scirra" id="Keyboard" version="1">Keyboard</plugin>
-        <plugin author="Scirra" id="Mouse" version="1">Mouse</plugin>
-        <plugin author="Scirra" id="TiledBg" version="1">Tiled Background</plugin>
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> b82276877bcf053202b768a347a1b61ec5769805
-=======
 =======
 
+        <plugin author="Scirra" id="Text" version="1">Text</plugin>
+=======
 >>>>>>> 7bc43b1b5d9c3345f23691dfbea8efebe345e55c
+        <plugin author="Scirra" id="Sprite" version="1">Sprite</plugin>
+        <plugin author="Scirra" id="Keyboard" version="1">Keyboard</plugin>
+        <plugin author="Scirra" id="Mouse" version="1">Mouse</plugin>
+        <plugin author="Scirra" id="TiledBg" version="1">Tiled Background</plugin>
+<<<<<<< HEAD
+
+=======
 >>>>>>> b82276877bcf053202b768a347a1b61ec5769805
     </used-plugins>
     <used-behaviors>
@@ -45,7 +38,6 @@
         <behavior author="Scirra" id="Platform" version="1">Platform</behavior>
         <behavior author="Scirra" id="Anchor" version="1">Anchor</behavior>
 <<<<<<< HEAD
-<<<<<<< HEAD
         <behavior author="Scirra" id="custom" version="1">Custom Movement</behavior>
         <behavior author="Scirra" id="Timer" version="1">Timer</behavior>
 =======
@@ -59,13 +51,7 @@
         <behavior author="Scirra" id="Platform" version="1">Platform</behavior>
         <behavior author="Scirra" id="custom" version="1">Custom Movement</behavior>
         <behavior author="Scirra" id="Sin" version="1">Sine</behavior>
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> b82276877bcf053202b768a347a1b61ec5769805
-=======
-=======
 
->>>>>>> 7bc43b1b5d9c3345f23691dfbea8efebe345e55c
 >>>>>>> b82276877bcf053202b768a347a1b61ec5769805
         <behavior author="Scirra" id="solid" version="1">Solid</behavior>
     </used-behaviors>
@@ -1655,8 +1641,6 @@
 =======
 <<<<<<< HEAD
 =======
->>>>>>> b82276877bcf053202b768a347a1b61ec5769805
-=======
 
 >>>>>>> 7bc43b1b5d9c3345f23691dfbea8efebe345e55c
         <object-type name="bg_2" sid="2263083650073058">
@@ -1675,9 +1659,6 @@
             <plugin id="TiledBg" />
             <texture />
 <<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> b82276877bcf053202b768a347a1b61ec5769805
-=======
 =======
 
 >>>>>>> 7bc43b1b5d9c3345f23691dfbea8efebe345e55c
