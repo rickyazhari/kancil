@@ -59,7 +59,7 @@
             <blend-mode>0</blend-mode>
             <effect-fallback>0</effect-fallback>
             <instances>
-                <instance type="bg_1" uid="20">
+                <instance type="bg8_1" uid="20">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <hotspot>Top-left</hotspot>
@@ -79,7 +79,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="bg_2" uid="28">
+                <instance type="bg8_2" uid="28">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <hotspot>Top-left</hotspot>
@@ -99,7 +99,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="TiledBackground8" uid="146">
+                <instance type="bg8_3" uid="8">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <hotspot>Top-left</hotspot>

@@ -2120,7 +2120,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="timun" uid="147">
+                <instance type="timun" uid="2">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -2142,7 +2142,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="timun" uid="148">
+                <instance type="timun" uid="3">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>

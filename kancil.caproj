@@ -689,10 +689,6 @@
         <object-type name="Keyboard" sid="7798635860827477">
             <plugin id="Keyboard" />
         </object-type>
-        <object-type name="TiledBackground" sid="957791055876461">
-            <plugin id="TiledBg" />
-            <texture />
-        </object-type>
         <object-type name="Mouse" sid="3045343836546517">
             <plugin id="Mouse" />
         </object-type>
@@ -1380,7 +1376,7 @@
             <plugin id="TiledBg" />
             <texture />
         </object-type>
-        <object-type name="bg_1" sid="9444457012682812">
+        <object-type name="bg8_1" sid="9444457012682812">
             <plugin id="TiledBg" />
             <texture />
         </object-type>
@@ -1607,23 +1603,23 @@
                 </animation>
             </animation-folder>
         </object-type>
-        <object-type name="bg_2" sid="2263083650073058">
+        <object-type name="bg8_2" sid="2263083650073058">
             <plugin id="TiledBg" />
             <texture />
         </object-type>
-        <object-type name="TiledBackground8" sid="6972177636044395">
+        <object-type name="bg8_3" sid="6972177636044395">
             <plugin id="TiledBg" />
             <texture />
         </object-type>
-        <object-type name="TiledBackground2" sid="8159250550537716">
+        <object-type name="bg_tutor" sid="8159250550537716">
             <plugin id="TiledBg" />
             <texture />
         </object-type>
-        <object-type name="TiledBackground3" sid="9945707631879945">
+        <object-type name="bg_menu" sid="229741356486104">
             <plugin id="TiledBg" />
             <texture />
         </object-type>
-        <object-type name="TiledBackground4" sid="229741356486104">
+        <object-type name="lvlMap" sid="3143820931984718">
             <plugin id="TiledBg" />
             <texture />
         </object-type>
