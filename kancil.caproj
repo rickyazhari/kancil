@@ -11,7 +11,6 @@
     <saved-with-version>13900</saved-with-version>
     <used-plugins>
 <<<<<<< HEAD
-<<<<<<< HEAD
         <plugin author="Scirra" id="Mouse" version="1">Mouse</plugin>
         <plugin author="Scirra" id="Sprite" version="1">Sprite</plugin>
         <plugin author="Scirra" id="TiledBg" version="1">Tiled Background</plugin>
@@ -21,16 +20,11 @@
 =======
         <plugin author="Scirra" id="Touch" version="1">Touch</plugin>
 =======
-        <plugin author="Scirra" id="Touch" version="1">Touch</plugin>
->>>>>>> b82276877bcf053202b768a347a1b61ec5769805
-        <plugin author="Scirra" id="Text" version="1">Text</plugin>
         <plugin author="Scirra" id="Sprite" version="1">Sprite</plugin>
         <plugin author="Scirra" id="Keyboard" version="1">Keyboard</plugin>
         <plugin author="Scirra" id="Mouse" version="1">Mouse</plugin>
         <plugin author="Scirra" id="TiledBg" version="1">Tiled Background</plugin>
-<<<<<<< HEAD
->>>>>>> b82276877bcf053202b768a347a1b61ec5769805
-=======
+
 >>>>>>> b82276877bcf053202b768a347a1b61ec5769805
     </used-plugins>
     <used-behaviors>
@@ -38,19 +32,15 @@
         <behavior author="Scirra" id="Platform" version="1">Platform</behavior>
         <behavior author="Scirra" id="Anchor" version="1">Anchor</behavior>
 <<<<<<< HEAD
-<<<<<<< HEAD
         <behavior author="Scirra" id="custom" version="1">Custom Movement</behavior>
         <behavior author="Scirra" id="Timer" version="1">Timer</behavior>
 =======
-=======
->>>>>>> b82276877bcf053202b768a347a1b61ec5769805
+
         <behavior author="Scirra" id="Timer" version="1">Timer</behavior>
         <behavior author="Scirra" id="Platform" version="1">Platform</behavior>
         <behavior author="Scirra" id="custom" version="1">Custom Movement</behavior>
         <behavior author="Scirra" id="Sin" version="1">Sine</behavior>
-<<<<<<< HEAD
->>>>>>> b82276877bcf053202b768a347a1b61ec5769805
-=======
+
 >>>>>>> b82276877bcf053202b768a347a1b61ec5769805
         <behavior author="Scirra" id="solid" version="1">Solid</behavior>
     </used-behaviors>
@@ -1564,7 +1554,6 @@
             </animation-folder>
         </object-type>
 <<<<<<< HEAD
-<<<<<<< HEAD
         <object-type name="timun_emas" sid="3308423950097184">
             <plugin id="Sprite" />
             <animation-folder expanded="1">
@@ -1638,8 +1627,7 @@
                 </animation>
             </animation-folder>
 =======
-=======
->>>>>>> b82276877bcf053202b768a347a1b61ec5769805
+
         <object-type name="bg_2" sid="2263083650073058">
             <plugin id="TiledBg" />
             <texture />
@@ -1655,9 +1643,7 @@
         <object-type name="TiledBackground3" sid="9945707631879945">
             <plugin id="TiledBg" />
             <texture />
-<<<<<<< HEAD
->>>>>>> b82276877bcf053202b768a347a1b61ec5769805
-=======
+
 >>>>>>> b82276877bcf053202b768a347a1b61ec5769805
         </object-type>
     </object-folder>
