@@ -3,7 +3,7 @@
     <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
     <name>player_char</name>
     <events>
-        <event-group description="" sid="386286963284222" title="general">
+        <event-group collapsed="1" description="" sid="386286963284222" title="general">
             <sub-events>
                 <event-block any="1" sid="2082030108452163">
                     <conditions>
@@ -601,7 +601,7 @@
                 </event-block>
             </sub-events>
         </event-group>
-        <event-group description="" sid="6119991090109952" title="player sliding">
+        <event-group collapsed="1" description="" sid="6119991090109952" title="player sliding">
             <sub-events>
                 <event-block any="1" sid="7130471172592306">
                     <conditions>
@@ -814,7 +814,7 @@
                 </event-block>
             </sub-events>
         </event-group>
-        <event-group description="" sid="7497139362254449" title="camera player">
+        <event-group collapsed="1" description="" sid="7497139362254449" title="camera player">
             <sub-events>
                 <event-block sid="554867006860311">
                     <conditions>
@@ -839,7 +839,7 @@
                         <condition id="-7" name="Compare instance variable" sid="6670581395633974" type="kancil">
                             <param id="0" name="Instance variable">speed</param>
                             <param id="1" name="Comparison">4</param>
-                            <param id="2" name="Value">1</param>
+                            <param id="2" name="Value">100</param>
                         </condition>
                         <condition id="-7" name="Compare instance variable" sid="3439200973602576" type="kancil">
                             <param id="0" name="Instance variable">sliding</param>
@@ -869,7 +869,7 @@
                         <condition id="-7" name="Compare instance variable" sid="7930958422731429" type="kancil">
                             <param id="0" name="Instance variable">speed</param>
                             <param id="1" name="Comparison">2</param>
-                            <param id="2" name="Value">300</param>
+                            <param id="2" name="Value">350</param>
                         </condition>
                     </conditions>
                     <actions>
@@ -888,7 +888,7 @@
                         <condition id="-7" name="Compare instance variable" sid="6385458557627071" type="kancil">
                             <param id="0" name="Instance variable">speed</param>
                             <param id="1" name="Comparison">0</param>
-                            <param id="2" name="Value">300</param>
+                            <param id="2" name="Value">350</param>
                         </condition>
                     </conditions>
                     <actions>
@@ -898,10 +898,6 @@
                         <action id="6" name="Set speed" sid="7328387552877855" type="kancil">
                             <param id="0" name="Speed">9</param>
                         </action>
-                        <action id="4" name="Set animation" sid="4959764315697716" type="kancil">
-                            <param id="0" name="Animation">&quot;run&quot;</param>
-                            <param id="1" name="From">1</param>
-                        </action>
                     </actions>
                 </event-block>
                 <event-block sid="6588397430386161">
@@ -909,7 +905,7 @@
                         <condition id="-7" name="Compare instance variable" sid="3343358228765056" type="kancil">
                             <param id="0" name="Instance variable">speed</param>
                             <param id="1" name="Comparison">3</param>
-                            <param id="2" name="Value">100</param>
+                            <param id="2" name="Value">150</param>
                         </condition>
                     </conditions>
                     <actions>
@@ -928,7 +924,7 @@
                         <condition id="-7" name="Compare instance variable" sid="74400633773027" type="kancil">
                             <param id="0" name="Instance variable">speed</param>
                             <param id="1" name="Comparison">4</param>
-                            <param id="2" name="Value">100</param>
+                            <param id="2" name="Value">150</param>
                         </condition>
                     </conditions>
                     <actions>
@@ -961,7 +957,7 @@
                         <condition id="-7" name="Compare instance variable" sid="5426149583967197" type="kancil">
                             <param id="0" name="Instance variable">speed</param>
                             <param id="1" name="Comparison">4</param>
-                            <param id="2" name="Value">300</param>
+                            <param id="2" name="Value">350</param>
                         </condition>
                         <condition id="-7" name="Compare instance variable" sid="6875631605645979" type="kancil">
                             <param id="0" name="Instance variable">speed</param>
@@ -971,7 +967,26 @@
                     </conditions>
                     <actions>
                         <action id="6" name="Set speed" sid="9326934889009262" type="kancil">
-                            <param id="0" name="Speed">12</param>
+                            <param id="0" name="Speed">11</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="367609899999332">
+                    <conditions>
+                        <condition id="-7" name="Compare instance variable" sid="4438827619750704" type="kancil">
+                            <param id="0" name="Instance variable">speed</param>
+                            <param id="1" name="Comparison">5</param>
+                            <param id="2" name="Value">400</param>
+                        </condition>
+                        <condition id="-7" name="Compare instance variable" sid="7831673150828149" type="kancil">
+                            <param id="0" name="Instance variable">speed</param>
+                            <param id="1" name="Comparison">2</param>
+                            <param id="2" name="Value">450</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="6" name="Set speed" sid="9042925033356579" type="kancil">
+                            <param id="0" name="Speed">13</param>
                         </action>
                     </actions>
                 </event-block>
@@ -1054,6 +1069,45 @@
                                     <param id="1" name="Value">0</param>
                                 </action>
                             </actions>
+                            <sub-events>
+                                <event-block sid="6173703553989959">
+                                    <conditions>
+                                        <condition behavior="Platform" id="2" name="Is on floor" sid="7965778828612815" type="kancil" />
+                                        <condition id="-7" name="Compare instance variable" sid="55995698371473" type="kancil">
+                                            <param id="0" name="Instance variable">sliding</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">0</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions />
+                                    <sub-events>
+                                        <event-block sid="2057003746064371">
+                                            <conditions>
+                                                <condition id="-8" name="Is boolean instance variable set" sid="4723300181589314" type="kancil">
+                                                    <param id="0" name="Instance variable">perisai</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions>
+                                                <action id="4" name="Set animation" sid="1788995614116549" type="kancil">
+                                                    <param id="0" name="Animation">&quot;lari_shield&quot;</param>
+                                                    <param id="1" name="From">1</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                        <event-block sid="5387205395364362">
+                                            <conditions>
+                                                <condition id="-22" name="Else" sid="7686796472793175" type="System" />
+                                            </conditions>
+                                            <actions>
+                                                <action id="4" name="Set animation" sid="5545386796125694" type="kancil">
+                                                    <param id="0" name="Animation">&quot;lari&quot;</param>
+                                                    <param id="1" name="From">1</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                    </sub-events>
+                                </event-block>
+                            </sub-events>
                         </event-block>
                     </sub-events>
                 </event-block>
@@ -1112,7 +1166,7 @@
                 </event-block>
             </sub-events>
         </event-group>
-        <event-group description="" sid="5376695614038627" title="shield mode">
+        <event-group collapsed="1" description="" sid="5376695614038627" title="shield mode">
             <sub-events>
                 <event-block sid="1115373036989928">
                     <conditions>

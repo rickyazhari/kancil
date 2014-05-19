@@ -12,7 +12,7 @@ you probably do not want to add any .uistate.xml files to the repository.-->
     <open-tabs>
         <layout>splash_screen</layout>
         <layout>menu</layout>
-        <layout active="1">level_map</layout>
+        <layout>level_map</layout>
         <layout>level1</layout>
         <layout>level7</layout>
         <layout>level8</layout>
@@ -23,11 +23,12 @@ you probably do not want to add any .uistate.xml files to the repository.-->
         <layout>level5</layout>
         <layout>tutorial</layout>
         <event-sheet>player_char</event-sheet>
-        <event-sheet>event_level1</event-sheet>
+        <event-sheet active="1">event_level1</event-sheet>
         <event-sheet>event_level_map</event-sheet>
         <event-sheet>timer</event-sheet>
         <event-sheet>Event_splash_screen</event-sheet>
         <event-sheet>score</event-sheet>
+        <event-sheet>event_level2</event-sheet>
     </open-tabs>
     <properties>
         <property expanded="1" name="About" />

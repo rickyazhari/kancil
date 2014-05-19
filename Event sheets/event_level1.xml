@@ -6,5 +6,46 @@
         <include>score</include>
         <include>timer</include>
         <include>player_char</include>
+        <event-block any="1" sid="659209428204317">
+            <conditions>
+                <condition id="0" name="On collision with another object" sid="2177093176982646" type="kancil">
+                    <param id="0" name="Object">small_kaktus</param>
+                </condition>
+                <condition id="0" name="On collision with another object" sid="3661567684910709" type="kancil">
+                    <param id="0" name="Object">kaktus_tinggi</param>
+                </condition>
+                <condition id="0" name="On collision with another object" sid="2909799852521336" type="kancil">
+                    <param id="0" name="Object">batang</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action behavior="Flash" id="0" name="Flash" sid="1463406083381393" type="kancil">
+                    <param id="0" name="&apos;On&apos; time">0.1</param>
+                    <param id="1" name="&apos;Off&apos; time">0.1</param>
+                    <param id="2" name="Duration">1.2</param>
+                </action>
+                <action behavior="Solid" id="0" name="Set enabled" sid="3653570775464796" type="batang">
+                    <param id="0" name="State">0</param>
+                </action>
+                <action behavior="Solid" id="0" name="Set enabled" sid="6933598051273209" type="kaktus_tinggi">
+                    <param id="0" name="State">0</param>
+                </action>
+                <action behavior="Solid" id="0" name="Set enabled" sid="6217466748882789" type="small_kaktus">
+                    <param id="0" name="State">0</param>
+                </action>
+                <action id="-16" name="Wait" sid="7485746815588323" type="System">
+                    <param id="0" name="Seconds">1.0</param>
+                </action>
+                <action behavior="Solid" id="0" name="Set enabled" sid="1631971258262085" type="batang">
+                    <param id="0" name="State">1</param>
+                </action>
+                <action behavior="Solid" id="0" name="Set enabled" sid="8362324369071529" type="kaktus_tinggi">
+                    <param id="0" name="State">1</param>
+                </action>
+                <action behavior="Solid" id="0" name="Set enabled" sid="279832767602929" type="small_kaktus">
+                    <param id="0" name="State">1</param>
+                </action>
+            </actions>
+        </event-block>
     </events>
 </c2eventsheet>
