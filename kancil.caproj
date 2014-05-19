@@ -10,21 +10,21 @@
     <unique-id>38o7xfc4zxkfj</unique-id>
     <saved-with-version>13900</saved-with-version>
     <used-plugins>
-        <plugin author="Scirra" id="Mouse" version="1">Mouse</plugin>
-        <plugin author="Scirra" id="Text" version="1">Text</plugin>
-        <plugin author="Scirra" id="Touch" version="1">Touch</plugin>
         <plugin author="Scirra" id="Keyboard" version="1">Keyboard</plugin>
+        <plugin author="Scirra" id="Text" version="1">Text</plugin>
         <plugin author="Scirra" id="TiledBg" version="1">Tiled Background</plugin>
         <plugin author="Scirra" id="Sprite" version="1">Sprite</plugin>
+        <plugin author="Scirra" id="Touch" version="1">Touch</plugin>
+        <plugin author="Scirra" id="Mouse" version="1">Mouse</plugin>
     </used-plugins>
     <used-behaviors>
+        <behavior author="Scirra" id="Sin" version="1">Sine</behavior>
+        <behavior author="Scirra" id="Timer" version="1">Timer</behavior>
         <behavior author="Scirra" id="Anchor" version="1">Anchor</behavior>
         <behavior author="Scirra" id="Flash" version="1">Flash</behavior>
-        <behavior author="Scirra" id="Sin" version="1">Sine</behavior>
         <behavior author="Scirra" id="Platform" version="1">Platform</behavior>
-        <behavior author="Scirra" id="Timer" version="1">Timer</behavior>
-        <behavior author="Scirra" id="solid" version="1">Solid</behavior>
         <behavior author="Scirra" id="custom" version="1">Custom Movement</behavior>
+        <behavior author="Scirra" id="solid" version="1">Solid</behavior>
     </used-behaviors>
     <used-effects>
         <effect author="Viktor Korsun" id="water">Water</effect>
@@ -1321,14 +1321,12 @@
                 <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="6084014843589571" speed="5">
                     <frame duration="1" hotspotX="0.5" hotspotY="0.502203">
                         <collision-poly>
-                            <point x="0.0714286" y="0.0418502" />
-                            <point x="0.857143" y="0.0374449" />
-                            <point x="0.878571" y="0.303965" />
-                            <point x="0.903571" y="0.362335" />
-                            <point x="0.880357" y="0.406938" />
-                            <point x="0.871429" y="0.5" />
-                            <point x="0.942857" y="0.982379" />
-                            <point x="0.192857" y="0.993392" />
+                            <point x="0.128571" y="0.0396476" />
+                            <point x="0.835714" y="0.0506608" />
+                            <point x="0.935714" y="0.986784" />
+                            <point x="0.635714" y="0.988987" />
+                            <point x="0.342857" y="0.987885" />
+                            <point x="0.178571" y="0.986784" />
                         </collision-poly>
                     </frame>
                 </animation>
@@ -1392,6 +1390,7 @@
             <plugin id="Text" />
             <instance-variables>
                 <instance-variable comment="limit waktu" name="waktu" sid="5531774324965689" type="number" />
+                <instance-variable name="level" sid="2274653211283916" type="number" />
             </instance-variables>
             <behaviors>
                 <behavior-type name="Timer" sid="1551057626336212">
@@ -1626,6 +1625,22 @@
         <object-type name="lvlMap" sid="3143820931984718">
             <plugin id="TiledBg" />
             <texture />
+        </object-type>
+        <object-type name="menu_ob" sid="1400218156779448">
+            <plugin id="Sprite" />
+            <behaviors>
+                <behavior-type name="Anchor" sid="5183650808228574">
+                    <behavior id="Anchor" />
+                </behavior-type>
+                <behavior-type name="Solid" sid="2673029999314723">
+                    <behavior id="solid" />
+                </behavior-type>
+            </behaviors>
+            <animation-folder expanded="1">
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="9740518545635822" speed="5">
+                    <frame duration="1" hotspotX="0.637795" hotspotY="0.5" />
+                </animation>
+            </animation-folder>
         </object-type>
     </object-folder>
     <families />

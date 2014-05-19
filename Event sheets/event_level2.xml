@@ -3,6 +3,19 @@
     <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
     <name>event_level2</name>
     <events>
+        <include>score</include>
+        <include>timer</include>
         <include>player_char</include>
+        <event-block sid="9849615242293588">
+            <conditions>
+                <condition id="-2" name="On start of layout" sid="4150492176299468" type="System" />
+            </conditions>
+            <actions>
+                <action id="-10" name="Set value" sid="7153505186863959" type="timer">
+                    <param id="0" name="Instance variable">level</param>
+                    <param id="1" name="Value">2</param>
+                </action>
+            </actions>
+        </event-block>
     </events>
 </c2eventsheet>

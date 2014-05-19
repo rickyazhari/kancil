@@ -7,22 +7,53 @@
             <sub-events>
                 <event-block sid="4783620517437255">
                     <conditions>
-                        <condition id="-2" name="On start of layout" sid="87442553917389" type="System" />
+                        <condition id="-25" name="On loader layout complete" sid="87442553917389" type="System" />
                     </conditions>
                     <actions>
-                        <action id="-10" name="Set value" sid="1489005330267949" type="timer">
-                            <param id="0" name="Instance variable">waktu</param>
-                            <param id="1" name="Value">43</param>
-                        </action>
-                        <action id="0" name="Set text" sid="6669366594870772" type="timer">
-                            <param id="0" name="Text">timer.waktu</param>
-                        </action>
                         <action behavior="Timer" id="0" name="Start timer" sid="5117833823314867" type="timer">
                             <param id="0" name="Duration">1.0</param>
                             <param id="1" name="Type">1</param>
                             <param id="2" name="Tag">&quot;limit waktu&quot;</param>
                         </action>
                     </actions>
+                    <sub-events>
+                        <event-block sid="211803252985463">
+                            <conditions>
+                                <condition id="-7" name="Compare instance variable" sid="7377192987344692" type="timer">
+                                    <param id="0" name="Instance variable">level</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">1</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-10" name="Set value" sid="3187456103967531" type="timer">
+                                    <param id="0" name="Instance variable">waktu</param>
+                                    <param id="1" name="Value">43</param>
+                                </action>
+                                <action id="0" name="Set text" sid="456125115474609" type="timer">
+                                    <param id="0" name="Text">timer.waktu</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="8781888942821494">
+                            <conditions>
+                                <condition id="-7" name="Compare instance variable" sid="6140881768828986" type="timer">
+                                    <param id="0" name="Instance variable">level</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">2</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-10" name="Set value" sid="2144881468555236" type="timer">
+                                    <param id="0" name="Instance variable">waktu</param>
+                                    <param id="1" name="Value">58</param>
+                                </action>
+                                <action id="0" name="Set text" sid="2814429146795879" type="timer">
+                                    <param id="0" name="Text">timer.waktu</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
                 </event-block>
             </sub-events>
         </event-group>
