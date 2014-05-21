@@ -17,5 +17,18 @@
                 </action>
             </actions>
         </event-block>
+        <event-block sid="6310638285064581">
+            <conditions>
+                <condition behavior="LineOfSight" id="0" name="Has LOS to object" sid="202354362753403" type="kayu">
+                    <param id="0" name="Object">kancil</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action behavior="LineOfSight" id="2" name="Add obstacle" sid="7145839639370518" type="kayu">
+                    <param id="0" name="Obstacle">kancil</param>
+                </action>
+                <action id="-9" name="Destroy" sid="9333218418043968" type="kayu" />
+            </actions>
+        </event-block>
     </events>
 </c2eventsheet>
