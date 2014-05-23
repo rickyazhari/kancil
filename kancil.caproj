@@ -10,22 +10,21 @@
     <unique-id>38o7xfc4zxkfj</unique-id>
     <saved-with-version>13900</saved-with-version>
     <used-plugins>
+        <plugin author="Scirra" id="Keyboard" version="1">Keyboard</plugin>
         <plugin author="Scirra" id="Text" version="1">Text</plugin>
-        <plugin author="Scirra" id="Touch" version="1">Touch</plugin>
+        <plugin author="Scirra" id="Mouse" version="1">Mouse</plugin>
         <plugin author="Scirra" id="TiledBg" version="1">Tiled Background</plugin>
         <plugin author="Scirra" id="Sprite" version="1">Sprite</plugin>
-        <plugin author="Scirra" id="Mouse" version="1">Mouse</plugin>
-        <plugin author="Scirra" id="Keyboard" version="1">Keyboard</plugin>
+        <plugin author="Scirra" id="Touch" version="1">Touch</plugin>
     </used-plugins>
     <used-behaviors>
-        <behavior author="Scirra" id="Anchor" version="1">Anchor</behavior>
-        <behavior author="Scirra" id="Sin" version="1">Sine</behavior>
-        <behavior author="Scirra" id="Flash" version="1">Flash</behavior>
-        <behavior author="Scirra" id="LOS" version="1">Line Of Sight</behavior>
+        <behavior author="Scirra" id="custom" version="1">Custom Movement</behavior>
         <behavior author="Scirra" id="Platform" version="1">Platform</behavior>
+        <behavior author="Scirra" id="Anchor" version="1">Anchor</behavior>
+        <behavior author="Scirra" id="Flash" version="1">Flash</behavior>
+        <behavior author="Scirra" id="Sin" version="1">Sine</behavior>
         <behavior author="Scirra" id="Timer" version="1">Timer</behavior>
         <behavior author="Scirra" id="solid" version="1">Solid</behavior>
-        <behavior author="Scirra" id="custom" version="1">Custom Movement</behavior>
     </used-behaviors>
     <used-effects>
         <effect author="Viktor Korsun" id="water">Water</effect>
@@ -45,7 +44,7 @@
         <prop name="Enable WebGL">On</prop>
         <prop name="Fullscreen in browser">Scale outer</prop>
         <prop name="Hide address bar">No</prop>
-        <prop name="Loader style">Nothing (not recommended)</prop>
+        <prop name="Loader style">Progress bar &amp; logo</prop>
         <prop name="Pause on unfocus">Yes</prop>
         <prop name="Preview browser">(default)</prop>
         <prop name="Sampling">Linear</prop>
@@ -1633,9 +1632,6 @@
                 <behavior-type name="Anchor" sid="5183650808228574">
                     <behavior id="Anchor" />
                 </behavior-type>
-                <behavior-type name="Solid" sid="2673029999314723">
-                    <behavior id="solid" />
-                </behavior-type>
             </behaviors>
             <animation-folder expanded="1">
                 <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="9740518545635822" speed="5">
@@ -1685,14 +1681,11 @@
         <object-type name="kayu" sid="7496482213538386">
             <plugin id="Sprite" />
             <behaviors>
-                <behavior-type name="Solid" sid="414068277941312">
+                <behavior-type name="Sine" sid="1356097376140704">
+                    <behavior id="Sin" />
+                </behavior-type>
+                <behavior-type name="Solid" sid="6192506470050446">
                     <behavior id="solid" />
-                </behavior-type>
-                <behavior-type name="Platform" sid="4292564757894046">
-                    <behavior id="Platform" />
-                </behavior-type>
-                <behavior-type name="LineOfSight" sid="6857894564446573">
-                    <behavior id="LOS" />
                 </behavior-type>
             </behaviors>
             <animation-folder expanded="1">
@@ -1700,6 +1693,59 @@
                     <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
                 </animation>
             </animation-folder>
+        </object-type>
+        <object-type name="engsel1" sid="8560582386231808">
+            <plugin id="TiledBg" />
+            <texture />
+        </object-type>
+        <object-type name="engsel_petak" sid="733539833092221">
+            <plugin id="TiledBg" />
+            <texture />
+        </object-type>
+        <object-type name="floor2" sid="4254310418618313">
+            <plugin id="TiledBg" />
+            <behaviors>
+                <behavior-type name="Solid" sid="9794669429952752">
+                    <behavior id="solid" />
+                </behavior-type>
+            </behaviors>
+            <texture />
+        </object-type>
+        <object-type name="floor3" sid="8706375929692556">
+            <plugin id="TiledBg" />
+            <behaviors>
+                <behavior-type name="Solid" sid="5635545684078253">
+                    <behavior id="solid" />
+                </behavior-type>
+            </behaviors>
+            <texture />
+        </object-type>
+        <object-type name="floor4" sid="589908868291561">
+            <plugin id="TiledBg" />
+            <behaviors>
+                <behavior-type name="Solid" sid="1237006950309804">
+                    <behavior id="solid" />
+                </behavior-type>
+            </behaviors>
+            <texture />
+        </object-type>
+        <object-type name="floor5" sid="9624018666812134">
+            <plugin id="TiledBg" />
+            <behaviors>
+                <behavior-type name="Solid" sid="4738283973716149">
+                    <behavior id="solid" />
+                </behavior-type>
+            </behaviors>
+            <texture />
+        </object-type>
+        <object-type name="duri" sid="1544532271411668">
+            <plugin id="TiledBg" />
+            <behaviors>
+                <behavior-type name="Solid" sid="3712768249734663">
+                    <behavior id="solid" />
+                </behavior-type>
+            </behaviors>
+            <texture />
         </object-type>
     </object-folder>
     <families />
