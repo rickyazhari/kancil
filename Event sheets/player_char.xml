@@ -1166,7 +1166,7 @@
                 </event-block>
             </sub-events>
         </event-group>
-        <event-group collapsed="1" description="" sid="5376695614038627" title="shield mode">
+        <event-group description="" sid="5376695614038627" title="shield mode">
             <sub-events>
                 <event-block sid="1115373036989928">
                     <conditions>
@@ -1210,6 +1210,57 @@
                             <param id="1" name="Value">0</param>
                         </action>
                     </actions>
+                    <sub-events>
+                        <event-block sid="7431024269514693">
+                            <conditions>
+                                <condition behavior="Platform" id="2" name="Is on floor" sid="2573019296125744" type="kancil" />
+                            </conditions>
+                            <actions />
+                            <sub-events>
+                                <event-block any="1" sid="2974668951462405">
+                                    <conditions>
+                                        <condition id="-7" name="Compare instance variable" sid="5593999356227202" type="kancil">
+                                            <param id="0" name="Instance variable">sliding</param>
+                                            <param id="1" name="Comparison">2</param>
+                                            <param id="2" name="Value">1</param>
+                                        </condition>
+                                        <condition id="-7" name="Compare instance variable" sid="4492057734942908" type="kancil">
+                                            <param id="0" name="Instance variable">sliding</param>
+                                            <param id="1" name="Comparison">4</param>
+                                            <param id="2" name="Value">1</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions />
+                                    <sub-events>
+                                        <event-block sid="1882113246203837">
+                                            <conditions>
+                                                <condition id="-8" name="Is boolean instance variable set" sid="9922943188507674" type="kancil">
+                                                    <param id="0" name="Instance variable">booster</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions>
+                                                <action id="4" name="Set animation" sid="1334195431085481" type="kancil">
+                                                    <param id="0" name="Animation">&quot;boost&quot;</param>
+                                                    <param id="1" name="From">1</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                        <event-block sid="8263871208207274">
+                                            <conditions>
+                                                <condition id="-22" name="Else" sid="8236828431257597" type="System" />
+                                            </conditions>
+                                            <actions>
+                                                <action id="4" name="Set animation" sid="3347227275667342" type="kancil">
+                                                    <param id="0" name="Animation">&quot;lari&quot;</param>
+                                                    <param id="1" name="From">1</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                    </sub-events>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                    </sub-events>
                 </event-block>
             </sub-events>
         </event-group>
