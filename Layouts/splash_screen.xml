@@ -4,8 +4,8 @@
     <sid>2028397387576905</sid>
     <event-sheet>Event_splash_screen</event-sheet>
     <size>
-        <width>1024</width>
-        <height>512</height>
+        <width>640</width>
+        <height>480</height>
     </size>
     <margins>
         <horizontal>500</horizontal>
@@ -34,29 +34,14 @@
                         <initial-frame>0</initial-frame>
                         <collisions>Enabled</collisions>
                     </properties>
-                    <effect-instances>
-                        <effect-instance type="Water">
-                            <parameters>
-                                <angle>7</angle>
-                                <delta>20</delta>
-                                <emboss>0.3</emboss>
-                                <frequency>4</frequency>
-                                <intensity>3</intensity>
-                                <reflectivity>400</reflectivity>
-                                <speed>0.1</speed>
-                                <x-speed>0.3</x-speed>
-                                <y-speed>0.3</y-speed>
-                            </parameters>
-                        </effect-instance>
-                    </effect-instances>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>512</x>
-                        <y>257</y>
+                        <x>320</x>
+                        <y>240</y>
                         <z>0</z>
-                        <width>1020</width>
-                        <height>520</height>
+                        <width>640</width>
+                        <height>480</height>
                         <depth>0</depth>
                         <hotspotX>0.5</hotspotX>
                         <hotspotY>0.5</hotspotY>
