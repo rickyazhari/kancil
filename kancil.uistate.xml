@@ -17,9 +17,8 @@ you probably do not want to add any .uistate.xml files to the repository.-->
         <layout>level7</layout>
         <layout>level8</layout>
         <layout>level6</layout>
-        <layout>level4</layout>
+        <layout active="1">level4</layout>
         <layout>level2</layout>
-        <layout active="1">level3</layout>
         <layout>level3</layout>
         <layout>level5</layout>
         <layout>tutorial</layout>
@@ -27,9 +26,10 @@ you probably do not want to add any .uistate.xml files to the repository.-->
         <event-sheet>event_level1</event-sheet>
         <event-sheet>event_level_map</event-sheet>
         <event-sheet>timer</event-sheet>
-        <event-sheet active="1">Event_splash_screen</event-sheet>
+        <event-sheet>Event_splash_screen</event-sheet>
         <event-sheet>score</event-sheet>
         <event-sheet>event_level2</event-sheet>
+        <event-sheet>event_level3</event-sheet>
     </open-tabs>
     <properties>
         <property expanded="1" name="About" />
