@@ -10,19 +10,19 @@
     <unique-id>38o7xfc4zxkfj</unique-id>
     <saved-with-version>13900</saved-with-version>
     <used-plugins>
-        <plugin author="Scirra" id="Touch" version="1">Touch</plugin>
-        <plugin author="Scirra" id="TiledBg" version="1">Tiled Background</plugin>
+        <plugin author="Scirra" id="Text" version="1">Text</plugin>
         <plugin author="Scirra" id="Particles" version="1">Particles</plugin>
         <plugin author="Scirra" id="Sprite" version="1">Sprite</plugin>
-        <plugin author="Scirra" id="Text" version="1">Text</plugin>
         <plugin author="Scirra" id="Mouse" version="1">Mouse</plugin>
+        <plugin author="Scirra" id="TiledBg" version="1">Tiled Background</plugin>
+        <plugin author="Scirra" id="Touch" version="1">Touch</plugin>
         <plugin author="Scirra" id="Keyboard" version="1">Keyboard</plugin>
     </used-plugins>
     <used-behaviors>
         <behavior author="Scirra" id="Anchor" version="1">Anchor</behavior>
-        <behavior author="Scirra" id="custom" version="1">Custom Movement</behavior>
-        <behavior author="Scirra" id="Flash" version="1">Flash</behavior>
         <behavior author="Scirra" id="Platform" version="1">Platform</behavior>
+        <behavior author="Scirra" id="Flash" version="1">Flash</behavior>
+        <behavior author="Scirra" id="custom" version="1">Custom Movement</behavior>
         <behavior author="Scirra" id="Sin" version="1">Sine</behavior>
         <behavior author="Scirra" id="Timer" version="1">Timer</behavior>
         <behavior author="Scirra" id="jumpthru" version="1">Jump-thru</behavior>
@@ -38,7 +38,7 @@
     </window-size>
     <pixel-rounding>1</pixel-rounding>
     <first-layout>level1</first-layout>
-    <use-loader-layout>1</use-loader-layout>
+    <use-loader-layout>0</use-loader-layout>
     <configuration-settings>
         <prop name="Clear background">Yes</prop>
         <prop name="Enable WebGL">On</prop>
@@ -50,7 +50,7 @@
         <prop name="Sampling">Linear</prop>
         <prop name="Use iOS retina display">All devices</prop>
     </configuration-settings>
-    <object-folder expanded="1">
+    <object-folder expanded="0">
         <object-type name="rumput" sid="3200280633005">
             <plugin id="TiledBg" />
             <behaviors>
@@ -1848,9 +1848,165 @@
             <plugin id="TiledBg" />
             <texture />
         </object-type>
+        <object-type name="kayu_atas" sid="9069753088510142">
+            <plugin id="Sprite" />
+            <behaviors>
+                <behavior-type name="Solid" sid="2085254015215012">
+                    <behavior id="solid" />
+                </behavior-type>
+                <behavior-type name="Sine" sid="507209416147011">
+                    <behavior id="Sin" />
+                </behavior-type>
+            </behaviors>
+            <animation-folder expanded="1">
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="7758310453750323" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="BonekaSawah" sid="9377996656807612">
+            <plugin id="Sprite" />
+            <behaviors>
+                <behavior-type name="Solid" sid="8411134288248652">
+                    <behavior id="solid" />
+                </behavior-type>
+            </behaviors>
+            <animation-folder expanded="1">
+                <animation framecount="4" loop="1" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="5523702796402729" speed="5">
+                    <frame duration="1" hotspotX="0.57554" hotspotY="0.229008">
+                        <collision-poly>
+                            <point x="0.446043" y="0.145038" />
+                            <point x="0.482014" y="0.0229008" />
+                            <point x="0.582734" y="0.167939" />
+                            <point x="0.683453" y="0.206107" />
+                            <point x="0.978417" y="0.435114" />
+                            <point x="0.489209" y="1" />
+                            <point x="0.028777" y="0.59542" />
+                            <point x="0.366906" y="0.229008" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.536913" hotspotY="0.229008">
+                        <collision-poly>
+                            <point x="0.47651" y="0.160305" />
+                            <point x="0.510067" y="0.0229008" />
+                            <point x="0.691275" y="0.206107" />
+                            <point x="0.758389" y="0.351145" />
+                            <point x="0.986577" y="0.442748" />
+                            <point x="0.510067" y="1" />
+                            <point x="0.0201343" y="0.519084" />
+                            <point x="0.328859" y="0.274809" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.535484" hotspotY="0.223077">
+                        <collision-poly>
+                            <point x="0.470968" y="0.146154" />
+                            <point x="0.496774" y="0.0307692" />
+                            <point x="0.580645" y="0.169231" />
+                            <point x="0.658065" y="0.223077" />
+                            <point x="0.954839" y="0.476923" />
+                            <point x="0.574194" y="1" />
+                            <point x="0.00645163" y="0.492308" />
+                            <point x="0.354839" y="0.223077" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.536913" hotspotY="0.229008">
+                        <collision-poly>
+                            <point x="0.47651" y="0.160305" />
+                            <point x="0.516778" y="0.0381679" />
+                            <point x="0.597315" y="0.160305" />
+                            <point x="0.704698" y="0.229008" />
+                            <point x="0.959732" y="0.442748" />
+                            <point x="0.516778" y="1" />
+                            <point x="0.0335571" y="0.541985" />
+                            <point x="0.355705" y="0.267176" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="penghalangatas" sid="5478991435439923">
+            <plugin id="TiledBg" />
+            <texture />
+        </object-type>
+        <object-type name="Penghalang_Atas" sid="3281516104584211">
+            <plugin id="Sprite" />
+            <behaviors>
+                <behavior-type name="Solid" sid="8563864370423173">
+                    <behavior id="solid" />
+                </behavior-type>
+            </behaviors>
+            <animation-folder expanded="1">
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="4073493818222659" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="BonekaSawahGerak" sid="305792410414448">
+            <plugin id="Sprite" />
+            <behaviors>
+                <behavior-type name="Solid" sid="2022211047712618">
+                    <behavior id="solid" />
+                </behavior-type>
+                <behavior-type name="Sine" sid="1470627271792292">
+                    <behavior id="Sin" />
+                </behavior-type>
+            </behaviors>
+            <animation-folder expanded="1">
+                <animation framecount="4" loop="1" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="5644327935050766" speed="5">
+                    <frame duration="1" hotspotX="0.57554" hotspotY="0.229008">
+                        <collision-poly>
+                            <point x="0.446043" y="0.145038" />
+                            <point x="0.482014" y="0.0229008" />
+                            <point x="0.582734" y="0.167939" />
+                            <point x="0.683453" y="0.206107" />
+                            <point x="0.978417" y="0.435114" />
+                            <point x="0.489209" y="1" />
+                            <point x="0.028777" y="0.59542" />
+                            <point x="0.366906" y="0.229008" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.536913" hotspotY="0.229008">
+                        <collision-poly>
+                            <point x="0.47651" y="0.160305" />
+                            <point x="0.510067" y="0.0229008" />
+                            <point x="0.691275" y="0.206107" />
+                            <point x="0.758389" y="0.351145" />
+                            <point x="0.986577" y="0.442748" />
+                            <point x="0.510067" y="1" />
+                            <point x="0.0201343" y="0.519084" />
+                            <point x="0.328859" y="0.274809" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.535484" hotspotY="0.223077">
+                        <collision-poly>
+                            <point x="0.470968" y="0.146154" />
+                            <point x="0.496774" y="0.0307692" />
+                            <point x="0.580645" y="0.169231" />
+                            <point x="0.658065" y="0.223077" />
+                            <point x="0.954839" y="0.476923" />
+                            <point x="0.574194" y="1" />
+                            <point x="0.00645163" y="0.492308" />
+                            <point x="0.354839" y="0.223077" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.536913" hotspotY="0.229008">
+                        <collision-poly>
+                            <point x="0.47651" y="0.160305" />
+                            <point x="0.516778" y="0.0381679" />
+                            <point x="0.597315" y="0.160305" />
+                            <point x="0.704698" y="0.229008" />
+                            <point x="0.959732" y="0.442748" />
+                            <point x="0.516778" y="1" />
+                            <point x="0.0335571" y="0.541985" />
+                            <point x="0.355705" y="0.267176" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
     </object-folder>
     <families />
-    <layout-folder expanded="1">
+    <layout-folder expanded="0">
         <layout>splash_screen.xml</layout>
         <layout>menu.xml</layout>
         <layout>level_map.xml</layout>
@@ -1864,7 +2020,7 @@
         <layout>level7.xml</layout>
         <layout>level8.xml</layout>
     </layout-folder>
-    <event-folder expanded="1">
+    <event-folder expanded="0">
         <event-sheet>Event_splash_screen.xml</event-sheet>
         <event-sheet>event_menu.xml</event-sheet>
         <event-sheet>event_level_map.xml</event-sheet>
@@ -1891,8 +2047,8 @@
     </global-instances>
     <sounds-folder expanded="1" />
     <music-folder expanded="1" />
-    <files-folder expanded="0">
-        <file-folder expanded="0" name="Icons">
+    <files-folder expanded="1">
+        <file-folder expanded="1" name="Icons">
             <file name="icon-16.png" />
             <file name="icon-32.png" />
             <file name="icon-114.png" />
