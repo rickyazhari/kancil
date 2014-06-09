@@ -4,11 +4,7 @@
     <name>Event_splash_screen</name>
     <events>
         <event-block sid="1400288603538134">
-            <conditions>
-                <condition id="4" name="On finished" sid="2155819633290423" type="Sprite7">
-                    <param id="0" name="Animation">&quot;default&quot;</param>
-                </condition>
-            </conditions>
+            <conditions />
             <actions>
                 <action id="-25" name="Go to layout (by name)" sid="8242059662066329" type="System">
                     <param id="0" name="Layout">&quot;level1&quot;</param>
