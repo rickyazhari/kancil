@@ -14,10 +14,10 @@ you probably do not want to add any .uistate.xml files to the repository.-->
         <layout>menu</layout>
         <layout>level_map</layout>
         <layout>level1</layout>
-        <layout active="1">level7</layout>
+        <layout>level7</layout>
         <layout>level8</layout>
         <layout>level6</layout>
-        <layout>level4</layout>
+        <layout active="1">level4</layout>
         <layout>level2</layout>
         <layout>level3</layout>
         <layout>level5</layout>
