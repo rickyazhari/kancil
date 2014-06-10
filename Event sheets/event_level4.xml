@@ -6,5 +6,16 @@
         <include>timer</include>
         <include>score</include>
         <include>player_char</include>
+        <event-block sid="4184815081252817">
+            <conditions>
+                <condition id="-2" name="On start of layout" sid="7355568889723595" type="System" />
+            </conditions>
+            <actions>
+                <action id="-10" name="Set value" sid="8981720312851921" type="timer">
+                    <param id="0" name="Instance variable">level</param>
+                    <param id="1" name="Value">4</param>
+                </action>
+            </actions>
+        </event-block>
     </events>
 </c2eventsheet>
