@@ -16,10 +16,10 @@ you probably do not want to add any .uistate.xml files to the repository.-->
         <layout>level7</layout>
         <layout>level8</layout>
         <layout>level6</layout>
-        <layout active="1">level4</layout>
+        <layout>level4</layout>
         <layout>level2</layout>
         <layout>level3</layout>
-        <layout>level5</layout>
+        <layout active="1">level5</layout>
         <event-sheet>player_char</event-sheet>
         <event-sheet>event_level1</event-sheet>
         <event-sheet>event_level_map</event-sheet>
