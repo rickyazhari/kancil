@@ -4,7 +4,7 @@
     <sid>4156300747957301</sid>
     <event-sheet>event_level6</event-sheet>
     <size>
-        <width>12800</width>
+        <width>36000</width>
         <height>512</height>
     </size>
     <margins>
@@ -36,9 +36,9 @@
                     <effect-fallback>0</effect-fallback>
                     <world>
                         <x>0</x>
-                        <y>-1</y>
+                        <y>0</y>
                         <z>0</z>
-                        <width>12802</width>
+                        <width>36000</width>
                         <height>512</height>
                         <depth>0</depth>
                         <hotspotX>0</hotspotX>
@@ -55,10 +55,10 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>-0.604614258</x>
-                        <y>350.27355957</y>
+                        <x>0</x>
+                        <y>350</y>
                         <z>0</z>
-                        <width>3353</width>
+                        <width>36000</width>
                         <height>35</height>
                         <depth>0</depth>
                         <hotspotX>0</hotspotX>
@@ -102,7 +102,7 @@
                         <x>0</x>
                         <y>385</y>
                         <z>0</z>
-                        <width>3350</width>
+                        <width>36000</width>
                         <height>126</height>
                         <depth>0</depth>
                         <hotspotX>0</hotspotX>
