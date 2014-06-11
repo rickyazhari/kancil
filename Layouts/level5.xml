@@ -47,26 +47,6 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="Alas3d" uid="2572">
-                    <properties>
-                        <initial-visibility>Visible</initial-visibility>
-                        <hotspot>Top-left</hotspot>
-                    </properties>
-                    <blend-mode>0</blend-mode>
-                    <effect-fallback>0</effect-fallback>
-                    <world>
-                        <x>158</x>
-                        <y>19</y>
-                        <z>0</z>
-                        <width>48</width>
-                        <height>26</height>
-                        <depth>0</depth>
-                        <hotspotX>0</hotspotX>
-                        <hotspotY>0</hotspotY>
-                        <angle>0</angle>
-                        <opacity>1</opacity>
-                    </world>
-                </instance>
                 <instance type="floor4" uid="2573">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
