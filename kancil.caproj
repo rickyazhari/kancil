@@ -10,17 +10,17 @@
     <unique-id>38o7xfc4zxkfj</unique-id>
     <saved-with-version>13900</saved-with-version>
     <used-plugins>
-        <plugin author="Scirra" id="Mouse" version="1">Mouse</plugin>
-        <plugin author="Scirra" id="Text" version="1">Text</plugin>
         <plugin author="Scirra" id="Particles" version="1">Particles</plugin>
         <plugin author="Scirra" id="Sprite" version="1">Sprite</plugin>
-        <plugin author="Scirra" id="TiledBg" version="1">Tiled Background</plugin>
+        <plugin author="Scirra" id="Text" version="1">Text</plugin>
         <plugin author="Scirra" id="Touch" version="1">Touch</plugin>
+        <plugin author="Scirra" id="Mouse" version="1">Mouse</plugin>
         <plugin author="Scirra" id="Keyboard" version="1">Keyboard</plugin>
+        <plugin author="Scirra" id="TiledBg" version="1">Tiled Background</plugin>
     </used-plugins>
     <used-behaviors>
-        <behavior author="Scirra" id="Anchor" version="1">Anchor</behavior>
         <behavior author="Scirra" id="Platform" version="1">Platform</behavior>
+        <behavior author="Scirra" id="Anchor" version="1">Anchor</behavior>
         <behavior author="Scirra" id="Flash" version="1">Flash</behavior>
         <behavior author="Scirra" id="Sin" version="1">Sine</behavior>
         <behavior author="Scirra" id="Timer" version="1">Timer</behavior>
@@ -1914,6 +1914,11 @@
         </object-type>
         <object-type name="kotak_tinggi" sid="6467786775855347">
             <plugin id="Sprite" />
+            <behaviors>
+                <behavior-type name="Solid" sid="5673584841582474">
+                    <behavior id="solid" />
+                </behavior-type>
+            </behaviors>
             <animation-folder expanded="1">
                 <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="6515108944108739" speed="5">
                     <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
