@@ -6,7 +6,7 @@ you probably do not want to add any .uistate.xml files to the repository.-->
     <camera>
         <position-x>530.113</position-x>
         <position-y>256</position-y>
-        <position-z>262.784</position-z>
+        <position-z>179.485</position-z>
         <lookat-x>530.113</lookat-x>
         <lookat-y>256</lookat-y>
         <lookat-z>0</lookat-z>

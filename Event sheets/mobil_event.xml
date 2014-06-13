@@ -1,0 +1,198 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>mobil_event</name>
+    <events>
+        <include>speed_range</include>
+        <event-block sid="2128954408334629">
+            <conditions>
+                <condition id="-1" name="Every tick" sid="6447209746965138" type="System" />
+            </conditions>
+            <actions>
+                <action id="-9" name="Set value" sid="1491467345994449" type="System">
+                    <param id="0" name="Variable">range</param>
+                    <param id="1" name="Value">mobil.X - kancil.X</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-group description="" sid="2960062128388967" title="mobil jalan">
+            <sub-events>
+                <event-block sid="5454651644852416">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="4646748088213894" type="System">
+                            <param id="0" name="Variable">range</param>
+                            <param id="1" name="Comparison">3</param>
+                            <param id="2" name="Value">500</param>
+                        </condition>
+                        <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="5321755571155205" type="Mobil">
+                            <param id="0" name="Instance variable">maju</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action behavior="CustomMovement" id="2" name="Set speed" sid="9017415171013426" type="Mobil">
+                            <param id="0" name="Which">1</param>
+                            <param id="1" name="Speed">kancil.speed</param>
+                        </action>
+                        <action behavior="CustomMovement" id="3" name="Accelerate" sid="4369929734926267" type="Mobil">
+                            <param id="0" name="Which">0</param>
+                            <param id="1" name="Acceleration">500</param>
+                        </action>
+                        <action id="-13" name="Set boolean" sid="8524776078696315" type="Mobil">
+                            <param id="0" name="Instance variable">maju</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                        <action behavior="Timer" id="0" name="Start timer" sid="8691560886121109" type="Mobil">
+                            <param id="0" name="Duration">0.5</param>
+                            <param id="1" name="Type">1</param>
+                            <param id="2" name="Tag">&quot;lempar&quot;</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="3998879656643113">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="3757520084368379" type="System">
+                            <param id="0" name="Variable">range</param>
+                            <param id="1" name="Comparison">3</param>
+                            <param id="2" name="Value">500</param>
+                        </condition>
+                        <condition id="-8" name="Is boolean instance variable set" sid="1634734001868395" type="Mobil">
+                            <param id="0" name="Instance variable">maju</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action behavior="CustomMovement" id="2" name="Set speed" sid="9975519242725663" type="Mobil">
+                            <param id="0" name="Which">1</param>
+                            <param id="1" name="Speed">kancil.speed</param>
+                        </action>
+                        <action behavior="CustomMovement" id="3" name="Accelerate" sid="1804997105822345" type="Mobil">
+                            <param id="0" name="Which">0</param>
+                            <param id="1" name="Acceleration">500</param>
+                        </action>
+                        <action id="-13" name="Set boolean" sid="9853726535754742" type="Mobil">
+                            <param id="0" name="Instance variable">maju</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                        <action behavior="Timer" id="0" name="Start timer" sid="4054381035416155" type="Mobil">
+                            <param id="0" name="Duration">1.0</param>
+                            <param id="1" name="Type">1</param>
+                            <param id="2" name="Tag">&quot;lempar&quot;</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="8078909979708055">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="9132120073674098" type="System">
+                            <param id="0" name="Variable">range</param>
+                            <param id="1" name="Comparison">5</param>
+                            <param id="2" name="Value">650</param>
+                        </condition>
+                        <condition id="-14" name="Compare variable" sid="2211959443178861" type="System">
+                            <param id="0" name="Variable">range</param>
+                            <param id="1" name="Comparison">2</param>
+                            <param id="2" name="Value">700</param>
+                        </condition>
+                        <condition id="-8" name="Is boolean instance variable set" sid="7386153601546093" type="Mobil">
+                            <param id="0" name="Instance variable">maju</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action behavior="CustomMovement" id="2" name="Set speed" sid="8576212122998898" type="Mobil">
+                            <param id="0" name="Which">1</param>
+                            <param id="1" name="Speed">kancil.speed - 40</param>
+                        </action>
+                        <action behavior="Timer" id="1" name="Stop timer" sid="7171845662310518" type="Mobil">
+                            <param id="0" name="Tag">&quot;lempar&quot;</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="2557949267197207">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="8414711475347714" type="System">
+                            <param id="0" name="Variable">range</param>
+                            <param id="1" name="Comparison">5</param>
+                            <param id="2" name="Value">700</param>
+                        </condition>
+                        <condition id="-8" name="Is boolean instance variable set" sid="5378259840988695" type="Mobil">
+                            <param id="0" name="Instance variable">maju</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action behavior="CustomMovement" id="2" name="Set speed" sid="4029154361110997" type="Mobil">
+                            <param id="0" name="Which">1</param>
+                            <param id="1" name="Speed">kancil.speed - 80</param>
+                        </action>
+                        <action behavior="Timer" id="1" name="Stop timer" sid="2783337428917464" type="Mobil">
+                            <param id="0" name="Tag">&quot;lempar&quot;</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-group description="" sid="846547470492133" title="timer aktif">
+            <sub-events>
+                <event-block sid="3189489226739716">
+                    <conditions>
+                        <condition behavior="Timer" id="0" name="On timer" sid="2256654976451165" type="Mobil">
+                            <param id="0" name="Tag">&quot;lempar&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="5542281190506004">
+                            <conditions>
+                                <condition id="-7" name="Compare instance variable" sid="7590258174160954" type="Mobil">
+                                    <param id="0" name="Instance variable">rentang</param>
+                                    <param id="1" name="Comparison">4</param>
+                                    <param id="2" name="Value">0</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-10" name="Set value" sid="3299762617736317" type="Mobil">
+                                    <param id="0" name="Instance variable">rentang</param>
+                                    <param id="1" name="Value">mobil.rentang - 1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block sid="8917074683883111">
+                    <conditions>
+                        <condition id="-7" name="Compare instance variable" sid="4527391800936887" type="Mobil">
+                            <param id="0" name="Instance variable">rentang</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">0</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-13" name="Set boolean" sid="8452421445017673" type="Mobil">
+                            <param id="0" name="Instance variable">box</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                        <action id="-10" name="Set value" sid="2758320671182892" type="Mobil">
+                            <param id="0" name="Instance variable">rentang</param>
+                            <param id="1" name="Value">3</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="8614472982069193">
+                    <conditions>
+                        <condition id="-8" name="Is boolean instance variable set" sid="8961096996369053" type="Mobil">
+                            <param id="0" name="Instance variable">box</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Spawn another object" sid="7953093435961185" type="Mobil">
+                            <param id="0" name="Object">boxkecil_physic</param>
+                            <param id="1" name="Layer">&quot;game&quot;</param>
+                            <param id="2" name="Image point">0</param>
+                        </action>
+                        <action id="-13" name="Set boolean" sid="9264983269083952" type="Mobil">
+                            <param id="0" name="Instance variable">box</param>
+                            <param id="1" name="Value">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+    </events>
+</c2eventsheet>

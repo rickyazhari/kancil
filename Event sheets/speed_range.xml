@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>speed_range</name>
+    <events>
+        <variable constant="0" name="range" sid="2553710105023158" static="0" type="number">0</variable>
+        <variable constant="0" name="speed" sid="2445934530544092" static="0" type="number">0</variable>
+        <event-block sid="9495680439989075">
+            <conditions>
+                <condition id="-2" name="On start of layout" sid="2423275719703555" type="System" />
+            </conditions>
+            <actions>
+                <action id="-9" name="Set value" sid="5006634830283349" type="System">
+                    <param id="0" name="Variable">speed</param>
+                    <param id="1" name="Value">kancil.CustomMovement.Speed</param>
+                </action>
+            </actions>
+        </event-block>
+    </events>
+</c2eventsheet>

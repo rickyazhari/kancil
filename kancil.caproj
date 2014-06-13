@@ -10,23 +10,24 @@
     <unique-id>38o7xfc4zxkfj</unique-id>
     <saved-with-version>13900</saved-with-version>
     <used-plugins>
-        <plugin author="Scirra" id="Particles" version="1">Particles</plugin>
-        <plugin author="Scirra" id="Sprite" version="1">Sprite</plugin>
-        <plugin author="Scirra" id="Text" version="1">Text</plugin>
-        <plugin author="Scirra" id="Touch" version="1">Touch</plugin>
-        <plugin author="Scirra" id="Mouse" version="1">Mouse</plugin>
         <plugin author="Scirra" id="Keyboard" version="1">Keyboard</plugin>
+        <plugin author="Scirra" id="Touch" version="1">Touch</plugin>
+        <plugin author="Scirra" id="Text" version="1">Text</plugin>
+        <plugin author="Scirra" id="Mouse" version="1">Mouse</plugin>
+        <plugin author="Scirra" id="Particles" version="1">Particles</plugin>
         <plugin author="Scirra" id="TiledBg" version="1">Tiled Background</plugin>
+        <plugin author="Scirra" id="Sprite" version="1">Sprite</plugin>
     </used-plugins>
     <used-behaviors>
-        <behavior author="Scirra" id="Platform" version="1">Platform</behavior>
         <behavior author="Scirra" id="Anchor" version="1">Anchor</behavior>
         <behavior author="Scirra" id="Flash" version="1">Flash</behavior>
+        <behavior author="Scirra" id="Physics" version="1">Physics</behavior>
         <behavior author="Scirra" id="Sin" version="1">Sine</behavior>
+        <behavior author="Scirra" id="Platform" version="1">Platform</behavior>
         <behavior author="Scirra" id="Timer" version="1">Timer</behavior>
-        <behavior author="Scirra" id="custom" version="1">Custom Movement</behavior>
         <behavior author="Scirra" id="solid" version="1">Solid</behavior>
         <behavior author="Scirra" id="jumpthru" version="1">Jump-thru</behavior>
+        <behavior author="Scirra" id="custom" version="1">Custom Movement</behavior>
     </used-behaviors>
     <used-effects />
     <configurations>
@@ -1707,6 +1708,9 @@
                 <behavior-type name="Solid" sid="1237006950309804">
                     <behavior id="solid" />
                 </behavior-type>
+                <behavior-type name="Physics" sid="1098619300474039">
+                    <behavior id="Physics" />
+                </behavior-type>
             </behaviors>
             <texture />
         </object-type>
@@ -1899,7 +1903,7 @@
             <plugin id="TiledBg" />
             <texture />
         </object-type>
-        <object-type name="boxkecil" sid="9465452636863861">
+        <object-type global="1" name="boxkecil" sid="9465452636863861">
             <plugin id="Sprite" />
             <behaviors>
                 <behavior-type name="Solid" sid="741168949501789">
@@ -1912,7 +1916,7 @@
                 </animation>
             </animation-folder>
         </object-type>
-        <object-type name="kotak_tinggi" sid="6467786775855347">
+        <object-type global="1" name="kotak_tinggi" sid="6467786775855347">
             <plugin id="Sprite" />
             <behaviors>
                 <behavior-type name="Solid" sid="5673584841582474">
@@ -1921,6 +1925,92 @@
             </behaviors>
             <animation-folder expanded="1">
                 <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="6515108944108739" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Mobil" sid="2289098750451382">
+            <plugin id="Sprite" />
+            <instance-variables>
+                <instance-variable name="maju" sid="851077045625042" type="boolean" />
+                <instance-variable name="rentang" sid="9986818762896565" type="number" />
+                <instance-variable name="box" sid="4784405544566551" type="boolean" />
+            </instance-variables>
+            <behaviors>
+                <behavior-type name="Solid" sid="1178950893197025">
+                    <behavior id="solid" />
+                </behavior-type>
+                <behavior-type name="CustomMovement" sid="1091292485096895">
+                    <behavior id="custom" />
+                </behavior-type>
+                <behavior-type name="Timer" sid="9608385288537282">
+                    <behavior id="Timer" />
+                </behavior-type>
+                <behavior-type name="Physics" sid="9213475414891268">
+                    <behavior id="Physics" />
+                </behavior-type>
+            </behaviors>
+            <animation-folder expanded="1">
+                <animation framecount="4" loop="1" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="3303137709297093" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5">
+                        <collision-poly>
+                            <point x="0.12" y="0.63" />
+                            <point x="0.54" y="0.45" />
+                            <point x="0.87" y="0.66" />
+                            <point x="0.87" y="1" />
+                            <point x="0.47" y="1" />
+                            <point x="0.11" y="1" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5">
+                        <collision-poly>
+                            <point x="0.39" y="0.52" />
+                            <point x="0.53" y="0.48" />
+                            <point x="0.71" y="0.49" />
+                            <point x="0.85" y="0.67" />
+                            <point x="0.88" y="1" />
+                            <point x="0.5" y="1" />
+                            <point x="0.11" y="1" />
+                            <point x="0.12" y="0.69" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5">
+                        <collision-poly>
+                            <point x="0.11" y="0.69" />
+                            <point x="0.57" y="0.49" />
+                            <point x="0.85" y="0.65" />
+                            <point x="0.85" y="1" />
+                            <point x="0.49" y="1" />
+                            <point x="0.1" y="1" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5">
+                        <collision-poly>
+                            <point x="0.42" y="0.61" />
+                            <point x="0.55" y="0.45" />
+                            <point x="0.7" y="0.54" />
+                            <point x="0.82" y="0.64" />
+                            <point x="0.89" y="1" />
+                            <point x="0.5" y="1" />
+                            <point x="0.12" y="1" />
+                            <point x="0.11" y="0.69" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="boxkecil_physic" sid="4107351237900343">
+            <plugin id="Sprite" />
+            <behaviors>
+                <behavior-type name="Solid" sid="2826814479281382">
+                    <behavior id="solid" />
+                </behavior-type>
+                <behavior-type name="Physics" sid="1744397705493551">
+                    <behavior id="Physics" />
+                </behavior-type>
+            </behaviors>
+            <animation-folder expanded="1">
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="272951968139754" speed="5">
                     <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
                 </animation>
             </animation-folder>
@@ -1955,6 +2045,8 @@
         <event-sheet>player_char.xml</event-sheet>
         <event-sheet>timer.xml</event-sheet>
         <event-sheet>score.xml</event-sheet>
+        <event-sheet>speed_range.xml</event-sheet>
+        <event-sheet>mobil_event.xml</event-sheet>
     </event-folder>
     <global-instances>
         <global-instance type="Keyboard" uid="2773" />

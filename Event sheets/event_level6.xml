@@ -2,5 +2,10 @@
 <c2eventsheet>
     <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
     <name>event_level6</name>
-    <events />
+    <events>
+        <include>mobil_event</include>
+        <include>timer</include>
+        <include>score</include>
+        <include>player_char</include>
+    </events>
 </c2eventsheet>

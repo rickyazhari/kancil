@@ -3,7 +3,7 @@
     <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
     <name>player_char</name>
     <events>
-        <event-group collapsed="1" description="" sid="386286963284222" title="general">
+        <event-group description="" sid="386286963284222" title="general">
             <sub-events>
                 <event-block any="1" sid="2082030108452163">
                     <conditions>
@@ -322,7 +322,7 @@
                 </event-block>
             </sub-events>
         </event-group>
-        <event-group description="" sid="5674974752222511" title="jump dan double jump">
+        <event-group collapsed="1" description="" sid="5674974752222511" title="jump dan double jump">
             <sub-events>
                 <event-block sid="9459400969129721">
                     <conditions>
@@ -1056,7 +1056,7 @@
                                     <param id="0" name="Tag">&quot;boost_speed&quot;</param>
                                 </action>
                                 <action behavior="Timer" id="0" name="Start timer" sid="4465521642902964" type="kancil">
-                                    <param id="0" name="Duration">0.3</param>
+                                    <param id="0" name="Duration">1.0</param>
                                     <param id="1" name="Type">1</param>
                                     <param id="2" name="Tag">&quot;reduce_boost&quot;</param>
                                 </action>
