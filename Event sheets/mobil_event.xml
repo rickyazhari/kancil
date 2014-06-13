@@ -27,6 +27,11 @@
                         <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="5321755571155205" type="Mobil">
                             <param id="0" name="Instance variable">maju</param>
                         </condition>
+                        <condition id="-14" name="Compare variable" sid="5758509863184436" type="System">
+                            <param id="0" name="Variable">range</param>
+                            <param id="1" name="Comparison">4</param>
+                            <param id="2" name="Value">200</param>
+                        </condition>
                     </conditions>
                     <actions>
                         <action behavior="CustomMovement" id="2" name="Set speed" sid="9017415171013426" type="Mobil">
@@ -57,6 +62,11 @@
                         </condition>
                         <condition id="-8" name="Is boolean instance variable set" sid="1634734001868395" type="Mobil">
                             <param id="0" name="Instance variable">maju</param>
+                        </condition>
+                        <condition id="-14" name="Compare variable" sid="9171265810474623" type="System">
+                            <param id="0" name="Variable">range</param>
+                            <param id="1" name="Comparison">4</param>
+                            <param id="2" name="Value">200</param>
                         </condition>
                     </conditions>
                     <actions>
