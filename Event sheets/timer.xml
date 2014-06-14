@@ -107,6 +107,24 @@
                                 </action>
                             </actions>
                         </event-block>
+                        <event-block sid="8551433977416618">
+                            <conditions>
+                                <condition id="-7" name="Compare instance variable" sid="6818961269016347" type="timer">
+                                    <param id="0" name="Instance variable">level</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">6</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-10" name="Set value" sid="1885130248703138" type="timer">
+                                    <param id="0" name="Instance variable">waktu</param>
+                                    <param id="1" name="Value">78</param>
+                                </action>
+                                <action id="0" name="Set text" sid="7531792142688519" type="timer">
+                                    <param id="0" name="Text">timer.waktu</param>
+                                </action>
+                            </actions>
+                        </event-block>
                     </sub-events>
                 </event-block>
             </sub-events>

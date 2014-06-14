@@ -13,6 +13,9 @@
                     <param id="0" name="Variable">range</param>
                     <param id="1" name="Value">mobil.X - kancil.X</param>
                 </action>
+                <action id="0" name="Set text" sid="9135741526941112" type="score">
+                    <param id="0" name="Text">boxkecil_physic.lentur</param>
+                </action>
             </actions>
         </event-block>
         <event-group description="" sid="2960062128388967" title="mobil jalan">
@@ -83,7 +86,7 @@
                             <param id="1" name="Value">1</param>
                         </action>
                         <action behavior="Timer" id="0" name="Start timer" sid="4054381035416155" type="Mobil">
-                            <param id="0" name="Duration">1.0</param>
+                            <param id="0" name="Duration">0.65</param>
                             <param id="1" name="Type">1</param>
                             <param id="2" name="Tag">&quot;lempar&quot;</param>
                         </action>
@@ -110,9 +113,6 @@
                             <param id="0" name="Which">1</param>
                             <param id="1" name="Speed">kancil.speed - 40</param>
                         </action>
-                        <action behavior="Timer" id="1" name="Stop timer" sid="7171845662310518" type="Mobil">
-                            <param id="0" name="Tag">&quot;lempar&quot;</param>
-                        </action>
                     </actions>
                 </event-block>
                 <event-block sid="2557949267197207">
@@ -131,9 +131,6 @@
                             <param id="0" name="Which">1</param>
                             <param id="1" name="Speed">kancil.speed - 80</param>
                         </action>
-                        <action behavior="Timer" id="1" name="Stop timer" sid="2783337428917464" type="Mobil">
-                            <param id="0" name="Tag">&quot;lempar&quot;</param>
-                        </action>
                     </actions>
                 </event-block>
             </sub-events>
@@ -148,6 +145,32 @@
                     </conditions>
                     <actions />
                     <sub-events>
+                        <event-block sid="8917074683883111">
+                            <conditions>
+                                <condition id="-7" name="Compare instance variable" sid="4527391800936887" type="Mobil">
+                                    <param id="0" name="Instance variable">rentang</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">0</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-10" name="Set value" sid="2758320671182892" type="Mobil">
+                                    <param id="0" name="Instance variable">rentang</param>
+                                    <param id="1" name="Value">2</param>
+                                </action>
+                                <action behavior="Physics" id="18" name="Set elasticity" sid="5355630442346829" type="boxkecil_physic">
+                                    <param id="0" name="Elasticity">boxkecil_physic.Physics.Elasticity - 0.2</param>
+                                </action>
+                                <action id="-10" name="Set value" sid="8139893806149398" type="boxkecil_physic">
+                                    <param id="0" name="Instance variable">lentur</param>
+                                    <param id="1" name="Value">boxkecil_physic.lentur - 1</param>
+                                </action>
+                                <action id="-13" name="Set boolean" sid="8452421445017673" type="Mobil">
+                                    <param id="0" name="Instance variable">box</param>
+                                    <param id="1" name="Value">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
                         <event-block sid="5542281190506004">
                             <conditions>
                                 <condition id="-7" name="Compare instance variable" sid="7590258174160954" type="Mobil">
@@ -165,25 +188,6 @@
                         </event-block>
                     </sub-events>
                 </event-block>
-                <event-block sid="8917074683883111">
-                    <conditions>
-                        <condition id="-7" name="Compare instance variable" sid="4527391800936887" type="Mobil">
-                            <param id="0" name="Instance variable">rentang</param>
-                            <param id="1" name="Comparison">0</param>
-                            <param id="2" name="Value">0</param>
-                        </condition>
-                    </conditions>
-                    <actions>
-                        <action id="-13" name="Set boolean" sid="8452421445017673" type="Mobil">
-                            <param id="0" name="Instance variable">box</param>
-                            <param id="1" name="Value">1</param>
-                        </action>
-                        <action id="-10" name="Set value" sid="2758320671182892" type="Mobil">
-                            <param id="0" name="Instance variable">rentang</param>
-                            <param id="1" name="Value">3</param>
-                        </action>
-                    </actions>
-                </event-block>
                 <event-block sid="8614472982069193">
                     <conditions>
                         <condition id="-8" name="Is boolean instance variable set" sid="8961096996369053" type="Mobil">
@@ -199,6 +203,34 @@
                         <action id="-13" name="Set boolean" sid="9264983269083952" type="Mobil">
                             <param id="0" name="Instance variable">box</param>
                             <param id="1" name="Value">0</param>
+                        </action>
+                    </actions>
+                    <sub-events>
+                        <event-block sid="9473668386680432">
+                            <conditions />
+                            <actions />
+                        </event-block>
+                        <event-block sid="7648199300817181">
+                            <conditions />
+                            <actions />
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block sid="845788571494376">
+                    <conditions>
+                        <condition id="-7" name="Compare instance variable" sid="3988071259922588" type="boxkecil_physic">
+                            <param id="0" name="Instance variable">lentur</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">0</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-10" name="Set value" sid="7107751855266498" type="boxkecil_physic">
+                            <param id="0" name="Instance variable">lentur</param>
+                            <param id="1" name="Value">5</param>
+                        </action>
+                        <action behavior="Physics" id="18" name="Set elasticity" sid="6214921301877931" type="boxkecil_physic">
+                            <param id="0" name="Elasticity">1.0</param>
                         </action>
                     </actions>
                 </event-block>
