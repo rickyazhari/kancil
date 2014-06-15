@@ -15,7 +15,7 @@ you probably do not want to add any .uistate.xml files to the repository.-->
         <layout>level1</layout>
         <layout>level7</layout>
         <layout>level8</layout>
-        <layout active="1">level6</layout>
+        <layout>level6</layout>
         <layout>level4</layout>
         <layout>level2</layout>
         <layout>level3</layout>
@@ -32,7 +32,7 @@ you probably do not want to add any .uistate.xml files to the repository.-->
         <event-sheet>event_level5</event-sheet>
         <event-sheet>speed_range</event-sheet>
         <event-sheet>event_level6</event-sheet>
-        <event-sheet>mobil_event</event-sheet>
+        <event-sheet active="1">mobil_event</event-sheet>
     </open-tabs>
     <properties>
         <property expanded="1" name="About" />

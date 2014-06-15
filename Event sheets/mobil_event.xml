@@ -137,7 +137,7 @@
         </event-group>
         <event-group description="" sid="846547470492133" title="timer aktif">
             <sub-events>
-                <event-block sid="3189489226739716">
+                <event-block collapsed="1" sid="3189489226739716">
                     <conditions>
                         <condition behavior="Timer" id="0" name="On timer" sid="2256654976451165" type="Mobil">
                             <param id="0" name="Tag">&quot;lempar&quot;</param>

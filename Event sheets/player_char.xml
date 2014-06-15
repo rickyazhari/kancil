@@ -322,7 +322,7 @@
                 </event-block>
             </sub-events>
         </event-group>
-        <event-group collapsed="1" description="" sid="5674974752222511" title="jump dan double jump">
+        <event-group description="" sid="5674974752222511" title="jump dan double jump">
             <sub-events>
                 <event-block sid="9459400969129721">
                     <conditions>
@@ -829,7 +829,7 @@
                 </event-block>
             </sub-events>
         </event-group>
-        <event-group description="" sid="2419779077753352" title="motion speed">
+        <event-group collapsed="1" description="" sid="2419779077753352" title="motion speed">
             <sub-events>
                 <event-block sid="5215615571930185">
                     <conditions>
@@ -1006,7 +1006,7 @@
                 </event-block>
             </sub-events>
         </event-group>
-        <event-group description="" sid="8649669690295955" title="boost speed">
+        <event-group collapsed="1" description="" sid="8649669690295955" title="boost speed">
             <sub-events>
                 <event-block sid="7607901261059213">
                     <conditions>
@@ -1166,7 +1166,7 @@
                 </event-block>
             </sub-events>
         </event-group>
-        <event-group description="" sid="5376695614038627" title="shield mode">
+        <event-group collapsed="1" description="" sid="5376695614038627" title="shield mode">
             <sub-events>
                 <event-block sid="1115373036989928">
                     <conditions>
