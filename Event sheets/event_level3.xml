@@ -3,6 +3,8 @@
     <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
     <name>event_level3</name>
     <events>
+        <include>sound</include>
+        <include>button</include>
         <include>timer</include>
         <include>score</include>
         <include>player_char</include>
@@ -15,13 +17,156 @@
                     <param id="0" name="Instance variable">level</param>
                     <param id="1" name="Value">3</param>
                 </action>
+                <action id="-10" name="Set value" sid="6268196067186831" type="timer">
+                    <param id="0" name="Instance variable">waktu</param>
+                    <param id="1" name="Value">78</param>
+                </action>
+                <action id="0" name="Set text" sid="3248165067338534" type="timer">
+                    <param id="0" name="Text">timer.waktu</param>
+                </action>
+                <action id="-4" name="Set layer visible" sid="9615827237005637" type="System">
+                    <param id="0" name="Layer">3</param>
+                    <param id="1" name="Visibility">0</param>
+                </action>
+                <action id="-4" name="Set layer visible" sid="1999228883455419" type="System">
+                    <param id="0" name="Layer">4</param>
+                    <param id="1" name="Visibility">0</param>
+                </action>
+                <action id="-4" name="Set layer visible" sid="1272016575293254" type="System">
+                    <param id="0" name="Layer">5</param>
+                    <param id="1" name="Visibility">0</param>
+                </action>
             </actions>
         </event-block>
-        <event-block sid="7877173167273541">
+        <event-block sid="544689341041505">
             <conditions>
-                <condition id="-1" name="Every tick" sid="8176878122072153" type="System" />
+                <condition id="-14" name="Compare variable" sid="8511927825123817" type="System">
+                    <param id="0" name="Variable">sound</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">1</param>
+                </condition>
+                <condition id="5" inverted="1" name="Is tag playing" sid="5171683690377975" type="menu_sound">
+                    <param id="0" name="Tag">&quot;background&quot;</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="4" name="Set animation" sid="8959396294188385" type="sound">
+                    <param id="0" name="Animation">&quot;default&quot;</param>
+                    <param id="1" name="From">1</param>
+                </action>
+                <action id="7" name="Play (by name)" sid="7143330004720892" type="menu_sound">
+                    <param id="0" name="Folder">0</param>
+                    <param id="1" name="Audio file name">&quot;background&quot;</param>
+                    <param id="3" name="Loop">1</param>
+                    <param id="4" name="Volume">-10</param>
+                    <param id="2" name="Tag (optional)">&quot;background&quot;</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="3595051867762556">
+            <conditions>
+                <condition id="-14" name="Compare variable" sid="1248301812508941" type="System">
+                    <param id="0" name="Variable">sound</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">0</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="4" name="Set animation" sid="1509077944505202" type="sound">
+                    <param id="0" name="Animation">&quot;mati&quot;</param>
+                    <param id="1" name="From">1</param>
+                </action>
+                <action id="6" name="Stop" sid="135536748080105" type="menu_sound">
+                    <param id="0" name="Tag">&quot;background&quot;</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block any="1" sid="4112597270046056">
+            <conditions>
+                <condition id="-2" name="On start of layout" sid="9187573809267057" type="System" />
+                <condition id="-1" name="Every tick" sid="6452477838533199" type="System" />
             </conditions>
             <actions />
+            <sub-events>
+                <event-block sid="5596527704292513">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="1207601003286021" type="System">
+                            <param id="0" name="Variable">sound</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">1</param>
+                        </condition>
+                        <condition id="5" inverted="1" name="Is tag playing" sid="7009218457696328" type="menu_sound">
+                            <param id="0" name="Tag">&quot;background&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="4" name="Set animation" sid="673666696140045" type="sound">
+                            <param id="0" name="Animation">&quot;Default&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                        <action id="7" name="Play (by name)" sid="199332040813307" type="menu_sound">
+                            <param id="0" name="Folder">0</param>
+                            <param id="1" name="Audio file name">&quot;background&quot;</param>
+                            <param id="3" name="Loop">1</param>
+                            <param id="4" name="Volume">-15</param>
+                            <param id="2" name="Tag (optional)">&quot;background&quot;</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="5058049553779405">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="2546451827952314" type="System">
+                            <param id="0" name="Variable">sound</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">0</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="4" name="Set animation" sid="9686049923896025" type="sound">
+                            <param id="0" name="Animation">&quot;mati&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                        <action id="6" name="Stop" sid="8124435559998955" type="menu_sound">
+                            <param id="0" name="Tag">&quot;background&quot;</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <event-block sid="2378774678773526">
+            <conditions>
+                <condition id="-1" name="Compare X" sid="469279204793944" type="kancil">
+                    <param id="0" name="Comparison">4</param>
+                    <param id="1" name="X co-ordinate">LayoutWidth - 400</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="2" name="Stop" sid="3338405948418225" type="kancil" />
+                <action id="-4" name="Set layer visible" sid="8182175132407152" type="System">
+                    <param id="0" name="Layer">2</param>
+                    <param id="1" name="Visibility">0</param>
+                </action>
+                <action id="-4" name="Set layer visible" sid="5917991581105899" type="System">
+                    <param id="0" name="Layer">3</param>
+                    <param id="1" name="Visibility">1</param>
+                </action>
+                <action id="-4" name="Set layer visible" sid="522984766933329" type="System">
+                    <param id="0" name="Layer">5</param>
+                    <param id="1" name="Visibility">1</param>
+                </action>
+                <action id="-15" name="Set visible" sid="9026886586731991" type="nextbtn">
+                    <param id="0" name="Visibility">1</param>
+                </action>
+                <action id="-15" name="Set visible" sid="7502185126224598" type="wrap_layout">
+                    <param id="0" name="Visibility">1</param>
+                </action>
+                <action id="-15" name="Set visible" sid="2542881783439185" type="mainmenubtn">
+                    <param id="0" name="Visibility">1</param>
+                </action>
+                <action id="0" name="Set text" sid="6126549368991725" type="level_score">
+                    <param id="0" name="Text">Total_score</param>
+                </action>
+            </actions>
         </event-block>
     </events>
 </c2eventsheet>

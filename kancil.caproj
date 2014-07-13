@@ -2,32 +2,34 @@
 <c2project>
     <name>kancil</name>
     <description></description>
-    <version>1.0.0.0</version>
-    <author></author>
-    <author-email></author-email>
-    <author-website>http://</author-website>
-    <app-id>com.mycompany.myapp</app-id>
+    <version>1.0.0.1</version>
+    <author>Team Coret</author>
+    <author-email>Coret.team@gmail.com</author-email>
+    <author-website>http://myfuntastic.com</author-website>
+    <app-id>com.coret.kancilrun</app-id>
     <unique-id>38o7xfc4zxkfj</unique-id>
-    <saved-with-version>13900</saved-with-version>
+    <saved-with-version>17400</saved-with-version>
     <used-plugins>
-        <plugin author="Scirra" id="Mouse" version="1">Mouse</plugin>
-        <plugin author="Scirra" id="Particles" version="1">Particles</plugin>
-        <plugin author="Scirra" id="Sprite" version="1">Sprite</plugin>
+        <plugin author="Scirra" id="Audio" version="1">Audio</plugin>
         <plugin author="Scirra" id="Keyboard" version="1">Keyboard</plugin>
+        <plugin author="Scirra" id="Mouse" version="1">Mouse</plugin>
+        <plugin author="Scirra" id="ScirraArcade" version="1">Scirra Arcade</plugin>
+        <plugin author="Scirra" id="Sprite" version="1">Sprite</plugin>
         <plugin author="Scirra" id="Text" version="1">Text</plugin>
-        <plugin author="Scirra" id="Touch" version="1">Touch</plugin>
         <plugin author="Scirra" id="TiledBg" version="1">Tiled Background</plugin>
+        <plugin author="Scirra" id="Touch" version="1">Touch</plugin>
     </used-plugins>
     <used-behaviors>
-        <behavior author="Scirra" id="Sin" version="1">Sine</behavior>
         <behavior author="Scirra" id="Anchor" version="1">Anchor</behavior>
         <behavior author="Scirra" id="Flash" version="1">Flash</behavior>
-        <behavior author="Scirra" id="Platform" version="1">Platform</behavior>
         <behavior author="Scirra" id="Physics" version="1">Physics</behavior>
-        <behavior author="Scirra" id="custom" version="1">Custom Movement</behavior>
+        <behavior author="Scirra" id="Platform" version="1">Platform</behavior>
+        <behavior author="Scirra" id="Sin" version="1">Sine</behavior>
         <behavior author="Scirra" id="Timer" version="1">Timer</behavior>
-        <behavior author="Scirra" id="solid" version="1">Solid</behavior>
+        <behavior author="Scirra" id="custom" version="1">Custom Movement</behavior>
         <behavior author="Scirra" id="jumpthru" version="1">Jump-thru</behavior>
+        <behavior author="Scirra" id="solid" version="1">Solid</behavior>
+        <behavior author="Scirra" id="wrap" version="1">Wrap</behavior>
     </used-behaviors>
     <used-effects />
     <configurations>
@@ -38,8 +40,9 @@
         <height>480</height>
     </window-size>
     <pixel-rounding>1</pixel-rounding>
-    <first-layout>level1</first-layout>
-    <use-loader-layout>0</use-loader-layout>
+    <preview-effects>1</preview-effects>
+    <first-layout>Layout 1</first-layout>
+    <use-loader-layout>1</use-loader-layout>
     <configuration-settings>
         <prop name="Clear background">Yes</prop>
         <prop name="Enable WebGL">On</prop>
@@ -52,18 +55,6 @@
         <prop name="Use iOS retina display">All devices</prop>
     </configuration-settings>
     <object-folder expanded="1">
-        <object-type name="rumput" sid="3200280633005">
-            <plugin id="TiledBg" />
-            <behaviors>
-                <behavior-type name="Solid" sid="3928867909378253">
-                    <behavior id="solid" />
-                </behavior-type>
-                <behavior-type name="Sine" sid="356329735472496">
-                    <behavior id="Sin" />
-                </behavior-type>
-            </behaviors>
-            <texture />
-        </object-type>
         <object-type name="kancil" sid="1766270857766354">
             <plugin id="Sprite" />
             <instance-variables>
@@ -75,6 +66,8 @@
                 <instance-variable name="boost_count" sid="703558071142786" type="number" />
                 <instance-variable name="boost_shield" sid="3456560456628589" type="number" />
                 <instance-variable name="reduce" sid="4239037558830431" type="number" />
+                <instance-variable name="life" sid="7073165903833082" type="number" />
+                <instance-variable name="tabrakan" sid="1834788767132172" type="boolean" />
             </instance-variables>
             <behaviors>
                 <behavior-type name="CustomMovement" sid="8401330568994837">
@@ -92,6 +85,32 @@
             </behaviors>
             <animation-folder expanded="1">
                 <animation framecount="3" loop="1" name="lari" pingpong="0" repeatcount="1" repeatto="0" sid="7254713466986469" speed="9">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5">
+                        <collision-poly>
+                            <point x="0.58" y="0.6825" />
+                            <point x="0.5825" y="0.50625" />
+                            <point x="0.67375" y="0.55875" />
+                            <point x="0.756875" y="0.571875" />
+                            <point x="0.810937" y="0.650937" />
+                            <point x="0.820469" y="0.725469" />
+                            <point x="0.86" y="0.76625" />
+                            <point x="0.8125" y="0.795" />
+                            <point x="0.69875" y="0.79" />
+                            <point x="0.656875" y="0.865" />
+                            <point x="0.713438" y="0.93" />
+                            <point x="0.65" y="1" />
+                            <point x="0.5775" y="0.9" />
+                            <point x="0.45375" y="0.8325" />
+                            <point x="0.426875" y="0.94625" />
+                            <point x="0.34" y="1" />
+                            <point x="0.27375" y="0.97" />
+                            <point x="0.263125" y="0.805" />
+                            <point x="0.24" y="0.6425" />
+                            <point x="0.2675" y="0.6125" />
+                            <point x="0.31625" y="0.685" />
+                            <point x="0.420625" y="0.64375" />
+                        </collision-poly>
+                    </frame>
                     <frame duration="1" hotspotX="0.5" hotspotY="0.5">
                         <collision-poly>
                             <point x="0.27" y="0.6375" />
@@ -139,32 +158,6 @@
                             <point x="0.301406" y="0.867344" />
                             <point x="0.2625" y="1" />
                             <point x="0.20125" y="0.96" />
-                        </collision-poly>
-                    </frame>
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.5">
-                        <collision-poly>
-                            <point x="0.58" y="0.6825" />
-                            <point x="0.5825" y="0.50625" />
-                            <point x="0.67375" y="0.55875" />
-                            <point x="0.756875" y="0.571875" />
-                            <point x="0.810937" y="0.650937" />
-                            <point x="0.820469" y="0.725469" />
-                            <point x="0.86" y="0.76625" />
-                            <point x="0.8125" y="0.795" />
-                            <point x="0.69875" y="0.79" />
-                            <point x="0.656875" y="0.865" />
-                            <point x="0.713438" y="0.93" />
-                            <point x="0.65" y="1" />
-                            <point x="0.5775" y="0.9" />
-                            <point x="0.45375" y="0.8325" />
-                            <point x="0.426875" y="0.94625" />
-                            <point x="0.34" y="1" />
-                            <point x="0.27375" y="0.97" />
-                            <point x="0.263125" y="0.805" />
-                            <point x="0.24" y="0.6425" />
-                            <point x="0.2675" y="0.6125" />
-                            <point x="0.31625" y="0.685" />
-                            <point x="0.420625" y="0.64375" />
                         </collision-poly>
                     </frame>
                 </animation>
@@ -689,6 +682,20 @@
                         </collision-poly>
                     </frame>
                 </animation>
+                <animation framecount="1" loop="0" name="mati" pingpong="0" repeatcount="1" repeatto="0" sid="5162419412228404" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5">
+                        <collision-poly>
+                            <point x="0.47" y="0.47" />
+                            <point x="0.5" y="0.41" />
+                            <point x="0.65" y="0.35" />
+                            <point x="0.83" y="0.5" />
+                            <point x="0.78" y="0.78" />
+                            <point x="0.5" y="0.97" />
+                            <point x="0.3" y="0.7" />
+                            <point x="0.17" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                </animation>
             </animation-folder>
         </object-type>
         <object-type name="Keyboard" sid="7798635860827477">
@@ -711,27 +718,25 @@
         <object-type name="touch" sid="4135547164536966">
             <plugin id="Touch" />
         </object-type>
-        <object-type name="Sprite" sid="4760903210419143">
-            <plugin id="Sprite" />
-            <animation-folder expanded="1">
-                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="2533875437778037" speed="5">
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
-                </animation>
-            </animation-folder>
-        </object-type>
-        <object-type name="Sprite2" sid="1145249711081723">
-            <plugin id="Sprite" />
-            <animation-folder expanded="1">
-                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="210911131413337" speed="5">
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
-                </animation>
-            </animation-folder>
-        </object-type>
         <object-type name="jumpButton" sid="3813309496421984">
             <plugin id="Sprite" />
+            <behaviors>
+                <behavior-type name="Anchor" sid="6097021410611298">
+                    <behavior id="Anchor" />
+                </behavior-type>
+            </behaviors>
             <animation-folder expanded="1">
                 <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="7035405721969184" speed="5">
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.506494">
+                        <collision-poly>
+                            <point x="0.0421053" y="0.181818" />
+                            <point x="0.5" y="0.0909091" />
+                            <point x="0.968421" y="0.155844" />
+                            <point x="0.994737" y="0.909091" />
+                            <point x="0.0263158" y="0.857143" />
+                            <point x="0.00526316" y="0.493506" />
+                        </collision-poly>
+                    </frame>
                 </animation>
             </animation-folder>
         </object-type>
@@ -752,57 +757,6 @@
                 </behavior-type>
             </behaviors>
             <texture />
-        </object-type>
-        <object-type name="Sprite4" sid="6436445277835453">
-            <plugin id="Sprite" />
-            <animation-folder expanded="1">
-                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="7578441297636717" speed="5">
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
-                </animation>
-            </animation-folder>
-        </object-type>
-        <object-type name="Sprite5" sid="7238569643738148">
-            <plugin id="Sprite" />
-            <behaviors>
-                <behavior-type name="Sine" sid="2994277689550057">
-                    <behavior id="Sin" />
-                </behavior-type>
-            </behaviors>
-            <animation-folder expanded="1">
-                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="7558173711474896" speed="5">
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.5">
-                        <collision-poly>
-                            <point x="0.06" y="0.230769" />
-                            <point x="0.5" y="0.192308" />
-                            <point x="0.95" y="0.192308" />
-                            <point x="1" y="0.5" />
-                            <point x="1" y="1" />
-                            <point x="0" y="1" />
-                            <point x="0" y="0.5" />
-                        </collision-poly>
-                    </frame>
-                </animation>
-            </animation-folder>
-        </object-type>
-        <object-type name="Sprite6" sid="8495931243264475">
-            <plugin id="Sprite" />
-            <behaviors>
-                <behavior-type name="Sine" sid="9107211942113531">
-                    <behavior id="Sin" />
-                </behavior-type>
-            </behaviors>
-            <animation-folder expanded="1">
-                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="9223428979625122" speed="5">
-                    <frame duration="1" hotspotX="0.18" hotspotY="0.576923">
-                        <collision-poly>
-                            <point x="0" y="0" />
-                            <point x="0.98" y="0.0769231" />
-                            <point x="1" y="1" />
-                            <point x="0" y="1" />
-                        </collision-poly>
-                    </frame>
-                </animation>
-            </animation-folder>
         </object-type>
         <object-type name="small_kaktus" sid="29097617918618">
             <plugin id="Sprite" />
@@ -1366,14 +1320,6 @@
             <plugin id="TiledBg" />
             <texture />
         </object-type>
-        <object-type name="bg8_1" sid="9444457012682812">
-            <plugin id="TiledBg" />
-            <texture />
-        </object-type>
-        <object-type name="bg7_1" sid="4251715041930396">
-            <plugin id="TiledBg" />
-            <texture />
-        </object-type>
         <object-type name="timer" sid="1374458150031384">
             <plugin id="Text" />
             <instance-variables>
@@ -1383,9 +1329,6 @@
             <behaviors>
                 <behavior-type name="Timer" sid="1551057626336212">
                     <behavior id="Timer" />
-                </behavior-type>
-                <behavior-type name="Anchor" sid="3309634904113852">
-                    <behavior id="Anchor" />
                 </behavior-type>
             </behaviors>
         </object-type>
@@ -1470,10 +1413,6 @@
                     </frame>
                 </animation>
             </animation-folder>
-        </object-type>
-        <object-type name="bg7_2" sid="2808780714991787">
-            <plugin id="TiledBg" />
-            <texture />
         </object-type>
         <object-type name="timun" sid="3035188127257212">
             <plugin id="Sprite" />
@@ -1594,18 +1533,6 @@
                 </animation>
             </animation-folder>
         </object-type>
-        <object-type name="bg8_2" sid="2263083650073058">
-            <plugin id="TiledBg" />
-            <texture />
-        </object-type>
-        <object-type name="bg8_3" sid="6972177636044395">
-            <plugin id="TiledBg" />
-            <texture />
-        </object-type>
-        <object-type name="bg_tutor" sid="8159250550537716">
-            <plugin id="TiledBg" />
-            <texture />
-        </object-type>
         <object-type name="bg_menu" sid="229741356486104">
             <plugin id="TiledBg" />
             <texture />
@@ -1616,14 +1543,18 @@
         </object-type>
         <object-type name="menu_ob" sid="1400218156779448">
             <plugin id="Sprite" />
-            <behaviors>
-                <behavior-type name="Anchor" sid="5183650808228574">
-                    <behavior id="Anchor" />
-                </behavior-type>
-            </behaviors>
             <animation-folder expanded="1">
                 <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="9740518545635822" speed="5">
-                    <frame duration="1" hotspotX="0.637795" hotspotY="0.5" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.506667">
+                        <collision-poly>
+                            <point x="0.065" y="0.173333" />
+                            <point x="0.5" y="0.08" />
+                            <point x="0.945" y="0.146667" />
+                            <point x="0.97" y="0.92" />
+                            <point x="0.05" y="0.866667" />
+                            <point x="0.03" y="0.493333" />
+                        </collision-poly>
+                    </frame>
                 </animation>
             </animation-folder>
         </object-type>
@@ -1708,7 +1639,7 @@
                 <behavior-type name="Solid" sid="1237006950309804">
                     <behavior id="solid" />
                 </behavior-type>
-                <behavior-type name="Physics" sid="1098619300474039">
+                <behavior-type name="Physics" sid="8571448415558051">
                     <behavior id="Physics" />
                 </behavior-type>
             </behaviors>
@@ -1721,18 +1652,6 @@
                     <behavior id="solid" />
                 </behavior-type>
             </behaviors>
-            <texture />
-        </object-type>
-        <object-type name="Sprite3" sid="6591094473503063">
-            <plugin id="Sprite" />
-            <animation-folder expanded="1">
-                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="2753087931620201" speed="5">
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
-                </animation>
-            </animation-folder>
-        </object-type>
-        <object-type name="Particles" sid="3116276618779146">
-            <plugin id="Particles" />
             <texture />
         </object-type>
         <object-type name="jembatan" sid="6661834254108878">
@@ -1891,19 +1810,16 @@
                 </animation>
             </animation-folder>
         </object-type>
-        <object-type name="Sprite7" sid="1990856039451732">
-            <plugin id="Sprite" />
-            <animation-folder expanded="1">
-                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="1040729278766823" speed="5">
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
-                </animation>
-            </animation-folder>
-        </object-type>
         <object-type name="FoorAkhir" sid="5867578916612418">
             <plugin id="TiledBg" />
+            <behaviors>
+                <behavior-type name="Solid" sid="9078797166583159">
+                    <behavior id="solid" />
+                </behavior-type>
+            </behaviors>
             <texture />
         </object-type>
-        <object-type global="1" name="boxkecil" sid="9465452636863861">
+        <object-type name="boxkecil" sid="9465452636863861">
             <plugin id="Sprite" />
             <behaviors>
                 <behavior-type name="Solid" sid="741168949501789">
@@ -1916,7 +1832,7 @@
                 </animation>
             </animation-folder>
         </object-type>
-        <object-type global="1" name="kotak_tinggi" sid="6467786775855347">
+        <object-type name="kotak_tinggi" sid="6467786775855347">
             <plugin id="Sprite" />
             <behaviors>
                 <behavior-type name="Solid" sid="5673584841582474">
@@ -2018,38 +1934,1004 @@
                 </animation>
             </animation-folder>
         </object-type>
+        <object-type name="menu_sound" sid="4175274682806929">
+            <plugin id="Audio" />
+        </object-type>
+        <object-type name="sound" sid="9142984956303389">
+            <plugin id="Sprite" />
+            <instance-variables>
+                <instance-variable name="sound" sid="9994673728730582" type="boolean" />
+            </instance-variables>
+            <behaviors>
+                <behavior-type name="Anchor" sid="1098544413298221">
+                    <behavior id="Anchor" />
+                </behavior-type>
+            </behaviors>
+            <animation-folder expanded="1">
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="2687037497029836" speed="5">
+                    <frame duration="1" hotspotX="0.517241" hotspotY="0.493333">
+                        <collision-poly>
+                            <point x="0.172414" y="0.16" />
+                            <point x="0.517241" y="0.04" />
+                            <point x="0.841379" y="0.18" />
+                            <point x="0.972414" y="0.493333" />
+                            <point x="0.841379" y="0.806667" />
+                            <point x="0.517241" y="0.953333" />
+                            <point x="0.172414" y="0.826667" />
+                            <point x="0.0275862" y="0.493333" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+                <animation framecount="1" loop="0" name="mati" pingpong="0" repeatcount="1" repeatto="0" sid="6392959075753475" speed="5">
+                    <frame duration="1" hotspotX="0.517986" hotspotY="0.503597">
+                        <collision-poly>
+                            <point x="0.158273" y="0.143885" />
+                            <point x="0.517986" y="0.00719424" />
+                            <point x="0.856115" y="0.165468" />
+                            <point x="0.992806" y="0.503597" />
+                            <point x="0.856115" y="0.841727" />
+                            <point x="0.517986" y="0.992806" />
+                            <point x="0.158273" y="0.863309" />
+                            <point x="0.00719424" y="0.503597" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="TiledBackground" sid="7154011197790656">
+            <plugin id="TiledBg" />
+            <behaviors>
+                <behavior-type name="Anchor" sid="6525082294963414">
+                    <behavior id="Anchor" />
+                </behavior-type>
+            </behaviors>
+            <texture />
+        </object-type>
+        <object-type name="Sprite8" sid="3754446150298614">
+            <plugin id="Sprite" />
+            <behaviors>
+                <behavior-type name="Anchor" sid="3573292132286332">
+                    <behavior id="Anchor" />
+                </behavior-type>
+            </behaviors>
+            <animation-folder expanded="1">
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="256774638852853" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5">
+                        <collision-poly>
+                            <point x="0.16" y="0.4" />
+                            <point x="0.5" y="0.295" />
+                            <point x="0.876" y="0.31" />
+                            <point x="0.966" y="0.5" />
+                            <point x="0.886" y="0.715" />
+                            <point x="0.5" y="0.71" />
+                            <point x="0.134" y="0.665" />
+                            <point x="0.044" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Sprite9" sid="6448933429897097">
+            <plugin id="Sprite" />
+            <behaviors>
+                <behavior-type name="Anchor" sid="8100757546085792">
+                    <behavior id="Anchor" />
+                </behavior-type>
+            </behaviors>
+            <animation-folder expanded="1">
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="6130306812157411" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.506667">
+                        <collision-poly>
+                            <point x="0.065" y="0.173333" />
+                            <point x="0.5" y="0.08" />
+                            <point x="0.945" y="0.146667" />
+                            <point x="0.97" y="0.92" />
+                            <point x="0.05" y="0.866667" />
+                            <point x="0.03" y="0.493333" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="attent" sid="9602991004657209">
+            <plugin id="Text" />
+            <behaviors>
+                <behavior-type name="Anchor" sid="4535480262416444">
+                    <behavior id="Anchor" />
+                </behavior-type>
+            </behaviors>
+        </object-type>
+        <object-type name="resumebtn" sid="7088015575602059">
+            <plugin id="Sprite" />
+            <animation-folder expanded="1">
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="8653846579332691" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.506667">
+                        <collision-poly>
+                            <point x="0.065" y="0.173333" />
+                            <point x="0.5" y="0.08" />
+                            <point x="0.945" y="0.146667" />
+                            <point x="0.97" y="0.92" />
+                            <point x="0.05" y="0.866667" />
+                            <point x="0.03" y="0.493333" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="soundbtn" sid="8812561414541677">
+            <plugin id="Sprite" />
+            <animation-folder expanded="1">
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="1040240945580605" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.506667">
+                        <collision-poly>
+                            <point x="0.065" y="0.173333" />
+                            <point x="0.5" y="0.08" />
+                            <point x="0.945" y="0.146667" />
+                            <point x="0.97" y="0.92" />
+                            <point x="0.05" y="0.866667" />
+                            <point x="0.03" y="0.493333" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+                <animation framecount="1" loop="0" name="mati" pingpong="0" repeatcount="1" repeatto="0" sid="5101081452712252" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.506667">
+                        <collision-poly>
+                            <point x="0.065" y="0.173333" />
+                            <point x="0.5" y="0.08" />
+                            <point x="0.945" y="0.146667" />
+                            <point x="0.97" y="0.92" />
+                            <point x="0.05" y="0.866667" />
+                            <point x="0.03" y="0.493333" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="restartbtn" sid="6375690224086458">
+            <plugin id="Sprite" />
+            <animation-folder expanded="1">
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="8375220233648018" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.506667">
+                        <collision-poly>
+                            <point x="0.065" y="0.173333" />
+                            <point x="0.5" y="0.08" />
+                            <point x="0.945" y="0.146667" />
+                            <point x="0.97" y="0.92" />
+                            <point x="0.05" y="0.866667" />
+                            <point x="0.03" y="0.493333" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="mainmenubtn" sid="5730448612324983">
+            <plugin id="Sprite" />
+            <animation-folder expanded="1">
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="5875175948159957" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.506667">
+                        <collision-poly>
+                            <point x="0.065" y="0.173333" />
+                            <point x="0.5" y="0.08" />
+                            <point x="0.945" y="0.146667" />
+                            <point x="0.97" y="0.92" />
+                            <point x="0.05" y="0.866667" />
+                            <point x="0.03" y="0.493333" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="wrap_layout" sid="3102307241530049">
+            <plugin id="Sprite" />
+            <animation-folder expanded="1">
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="3181833595723558" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.506667">
+                        <collision-poly>
+                            <point x="0.0971429" y="0.453333" />
+                            <point x="0.5" y="0.32" />
+                            <point x="0.928571" y="0.333333" />
+                            <point x="0.985714" y="0.493333" />
+                            <point x="0.908571" y="0.573333" />
+                            <point x="0.5" y="0.626667" />
+                            <point x="0.0885714" y="0.586667" />
+                            <point x="0.00857143" y="0.493333" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="nextbtn" sid="8071559321309177">
+            <plugin id="Sprite" />
+            <animation-folder expanded="1">
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="1412154638692423" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.506667">
+                        <collision-poly>
+                            <point x="0.065" y="0.173333" />
+                            <point x="0.5" y="0.08" />
+                            <point x="0.945" y="0.146667" />
+                            <point x="0.97" y="0.92" />
+                            <point x="0.05" y="0.866667" />
+                            <point x="0.03" y="0.493333" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="kancil_loader" sid="9956920254054719">
+            <plugin id="Sprite" />
+            <instance-variables>
+                <instance-variable comment="lari cepat" name="booster" sid="4341900293064998" type="boolean" />
+                <instance-variable comment="mode perisai" name="perisai" sid="2096212380553399" type="boolean" />
+                <instance-variable comment="jump kancil" name="jumlah_jump" sid="4016146068306521" type="number" />
+                <instance-variable comment="karakter sliding" name="sliding" sid="2831547904918889" type="number" />
+                <instance-variable name="speed" sid="5786640064420961" type="number" />
+                <instance-variable name="boost_count" sid="2665048034943117" type="number" />
+                <instance-variable name="boost_shield" sid="834640243647679" type="number" />
+                <instance-variable name="reduce" sid="2201020662637041" type="number" />
+                <instance-variable name="life" sid="389239251066184" type="number" />
+                <instance-variable name="tabrakan" sid="6150658211703749" type="boolean" />
+            </instance-variables>
+            <behaviors>
+                <behavior-type name="CustomMovement" sid="5188532987409412">
+                    <behavior id="custom" />
+                </behavior-type>
+                <behavior-type name="Platform" sid="4680589945686854">
+                    <behavior id="Platform" />
+                </behavior-type>
+                <behavior-type name="Timer" sid="5516912612656308">
+                    <behavior id="Timer" />
+                </behavior-type>
+                <behavior-type name="Flash" sid="4527515486444287">
+                    <behavior id="Flash" />
+                </behavior-type>
+                <behavior-type name="Wrap" sid="3920562055583137">
+                    <behavior id="wrap" />
+                </behavior-type>
+            </behaviors>
+            <animation-folder expanded="1">
+                <animation framecount="3" loop="1" name="lari" pingpong="0" repeatcount="1" repeatto="0" sid="1465958031315315" speed="9">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5">
+                        <collision-poly>
+                            <point x="0.58" y="0.6825" />
+                            <point x="0.5825" y="0.50625" />
+                            <point x="0.67375" y="0.55875" />
+                            <point x="0.756875" y="0.571875" />
+                            <point x="0.810937" y="0.650937" />
+                            <point x="0.820469" y="0.725469" />
+                            <point x="0.86" y="0.76625" />
+                            <point x="0.8125" y="0.795" />
+                            <point x="0.69875" y="0.79" />
+                            <point x="0.656875" y="0.865" />
+                            <point x="0.713438" y="0.93" />
+                            <point x="0.65" y="1" />
+                            <point x="0.5775" y="0.9" />
+                            <point x="0.45375" y="0.8325" />
+                            <point x="0.426875" y="0.94625" />
+                            <point x="0.34" y="1" />
+                            <point x="0.27375" y="0.97" />
+                            <point x="0.263125" y="0.805" />
+                            <point x="0.24" y="0.6425" />
+                            <point x="0.2675" y="0.6125" />
+                            <point x="0.31625" y="0.685" />
+                            <point x="0.420625" y="0.64375" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5">
+                        <collision-poly>
+                            <point x="0.27" y="0.6375" />
+                            <point x="0.36125" y="0.675" />
+                            <point x="0.406875" y="0.65375" />
+                            <point x="0.502188" y="0.638125" />
+                            <point x="0.584844" y="0.687812" />
+                            <point x="0.59625" y="0.52" />
+                            <point x="0.685" y="0.55875" />
+                            <point x="0.74875" y="0.569375" />
+                            <point x="0.798125" y="0.637188" />
+                            <point x="0.812812" y="0.726094" />
+                            <point x="0.86625" y="0.76375" />
+                            <point x="0.82" y="0.8" />
+                            <point x="0.69" y="0.795" />
+                            <point x="0.665" y="0.86" />
+                            <point x="0.6175" y="0.8675" />
+                            <point x="0.53375" y="0.95625" />
+                            <point x="0.4325" y="1" />
+                            <point x="0.28" y="0.83625" />
+                            <point x="0.30375" y="0.794375" />
+                            <point x="0.2325" y="0.6925" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5">
+                        <collision-poly>
+                            <point x="0.1575" y="0.825" />
+                            <point x="0.22875" y="0.7675" />
+                            <point x="0.2725" y="0.63" />
+                            <point x="0.3325" y="0.71625" />
+                            <point x="0.415" y="0.679375" />
+                            <point x="0.50875" y="0.688437" />
+                            <point x="0.595625" y="0.725469" />
+                            <point x="0.6125" y="0.5475" />
+                            <point x="0.68375" y="0.595" />
+                            <point x="0.776875" y="0.62875" />
+                            <point x="0.820937" y="0.698125" />
+                            <point x="0.822969" y="0.775313" />
+                            <point x="0.86625" y="0.8075" />
+                            <point x="0.725" y="1" />
+                            <point x="0.6075" y="0.9175" />
+                            <point x="0.47125" y="0.87875" />
+                            <point x="0.405625" y="0.924375" />
+                            <point x="0.337812" y="0.914688" />
+                            <point x="0.301406" y="0.867344" />
+                            <point x="0.2625" y="1" />
+                            <point x="0.20125" y="0.96" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+                <animation framecount="4" loop="0" name="jump" pingpong="0" repeatcount="1" repeatto="0" sid="5798684904418762" speed="9">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5">
+                        <collision-poly>
+                            <point x="0.3975" y="0.4375" />
+                            <point x="0.475" y="0.4" />
+                            <point x="0.57" y="0.3525" />
+                            <point x="0.7025" y="0.39125" />
+                            <point x="0.77625" y="0.400625" />
+                            <point x="0.735" y="0.4925" />
+                            <point x="0.6775" y="0.54125" />
+                            <point x="0.71" y="0.6025" />
+                            <point x="0.6875" y="0.79375" />
+                            <point x="0.59875" y="0.816875" />
+                            <point x="0.501875" y="0.860938" />
+                            <point x="0.495" y="1" />
+                            <point x="0.42" y="1" />
+                            <point x="0.31" y="0.9575" />
+                            <point x="0.33" y="0.82875" />
+                            <point x="0.2525" y="0.751875" />
+                            <point x="0.29125" y="0.740937" />
+                            <point x="0.338125" y="0.745469" />
+                            <point x="0.371563" y="0.640234" />
+                            <point x="0.52" y="0.5575" />
+                            <point x="0.4575" y="0.48" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5">
+                        <collision-poly>
+                            <point x="0.43" y="0.43" />
+                            <point x="0.6075" y="0.375" />
+                            <point x="0.8025" y="0.4475" />
+                            <point x="0.8075" y="0.67" />
+                            <point x="0.755625" y="0.7" />
+                            <point x="0.65875" y="0.695" />
+                            <point x="0.531875" y="0.7625" />
+                            <point x="0.523438" y="0.83875" />
+                            <point x="0.474219" y="0.871875" />
+                            <point x="0.399609" y="0.865938" />
+                            <point x="0.459805" y="0.982969" />
+                            <point x="0.415" y="1" />
+                            <point x="0.37" y="0.975" />
+                            <point x="0.325" y="0.9575" />
+                            <point x="0.2625" y="0.93375" />
+                            <point x="0.2375" y="0.6975" />
+                            <point x="0.31625" y="0.72375" />
+                            <point x="0.353125" y="0.654375" />
+                            <point x="0.446563" y="0.579687" />
+                            <point x="0.535781" y="0.567344" />
+                            <point x="0.47" y="0.48" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5">
+                        <collision-poly>
+                            <point x="0.585" y="0.65" />
+                            <point x="0.56" y="0.4775" />
+                            <point x="0.73" y="0.5" />
+                            <point x="0.8675" y="0.6625" />
+                            <point x="0.795" y="0.87" />
+                            <point x="0.7125" y="0.865" />
+                            <point x="0.64625" y="0.8275" />
+                            <point x="0.498125" y="0.83375" />
+                            <point x="0.454062" y="0.886875" />
+                            <point x="0.387031" y="0.895938" />
+                            <point x="0.338516" y="0.862969" />
+                            <point x="0.3325" y="1" />
+                            <point x="0.25625" y="0.97875" />
+                            <point x="0.18" y="0.8575" />
+                            <point x="0.25625" y="0.77375" />
+                            <point x="0.2525" y="0.635" />
+                            <point x="0.34125" y="0.685" />
+                            <point x="0.420625" y="0.635" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5">
+                        <collision-poly>
+                            <point x="0.3175" y="0.585" />
+                            <point x="0.3625" y="0.6725" />
+                            <point x="0.45" y="0.65" />
+                            <point x="0.51875" y="0.65375" />
+                            <point x="0.620625" y="0.710625" />
+                            <point x="0.6525" y="0.5475" />
+                            <point x="0.80375" y="0.64" />
+                            <point x="0.844375" y="0.74875" />
+                            <point x="0.857188" y="0.803125" />
+                            <point x="0.89" y="0.8425" />
+                            <point x="0.8225" y="0.86625" />
+                            <point x="0.715" y="1" />
+                            <point x="0.59625" y="0.89625" />
+                            <point x="0.484375" y="0.859375" />
+                            <point x="0.385937" y="0.893437" />
+                            <point x="0.339219" y="0.870469" />
+                            <point x="0.313359" y="0.826484" />
+                            <point x="0.26543" y="0.944492" />
+                            <point x="0.2225" y="0.9525" />
+                            <point x="0.1575" y="0.775" />
+                            <point x="0.265" y="0.7075" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+                <animation framecount="2" loop="0" name="slide" pingpong="0" repeatcount="1" repeatto="0" sid="1893060486380873" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5">
+                        <collision-poly>
+                            <point x="0.24875" y="0.69125" />
+                            <point x="0.29875" y="0.76625" />
+                            <point x="0.44625" y="0.75625" />
+                            <point x="0.55125" y="0.8075" />
+                            <point x="0.55625" y="0.66" />
+                            <point x="0.7325" y="0.73625" />
+                            <point x="0.827501" y="0.897501" />
+                            <point x="0.7675" y="0.98125" />
+                            <point x="0.32875" y="1" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5">
+                        <collision-poly>
+                            <point x="0.23375" y="0.793751" />
+                            <point x="0.2475" y="0.6975" />
+                            <point x="0.30875" y="0.774376" />
+                            <point x="0.39375" y="0.750937" />
+                            <point x="0.545" y="0.79125" />
+                            <point x="0.54375" y="0.66" />
+                            <point x="0.710625" y="0.715" />
+                            <point x="0.775" y="0.79" />
+                            <point x="0.824376" y="0.903125" />
+                            <point x="0.76875" y="0.98375" />
+                            <point x="0.34" y="1" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+                <animation framecount="3" loop="1" name="boost" pingpong="0" repeatcount="1" repeatto="0" sid="7817943388621795" speed="15">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5">
+                        <collision-poly>
+                            <point x="0.245" y="0.62" />
+                            <point x="0.34" y="0.685" />
+                            <point x="0.4375" y="0.6275" />
+                            <point x="0.585" y="0.66" />
+                            <point x="0.59" y="0.505" />
+                            <point x="0.785" y="0.6" />
+                            <point x="0.875" y="0.765" />
+                            <point x="0.46" y="1" />
+                            <point x="0.27" y="0.845" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5">
+                        <collision-poly>
+                            <point x="0.575" y="0.67" />
+                            <point x="0.59" y="0.505" />
+                            <point x="0.785" y="0.5975" />
+                            <point x="0.87" y="0.785" />
+                            <point x="0.705" y="0.8" />
+                            <point x="0.655" y="0.995" />
+                            <point x="0.5775" y="0.8775" />
+                            <point x="0.40875" y="0.86875" />
+                            <point x="0.43" y="0.95" />
+                            <point x="0.3025" y="1" />
+                            <point x="0.24875" y="0.605" />
+                            <point x="0.326875" y="0.6775" />
+                            <point x="0.430938" y="0.62875" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5">
+                        <collision-poly>
+                            <point x="0.28" y="0.64" />
+                            <point x="0.34" y="0.7075" />
+                            <point x="0.4575" y="0.66125" />
+                            <point x="0.58125" y="0.713125" />
+                            <point x="0.605" y="0.575" />
+                            <point x="0.765" y="0.605" />
+                            <point x="0.865" y="0.825" />
+                            <point x="0.735" y="1" />
+                            <point x="0.6275" y="0.92" />
+                            <point x="0.29875" y="0.93" />
+                            <point x="0.244375" y="1" />
+                            <point x="0.125" y="0.84" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+                <animation framecount="3" loop="1" name="lari_shield" pingpong="0" repeatcount="1" repeatto="0" sid="4307714740417845" speed="9">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5">
+                        <collision-poly>
+                            <point x="0.4525" y="0.63" />
+                            <point x="0.575" y="0.67" />
+                            <point x="0.6" y="0.515" />
+                            <point x="0.775" y="0.595" />
+                            <point x="0.87" y="0.7675" />
+                            <point x="0.66375" y="0.86375" />
+                            <point x="0.4475" y="1" />
+                            <point x="0.2875" y="0.85" />
+                            <point x="0.24" y="0.72" />
+                            <point x="0.2625" y="0.6275" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5">
+                        <collision-poly>
+                            <point x="0.4275" y="0.64" />
+                            <point x="0.5775" y="0.675" />
+                            <point x="0.595" y="0.525" />
+                            <point x="0.77" y="0.5775" />
+                            <point x="0.8625" y="0.7775" />
+                            <point x="0.64625" y="1" />
+                            <point x="0.5" y="0.86" />
+                            <point x="0.3975" y="0.87" />
+                            <point x="0.43625" y="0.94" />
+                            <point x="0.33" y="1" />
+                            <point x="0.26625" y="0.9575" />
+                            <point x="0.2425" y="0.6175" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5">
+                        <collision-poly>
+                            <point x="0.5875" y="0.72" />
+                            <point x="0.595" y="0.545" />
+                            <point x="0.77" y="0.62" />
+                            <point x="0.8675" y="0.8225" />
+                            <point x="0.725" y="1" />
+                            <point x="0.5" y="0.9" />
+                            <point x="0.3625" y="0.9325" />
+                            <point x="0.29875" y="0.89375" />
+                            <point x="0.245" y="1" />
+                            <point x="0.13875" y="0.83375" />
+                            <point x="0.255625" y="0.755625" />
+                            <point x="0.2675" y="0.6375" />
+                            <point x="0.3325" y="0.69625" />
+                            <point x="0.4475" y="0.670625" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+                <animation framecount="4" loop="0" name="jump_shield" pingpong="0" repeatcount="1" repeatto="0" sid="1881028306427643" speed="9">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5">
+                        <collision-poly>
+                            <point x="0.405" y="0.435" />
+                            <point x="0.5975" y="0.355" />
+                            <point x="0.7675" y="0.4" />
+                            <point x="0.6775" y="0.8025" />
+                            <point x="0.47" y="1" />
+                            <point x="0.315" y="0.96" />
+                            <point x="0.3175" y="0.835" />
+                            <point x="0.24625" y="0.745" />
+                            <point x="0.339375" y="0.75" />
+                            <point x="0.3675" y="0.655" />
+                            <point x="0.5125" y="0.55" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5">
+                        <collision-poly>
+                            <point x="0.5975" y="0.375" />
+                            <point x="0.795" y="0.445" />
+                            <point x="0.8125" y="0.6775" />
+                            <point x="0.6675" y="0.70375" />
+                            <point x="0.53" y="0.756875" />
+                            <point x="0.52125" y="0.843438" />
+                            <point x="0.416875" y="0.879219" />
+                            <point x="0.445" y="1" />
+                            <point x="0.35125" y="0.985" />
+                            <point x="0.2525" y="0.93" />
+                            <point x="0.275" y="0.80375" />
+                            <point x="0.22875" y="0.710625" />
+                            <point x="0.325625" y="0.719062" />
+                            <point x="0.361563" y="0.625781" />
+                            <point x="0.522031" y="0.549141" />
+                            <point x="0.4375" y="0.4225" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5">
+                        <collision-poly>
+                            <point x="0.585" y="0.645" />
+                            <point x="0.5525" y="0.485" />
+                            <point x="0.7525" y="0.525" />
+                            <point x="0.8825" y="0.675" />
+                            <point x="0.83375" y="0.735" />
+                            <point x="0.785" y="0.885" />
+                            <point x="0.64375" y="0.83375" />
+                            <point x="0.498125" y="0.830625" />
+                            <point x="0.4425" y="0.8925" />
+                            <point x="0.33875" y="0.87625" />
+                            <point x="0.3275" y="1" />
+                            <point x="0.24875" y="0.97125" />
+                            <point x="0.175" y="0.8475" />
+                            <point x="0.255" y="0.75875" />
+                            <point x="0.245" y="0.635" />
+                            <point x="0.3275" y="0.6925" />
+                            <point x="0.42875" y="0.63125" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5">
+                        <collision-poly>
+                            <point x="0.615" y="0.705" />
+                            <point x="0.635" y="0.545" />
+                            <point x="0.805" y="0.64" />
+                            <point x="0.88" y="0.8325" />
+                            <point x="0.80625" y="0.86625" />
+                            <point x="0.779375" y="0.945625" />
+                            <point x="0.7175" y="1" />
+                            <point x="0.4775" y="0.86" />
+                            <point x="0.3875" y="0.8975" />
+                            <point x="0.31" y="0.83625" />
+                            <point x="0.2425" y="0.95" />
+                            <point x="0.1575" y="0.775" />
+                            <point x="0.2725" y="0.7025" />
+                            <point x="0.3025" y="0.585" />
+                            <point x="0.371875" y="0.66" />
+                            <point x="0.46625" y="0.645" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+                <animation framecount="2" loop="1" name="slide_shield" pingpong="0" repeatcount="1" repeatto="0" sid="1324282899711954" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5">
+                        <collision-poly>
+                            <point x="0.535" y="0.8" />
+                            <point x="0.555" y="0.66" />
+                            <point x="0.7325" y="0.725" />
+                            <point x="0.835" y="0.8925" />
+                            <point x="0.7575" y="0.9875" />
+                            <point x="0.525" y="1" />
+                            <point x="0.3275" y="1" />
+                            <point x="0.26625" y="0.91375" />
+                            <point x="0.210625" y="0.763125" />
+                            <point x="0.25" y="0.6925" />
+                            <point x="0.3125" y="0.77125" />
+                            <point x="0.41875" y="0.745625" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5">
+                        <collision-poly>
+                            <point x="0.54" y="0.66" />
+                            <point x="0.725" y="0.72375" />
+                            <point x="0.84" y="0.8875" />
+                            <point x="0.7475" y="1" />
+                            <point x="0.33" y="1" />
+                            <point x="0.2725" y="0.92125" />
+                            <point x="0.26875" y="0.829375" />
+                            <point x="0.216875" y="0.763437" />
+                            <point x="0.24" y="0.6875" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+                <animation framecount="3" loop="1" name="boost_shield" pingpong="0" repeatcount="1" repeatto="0" sid="5324631339142839" speed="15">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5">
+                        <collision-poly>
+                            <point x="0.33" y="0.695" />
+                            <point x="0.43" y="0.63" />
+                            <point x="0.585" y="0.67" />
+                            <point x="0.605" y="0.515" />
+                            <point x="0.77" y="0.585" />
+                            <point x="0.86" y="0.77" />
+                            <point x="0.465" y="1" />
+                            <point x="0.3" y="0.88" />
+                            <point x="0.23" y="0.685" />
+                            <point x="0.26" y="0.6175" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5">
+                        <collision-poly>
+                            <point x="0.47" y="0.645" />
+                            <point x="0.575" y="0.68" />
+                            <point x="0.605" y="0.51" />
+                            <point x="0.775" y="0.61" />
+                            <point x="0.88" y="0.78" />
+                            <point x="0.6975" y="0.7925" />
+                            <point x="0.72625" y="0.94125" />
+                            <point x="0.645" y="1" />
+                            <point x="0.56" y="0.88" />
+                            <point x="0.4475" y="0.845" />
+                            <point x="0.43125" y="0.9525" />
+                            <point x="0.3" y="1" />
+                            <point x="0.2425" y="0.825" />
+                            <point x="0.27625" y="0.7825" />
+                            <point x="0.243125" y="0.58125" />
+                            <point x="0.33" y="0.67" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5">
+                        <collision-poly>
+                            <point x="0.585" y="0.72" />
+                            <point x="0.605" y="0.555" />
+                            <point x="0.785" y="0.63" />
+                            <point x="0.865" y="0.82" />
+                            <point x="0.74" y="1" />
+                            <point x="0.6075" y="0.93" />
+                            <point x="0.30125" y="0.92" />
+                            <point x="0.235" y="1" />
+                            <point x="0.12" y="0.8375" />
+                            <point x="0.2375" y="0.76625" />
+                            <point x="0.26125" y="0.625625" />
+                            <point x="0.323125" y="0.710312" />
+                            <point x="0.455" y="0.665" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+                <animation framecount="4" loop="0" name="jump_boost" pingpong="0" repeatcount="1" repeatto="0" sid="9606185087511345" speed="9">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5">
+                        <collision-poly>
+                            <point x="0.43" y="0.43" />
+                            <point x="0.56" y="0.365" />
+                            <point x="0.775" y="0.395" />
+                            <point x="0.71" y="0.59" />
+                            <point x="0.655" y="0.81" />
+                            <point x="0.47" y="1" />
+                            <point x="0.3" y="0.95" />
+                            <point x="0.32" y="0.85" />
+                            <point x="0.255" y="0.74" />
+                            <point x="0.34" y="0.735" />
+                            <point x="0.4025" y="0.63" />
+                            <point x="0.495" y="0.565" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5">
+                        <collision-poly>
+                            <point x="0.43" y="0.43" />
+                            <point x="0.615" y="0.375" />
+                            <point x="0.81" y="0.445" />
+                            <point x="0.825" y="0.685" />
+                            <point x="0.6475" y="0.7125" />
+                            <point x="0.53" y="0.825" />
+                            <point x="0.41" y="1" />
+                            <point x="0.255" y="0.91" />
+                            <point x="0.24" y="0.705" />
+                            <point x="0.3125" y="0.7125" />
+                            <point x="0.36375" y="0.61625" />
+                            <point x="0.515" y="0.55" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5">
+                        <collision-poly>
+                            <point x="0.575" y="0.65" />
+                            <point x="0.58" y="0.475" />
+                            <point x="0.755" y="0.535" />
+                            <point x="0.87" y="0.655" />
+                            <point x="0.77" y="0.875" />
+                            <point x="0.65" y="0.8325" />
+                            <point x="0.345" y="0.91125" />
+                            <point x="0.3275" y="1" />
+                            <point x="0.18" y="0.855" />
+                            <point x="0.26" y="0.76" />
+                            <point x="0.2425" y="0.645" />
+                            <point x="0.32875" y="0.6975" />
+                            <point x="0.421875" y="0.63375" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5">
+                        <collision-poly>
+                            <point x="0.61" y="0.71" />
+                            <point x="0.65" y="0.55" />
+                            <point x="0.81" y="0.64" />
+                            <point x="0.875" y="0.825" />
+                            <point x="0.71" y="1" />
+                            <point x="0.6" y="0.895" />
+                            <point x="0.385" y="0.8875" />
+                            <point x="0.2125" y="0.95375" />
+                            <point x="0.15625" y="0.756875" />
+                            <point x="0.32" y="0.59" />
+                            <point x="0.37" y="0.665" />
+                            <point x="0.48" y="0.6325" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+                <animation framecount="4" loop="0" name="jump_boost_shield" pingpong="0" repeatcount="1" repeatto="0" sid="7819100000971542" speed="9">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5">
+                        <collision-poly>
+                            <point x="0.33" y="0.75" />
+                            <point x="0.4" y="0.605" />
+                            <point x="0.51" y="0.55" />
+                            <point x="0.405" y="0.43" />
+                            <point x="0.585" y="0.35" />
+                            <point x="0.77" y="0.4" />
+                            <point x="0.67" y="0.81" />
+                            <point x="0.475" y="1" />
+                            <point x="0.305" y="0.94" />
+                            <point x="0.25" y="0.755" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5">
+                        <collision-poly>
+                            <point x="0.315" y="0.715" />
+                            <point x="0.3875" y="0.6075" />
+                            <point x="0.505" y="0.56" />
+                            <point x="0.4325" y="0.425" />
+                            <point x="0.64" y="0.365" />
+                            <point x="0.8" y="0.46" />
+                            <point x="0.81" y="0.665" />
+                            <point x="0.5575" y="0.7725" />
+                            <point x="0.405" y="1" />
+                            <point x="0.255" y="0.92" />
+                            <point x="0.23" y="0.7" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5">
+                        <collision-poly>
+                            <point x="0.555" y="0.645" />
+                            <point x="0.56" y="0.495" />
+                            <point x="0.745" y="0.52" />
+                            <point x="0.87" y="0.675" />
+                            <point x="0.795" y="0.88" />
+                            <point x="0.65" y="0.83" />
+                            <point x="0.385" y="0.91" />
+                            <point x="0.3125" y="1" />
+                            <point x="0.18" y="0.865" />
+                            <point x="0.275" y="0.755" />
+                            <point x="0.255" y="0.645" />
+                            <point x="0.325" y="0.685" />
+                            <point x="0.415" y="0.645" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5">
+                        <collision-poly>
+                            <point x="0.61" y="0.71" />
+                            <point x="0.655" y="0.55" />
+                            <point x="0.81" y="0.65" />
+                            <point x="0.87" y="0.825" />
+                            <point x="0.735" y="1" />
+                            <point x="0.585" y="0.9175" />
+                            <point x="0.35" y="0.87625" />
+                            <point x="0.225" y="0.955" />
+                            <point x="0.1425" y="0.7775" />
+                            <point x="0.26125" y="0.69375" />
+                            <point x="0.3" y="0.6" />
+                            <point x="0.36" y="0.655" />
+                            <point x="0.485" y="0.6525" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+                <animation framecount="1" loop="0" name="mati" pingpong="0" repeatcount="1" repeatto="0" sid="1386963781378816" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5">
+                        <collision-poly>
+                            <point x="0.47" y="0.47" />
+                            <point x="0.5" y="0.41" />
+                            <point x="0.65" y="0.35" />
+                            <point x="0.83" y="0.5" />
+                            <point x="0.78" y="0.78" />
+                            <point x="0.5" y="0.97" />
+                            <point x="0.3" y="0.7" />
+                            <point x="0.17" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="loading" sid="3181588532110454">
+            <plugin id="Text" />
+            <behaviors>
+                <behavior-type name="Anchor" sid="6433086945161985">
+                    <behavior id="Anchor" />
+                </behavior-type>
+            </behaviors>
+        </object-type>
+        <object-type name="new_gamebtn" sid="7692329238177976">
+            <plugin id="Sprite" />
+            <behaviors>
+                <behavior-type name="Anchor" sid="8547658230451692">
+                    <behavior id="Anchor" />
+                </behavior-type>
+            </behaviors>
+            <animation-folder expanded="1">
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="682184061356432" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.506667">
+                        <collision-poly>
+                            <point x="0.065" y="0.173333" />
+                            <point x="0.5" y="0.08" />
+                            <point x="0.945" y="0.146667" />
+                            <point x="0.97" y="0.92" />
+                            <point x="0.05" y="0.866667" />
+                            <point x="0.03" y="0.493333" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="cuntinue_btn" sid="164949939990206">
+            <plugin id="Sprite" />
+            <behaviors>
+                <behavior-type name="Anchor" sid="5154592666718083">
+                    <behavior id="Anchor" />
+                </behavior-type>
+            </behaviors>
+            <animation-folder expanded="1">
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="6306161348662806" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.506667">
+                        <collision-poly>
+                            <point x="0.065" y="0.173333" />
+                            <point x="0.5" y="0.08" />
+                            <point x="0.945" y="0.146667" />
+                            <point x="0.97" y="0.92" />
+                            <point x="0.05" y="0.866667" />
+                            <point x="0.03" y="0.493333" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="title" sid="9178352384973197">
+            <plugin id="Text" />
+            <behaviors>
+                <behavior-type name="Anchor" sid="9277636840546578">
+                    <behavior id="Anchor" />
+                </behavior-type>
+            </behaviors>
+        </object-type>
+        <object-type name="menu_score" sid="3624167962226172">
+            <plugin id="Text" />
+            <behaviors>
+                <behavior-type name="Anchor" sid="9073825334852351">
+                    <behavior id="Anchor" />
+                </behavior-type>
+            </behaviors>
+        </object-type>
+        <object-type name="title_complete" sid="3121090526618705">
+            <plugin id="Text" />
+        </object-type>
+        <object-type name="level_score" sid="3535486027628555">
+            <plugin id="Text" />
+        </object-type>
+        <object-type name="scira" sid="103936331845496">
+            <plugin id="ScirraArcade" />
+        </object-type>
+        <object-type name="slide_btn" sid="5024108656272884">
+            <plugin id="Sprite" />
+            <behaviors>
+                <behavior-type name="Anchor" sid="108731394014485">
+                    <behavior id="Anchor" />
+                </behavior-type>
+            </behaviors>
+            <animation-folder expanded="1">
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="1579629002180669" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.506667">
+                        <collision-poly>
+                            <point x="0.065" y="0.173333" />
+                            <point x="0.5" y="0.08" />
+                            <point x="0.945" y="0.146667" />
+                            <point x="0.97" y="0.92" />
+                            <point x="0.05" y="0.866667" />
+                            <point x="0.03" y="0.493333" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
     </object-folder>
     <families />
     <layout-folder expanded="1">
         <layout>menu.xml</layout>
-        <layout>level_map.xml</layout>
-        <layout>tutorial.xml</layout>
         <layout>level1.xml</layout>
         <layout>level2.xml</layout>
         <layout>level3.xml</layout>
         <layout>level4.xml</layout>
         <layout>level5.xml</layout>
         <layout>level6.xml</layout>
-        <layout>level7.xml</layout>
-        <layout>level8.xml</layout>
+        <layout>Layout 1.xml</layout>
     </layout-folder>
     <event-folder expanded="1">
         <event-sheet>Event_splash_screen.xml</event-sheet>
         <event-sheet>event_menu.xml</event-sheet>
-        <event-sheet>event_level_map.xml</event-sheet>
         <event-sheet>event_level1.xml</event-sheet>
         <event-sheet>event_level3.xml</event-sheet>
         <event-sheet>event_level2.xml</event-sheet>
         <event-sheet>event_level4.xml</event-sheet>
         <event-sheet>event_level5.xml</event-sheet>
         <event-sheet>event_level6.xml</event-sheet>
-        <event-sheet>event_level7.xml</event-sheet>
-        <event-sheet>event_level8.xml</event-sheet>
         <event-sheet>player_char.xml</event-sheet>
         <event-sheet>timer.xml</event-sheet>
         <event-sheet>score.xml</event-sheet>
         <event-sheet>speed_range.xml</event-sheet>
         <event-sheet>mobil_event.xml</event-sheet>
+        <event-sheet>sound.xml</event-sheet>
+        <event-sheet>button.xml</event-sheet>
+        <event-sheet>level.xml</event-sheet>
+        <event-sheet>Event sheet 1.xml</event-sheet>
     </event-folder>
     <global-instances>
         <global-instance type="Keyboard" uid="2773" />
@@ -2059,9 +2941,32 @@
                 <use-mouse-input>Yes</use-mouse-input>
             </properties>
         </global-instance>
+        <global-instance type="menu_sound" uid="23">
+            <properties>
+                <timescale-audio>Off</timescale-audio>
+                <saveload>All</saveload>
+                <positioned-audio></positioned-audio>
+                <panning-model>HRTF</panning-model>
+                <distance-model>Inverse</distance-model>
+                <listener-z-height>600</listener-z-height>
+                <reference-distance>600</reference-distance>
+                <maximum-distance>10000</maximum-distance>
+                <roll-off-factor>1</roll-off-factor>
+                <speed-of-sound>5000</speed-of-sound>
+                <doppler-factor>1</doppler-factor>
+            </properties>
+        </global-instance>
+        <global-instance type="scira" uid="4415" />
     </global-instances>
-    <sounds-folder expanded="1" />
-    <music-folder expanded="1" />
+    <sounds-folder expanded="1">
+        <file name="timun.ogg" />
+        <file name="jump.ogg" />
+        <file name="collision.ogg" />
+        <file name="timun_emas.ogg" />
+    </sounds-folder>
+    <music-folder expanded="1">
+        <file name="background.ogg" />
+    </music-folder>
     <files-folder expanded="1">
         <file-folder expanded="1" name="Icons">
             <file name="icon-16.png" />
@@ -2069,6 +2974,7 @@
             <file name="icon-114.png" />
             <file name="icon-128.png" />
             <file name="loading-logo.png" />
+            <file name="icon-256.png" />
         </file-folder>
     </files-folder>
 </c2project>

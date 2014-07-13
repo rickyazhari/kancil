@@ -4,6 +4,21 @@
     <name>score</name>
     <events>
         <variable constant="0" name="Total_score" sid="894782265436112" static="0" type="number">0</variable>
+        <variable constant="0" name="cur_score" sid="1283708108030178" static="0" type="number">0</variable>
+        <event-block sid="4296798986191875">
+            <conditions>
+                <condition id="-2" name="On start of layout" sid="4637316634575285" type="System" />
+            </conditions>
+            <actions>
+                <action id="-9" name="Set value" sid="5483465489084055" type="System">
+                    <param id="0" name="Variable">cur_score</param>
+                    <param id="1" name="Value">Total_score</param>
+                </action>
+                <action id="0" name="Set text" sid="4191479167898623" type="score">
+                    <param id="0" name="Text">cur_score</param>
+                </action>
+            </actions>
+        </event-block>
         <event-group description="" sid="9285368511516167" title="timun collision">
             <sub-events>
                 <event-block sid="126185081128202">
@@ -15,15 +30,104 @@
                     <actions>
                         <action id="-9" name="Destroy" sid="4663205891619171" type="timun" />
                         <action id="-10" name="Add to" sid="2405252246457561" type="System">
-                            <param id="0" name="Variable">Total_score</param>
+                            <param id="0" name="Variable">cur_score</param>
                             <param id="1" name="Value">1</param>
                         </action>
                         <action id="0" name="Set text" sid="2399527620262925" type="score">
-                            <param id="0" name="Text">Total_score</param>
+                            <param id="0" name="Text">cur_score</param>
                         </action>
                     </actions>
+                    <sub-events>
+                        <event-block sid="8400636663639982">
+                            <conditions>
+                                <condition id="-14" name="Compare variable" sid="9379399086548436" type="System">
+                                    <param id="0" name="Variable">sound</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">1</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="7" name="Play (by name)" sid="4217528613857445" type="menu_sound">
+                                    <param id="0" name="Folder">0</param>
+                                    <param id="1" name="Audio file name">&quot;timun&quot;</param>
+                                    <param id="3" name="Loop">0</param>
+                                    <param id="4" name="Volume">-5</param>
+                                    <param id="2" name="Tag (optional)">&quot;&quot;</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block sid="6539197414515238">
+                    <conditions>
+                        <condition id="0" name="On collision with another object" sid="3093873843060283" type="timun_emas">
+                            <param id="0" name="Object">kancil</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Destroy" sid="8439616453917252" type="timun_emas" />
+                        <action id="-10" name="Add to" sid="3041699247771693" type="System">
+                            <param id="0" name="Variable">cur_score</param>
+                            <param id="1" name="Value">6</param>
+                        </action>
+                        <action id="0" name="Set text" sid="3590533355302173" type="score">
+                            <param id="0" name="Text">cur_score</param>
+                        </action>
+                    </actions>
+                    <sub-events>
+                        <event-block sid="5276822357691079">
+                            <conditions>
+                                <condition id="-14" name="Compare variable" sid="2181536602880759" type="System">
+                                    <param id="0" name="Variable">sound</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">1</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="7" name="Play (by name)" sid="5866219299155346" type="menu_sound">
+                                    <param id="0" name="Folder">0</param>
+                                    <param id="1" name="Audio file name">&quot;timun_emas&quot;</param>
+                                    <param id="3" name="Loop">0</param>
+                                    <param id="4" name="Volume">-10</param>
+                                    <param id="2" name="Tag (optional)">&quot;&quot;</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
                 </event-block>
             </sub-events>
         </event-group>
+        <event-block sid="3773036567909313">
+            <conditions>
+                <condition id="-1" name="Compare X" sid="5135659936714762" type="kancil">
+                    <param id="0" name="Comparison">4</param>
+                    <param id="1" name="X co-ordinate">LayoutWidth - 400</param>
+                </condition>
+                <condition id="-14" name="Compare variable" sid="797342746043173" type="System">
+                    <param id="0" name="Variable">cur_score</param>
+                    <param id="1" name="Comparison">1</param>
+                    <param id="2" name="Value">Total_score</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-9" name="Set value" sid="5826227357942796" type="System">
+                    <param id="0" name="Variable">Total_score</param>
+                    <param id="1" name="Value">cur_score + (kancil.life * 200) + (timer.waktu* 100)</param>
+                </action>
+                <action id="-9" name="Set value" sid="9395097141512497" type="System">
+                    <param id="0" name="Variable">cur_score</param>
+                    <param id="1" name="Value">Total_score</param>
+                </action>
+                <action id="0" name="Set text" sid="9932748874265623" type="level_score">
+                    <param id="0" name="Text">Total_score</param>
+                </action>
+                <action id="0" name="Submit score" sid="960227160693842" type="scira">
+                    <param id="0" name="Score">Total_score</param>
+                </action>
+                <action id="1" name="Submit best time" sid="4308277713744847" type="scira">
+                    <param id="0" name="Seconds">level</param>
+                </action>
+            </actions>
+        </event-block>
     </events>
 </c2eventsheet>

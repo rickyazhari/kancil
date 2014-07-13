@@ -1,0 +1,614 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>button</name>
+    <events>
+        <variable constant="0" name="level" sid="6363840100180988" static="0" type="number">0</variable>
+        <event-group description="" sid="6025362565924048" title="init">
+            <sub-events>
+                <event-block sid="1271255668223648">
+                    <conditions>
+                        <condition id="-9" name="Layer is visible" sid="9489290119601992" type="System">
+                            <param id="0" name="Layer">3</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block any="1" sid="8451776093090646">
+                            <conditions>
+                                <condition id="6" name="On object clicked" sid="7306706530894128" type="Mouse">
+                                    <param id="0" name="Mouse button">0</param>
+                                    <param id="1" name="Click type">0</param>
+                                    <param id="2" name="Object clicked">cuntinue_btn</param>
+                                </condition>
+                                <condition id="3" name="On touched object" sid="6053561916282566" type="touch">
+                                    <param id="0" name="Object">cuntinue_btn</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-13" name="Set time scale" sid="2321880350272016" type="System">
+                                    <param id="0" name="Time scale">1.0</param>
+                                </action>
+                            </actions>
+                            <sub-events>
+                                <event-block sid="3717143266914055">
+                                    <conditions>
+                                        <condition id="-14" name="Compare variable" sid="8724237747663102" type="System">
+                                            <param id="0" name="Variable">level</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">1</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-2" name="Go to layout" sid="236941278566587" type="System">
+                                            <param id="0" name="Layout">level1</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="7089112731222593">
+                                    <conditions>
+                                        <condition id="-14" name="Compare variable" sid="1212595139761191" type="System">
+                                            <param id="0" name="Variable">level</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">2</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-2" name="Go to layout" sid="5798771308754559" type="System">
+                                            <param id="0" name="Layout">level2</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="7376696454069372">
+                                    <conditions>
+                                        <condition id="-14" name="Compare variable" sid="3161742446313448" type="System">
+                                            <param id="0" name="Variable">level</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">3</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-2" name="Go to layout" sid="4884283828389609" type="System">
+                                            <param id="0" name="Layout">level3</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="7022905929981239">
+                                    <conditions>
+                                        <condition id="-14" name="Compare variable" sid="5650861842246" type="System">
+                                            <param id="0" name="Variable">level</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">4</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-2" name="Go to layout" sid="3680495687573118" type="System">
+                                            <param id="0" name="Layout">level4</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="1210687783976793">
+                                    <conditions>
+                                        <condition id="-14" name="Compare variable" sid="5610563658777315" type="System">
+                                            <param id="0" name="Variable">level</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">5</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-2" name="Go to layout" sid="4348051822170087" type="System">
+                                            <param id="0" name="Layout">level5</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="4050641965723">
+                                    <conditions>
+                                        <condition id="-14" name="Compare variable" sid="8994222287365576" type="System">
+                                            <param id="0" name="Variable">level</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">6</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-2" name="Go to layout" sid="2097845088202706" type="System">
+                                            <param id="0" name="Layout">level6</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                        <event-block any="1" sid="3995606653073245">
+                            <conditions>
+                                <condition id="6" name="On object clicked" sid="8538407664564446" type="Mouse">
+                                    <param id="0" name="Mouse button">0</param>
+                                    <param id="1" name="Click type">0</param>
+                                    <param id="2" name="Object clicked">new_gamebtn</param>
+                                </condition>
+                                <condition id="3" name="On touched object" sid="1285961304314425" type="touch">
+                                    <param id="0" name="Object">new_gamebtn</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-9" name="Set value" sid="7124395851611523" type="System">
+                                    <param id="0" name="Variable">cur_score</param>
+                                    <param id="1" name="Value">0</param>
+                                </action>
+                                <action id="-9" name="Set value" sid="3924957249885055" type="System">
+                                    <param id="0" name="Variable">Total_score</param>
+                                    <param id="1" name="Value">0</param>
+                                </action>
+                                <action id="-2" name="Go to layout" sid="756152664508312" type="System">
+                                    <param id="0" name="Layout">level1</param>
+                                </action>
+                                <action id="-9" name="Set value" sid="1986508183281308" type="System">
+                                    <param id="0" name="Variable">level</param>
+                                    <param id="1" name="Value">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-block sid="4612835510866503">
+            <conditions>
+                <condition id="-9" name="Layer is visible" sid="4351244965227823" type="System">
+                    <param id="0" name="Layer">2</param>
+                </condition>
+            </conditions>
+            <actions />
+            <sub-events>
+                <event-block any="1" sid="8021351666042113">
+                    <conditions>
+                        <condition id="6" name="On object clicked" sid="7931122665907229" type="Mouse">
+                            <param id="0" name="Mouse button">0</param>
+                            <param id="1" name="Click type">0</param>
+                            <param id="2" name="Object clicked">menu_ob</param>
+                        </condition>
+                        <condition id="0" name="On key pressed" sid="1669799495769199" type="Keyboard">
+                            <param id="0" name="Key">27 (Esc)</param>
+                        </condition>
+                        <condition id="3" name="On touched object" sid="5111471971434308" type="touch">
+                            <param id="0" name="Object">menu_ob</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-4" name="Set layer visible" sid="6945019773121298" type="System">
+                            <param id="0" name="Layer">3</param>
+                            <param id="1" name="Visibility">1</param>
+                        </action>
+                        <action id="-4" name="Set layer visible" sid="2050089499257036" type="System">
+                            <param id="0" name="Layer">4</param>
+                            <param id="1" name="Visibility">1</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="2067676989774484" type="restartbtn">
+                            <param id="0" name="Visibility">1</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="3131165683250793" type="soundbtn">
+                            <param id="0" name="Visibility">1</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="6850469656869998" type="resumebtn">
+                            <param id="0" name="Visibility">1</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="9837682951652244" type="mainmenubtn">
+                            <param id="0" name="Visibility">1</param>
+                        </action>
+                    </actions>
+                    <sub-events>
+                        <event-block sid="5558414821666191">
+                            <conditions>
+                                <condition id="-14" name="Compare variable" sid="6016144750658665" type="System">
+                                    <param id="0" name="Variable">sound</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">0</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="4" name="Set animation" sid="9975054344031307" type="soundbtn">
+                                    <param id="0" name="Animation">&quot;mati&quot;</param>
+                                    <param id="1" name="From">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="1965494573644985">
+                            <conditions>
+                                <condition id="-22" name="Else" sid="7363018547045501" type="System" />
+                            </conditions>
+                            <actions>
+                                <action id="4" name="Set animation" sid="2088683083367885" type="soundbtn">
+                                    <param id="0" name="Animation">&quot;default&quot;</param>
+                                    <param id="1" name="From">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <event-block any="1" sid="596123414583128">
+            <conditions>
+                <condition id="-9" name="Layer is visible" sid="9292466408709131" type="System">
+                    <param id="0" name="Layer">4</param>
+                </condition>
+            </conditions>
+            <actions />
+            <sub-events>
+                <event-block any="1" sid="1415938492031006">
+                    <conditions>
+                        <condition id="6" name="On object clicked" sid="2403912251363778" type="Mouse">
+                            <param id="0" name="Mouse button">0</param>
+                            <param id="1" name="Click type">0</param>
+                            <param id="2" name="Object clicked">resumebtn</param>
+                        </condition>
+                        <condition id="3" name="On touched object" sid="2157513947689615" type="touch">
+                            <param id="0" name="Object">resumebtn</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-4" name="Set layer visible" sid="3553461679927381" type="System">
+                            <param id="0" name="Layer">3</param>
+                            <param id="1" name="Visibility">0</param>
+                        </action>
+                        <action id="-4" name="Set layer visible" sid="5310876757945875" type="System">
+                            <param id="0" name="Layer">4</param>
+                            <param id="1" name="Visibility">0</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="5425487868715648" type="restartbtn">
+                            <param id="0" name="Visibility">0</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="5840286050056311" type="soundbtn">
+                            <param id="0" name="Visibility">0</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="4217344902518665" type="resumebtn">
+                            <param id="0" name="Visibility">0</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="7779418801871528" type="mainmenubtn">
+                            <param id="0" name="Visibility">0</param>
+                        </action>
+                        <action id="-13" name="Set time scale" sid="4494894228424835" type="System">
+                            <param id="0" name="Time scale">1.0</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="6803285815375367" type="System">
+                            <param id="0" name="Variable">start_player</param>
+                            <param id="1" name="Value">0</param>
+                        </action>
+                        <action behavior="Timer" id="0" name="Start timer" sid="6073094251314674" type="kancil">
+                            <param id="0" name="Duration">1.0</param>
+                            <param id="1" name="Type">1</param>
+                            <param id="2" name="Tag">&quot;start&quot;</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block any="1" sid="5765320211525677">
+                    <conditions>
+                        <condition id="6" name="On object clicked" sid="711870981829082" type="Mouse">
+                            <param id="0" name="Mouse button">0</param>
+                            <param id="1" name="Click type">0</param>
+                            <param id="2" name="Object clicked">restartbtn</param>
+                        </condition>
+                        <condition id="3" name="On touched object" sid="669340287341987" type="touch">
+                            <param id="0" name="Object">restartbtn</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-26" name="Restart layout" sid="7857159544792968" type="System" />
+                        <action id="-4" name="Set layer visible" sid="971835938783178" type="System">
+                            <param id="0" name="Layer">3</param>
+                            <param id="1" name="Visibility">0</param>
+                        </action>
+                        <action id="-4" name="Set layer visible" sid="2335694952453212" type="System">
+                            <param id="0" name="Layer">4</param>
+                            <param id="1" name="Visibility">0</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="8437310749012936" type="restartbtn">
+                            <param id="0" name="Visibility">0</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="8286698307149559" type="soundbtn">
+                            <param id="0" name="Visibility">0</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="6148097046411654" type="resumebtn">
+                            <param id="0" name="Visibility">0</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="9571543133551736" type="mainmenubtn">
+                            <param id="0" name="Visibility">0</param>
+                        </action>
+                        <action id="-13" name="Set time scale" sid="8572185046185149" type="System">
+                            <param id="0" name="Time scale">1.0</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block any="1" sid="1431506404012738">
+                    <conditions>
+                        <condition id="6" name="On object clicked" sid="1675415249694502" type="Mouse">
+                            <param id="0" name="Mouse button">0</param>
+                            <param id="1" name="Click type">0</param>
+                            <param id="2" name="Object clicked">mainmenubtn</param>
+                        </condition>
+                        <condition id="3" name="On touched object" sid="1567157894001904" type="touch">
+                            <param id="0" name="Object">mainmenubtn</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="6" name="Stop" sid="8717199612019497" type="menu_sound">
+                            <param id="0" name="Tag">&quot;background&quot;</param>
+                        </action>
+                        <action id="-2" name="Go to layout" sid="166490941564488" type="System">
+                            <param id="0" name="Layout">menu</param>
+                        </action>
+                        <action id="-4" name="Set layer visible" sid="134224062558135" type="System">
+                            <param id="0" name="Layer">4</param>
+                            <param id="1" name="Visibility">0</param>
+                        </action>
+                        <action id="-4" name="Set layer visible" sid="4629307514323231" type="System">
+                            <param id="0" name="Layer">3</param>
+                            <param id="1" name="Visibility">0</param>
+                        </action>
+                        <action id="-4" name="Set layer visible" sid="2500008204377077" type="System">
+                            <param id="0" name="Layer">5</param>
+                            <param id="1" name="Visibility">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block collapsed="1" sid="7852976802041734">
+                    <conditions>
+                        <condition id="6" name="On object clicked" sid="7219605367792524" type="Mouse">
+                            <param id="0" name="Mouse button">0</param>
+                            <param id="1" name="Click type">0</param>
+                            <param id="2" name="Object clicked">soundbtn</param>
+                        </condition>
+                        <condition id="-9" name="Is visible" sid="8481719796954384" type="soundbtn" />
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="2224937268632588">
+                            <conditions>
+                                <condition id="-14" name="Compare variable" sid="8218670735918154" type="System">
+                                    <param id="0" name="Variable">sound</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">0</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="4" name="Set animation" sid="7581736871722928" type="soundbtn">
+                                    <param id="0" name="Animation">&quot;mati&quot;</param>
+                                    <param id="1" name="From">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="5985299454728998">
+                            <conditions>
+                                <condition id="-14" name="Compare variable" sid="6301520493969843" type="System">
+                                    <param id="0" name="Variable">sound</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">1</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="4" name="Set animation" sid="5249212432631594" type="soundbtn">
+                                    <param id="0" name="Animation">&quot;Default&quot;</param>
+                                    <param id="1" name="From">1</param>
+                                </action>
+                            </actions>
+                            <sub-events>
+                                <event-block sid="3479448685120929">
+                                    <conditions>
+                                        <condition id="5" inverted="1" name="Is tag playing" sid="969289380531487" type="menu_sound">
+                                            <param id="0" name="Tag">&quot;background&quot;</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="4" name="Set animation" sid="1600630679331045" type="sound">
+                                            <param id="0" name="Animation">&quot;Default&quot;</param>
+                                            <param id="1" name="From">1</param>
+                                        </action>
+                                        <action id="7" name="Play (by name)" sid="2484761507608659" type="menu_sound">
+                                            <param id="0" name="Folder">0</param>
+                                            <param id="1" name="Audio file name">&quot;background&quot;</param>
+                                            <param id="3" name="Loop">1</param>
+                                            <param id="4" name="Volume">-15</param>
+                                            <param id="2" name="Tag (optional)">&quot;background&quot;</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <event-block sid="8393002149805932">
+            <conditions>
+                <condition id="-9" name="Layer is visible" sid="2384352240042164" type="System">
+                    <param id="0" name="Layer">5</param>
+                </condition>
+            </conditions>
+            <actions />
+            <sub-events>
+                <event-block collapsed="1" sid="6617122521227997">
+                    <conditions>
+                        <condition id="6" name="On object clicked" sid="3252896688379867" type="Mouse">
+                            <param id="0" name="Mouse button">0</param>
+                            <param id="1" name="Click type">0</param>
+                            <param id="2" name="Object clicked">nextbtn</param>
+                        </condition>
+                        <condition id="-9" name="Is visible" sid="4756674632329186" type="nextbtn" />
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Set value" sid="3857412522688828" type="System">
+                            <param id="0" name="Variable">Total_score</param>
+                            <param id="1" name="Value">cur_score</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="7628111605352713" type="System">
+                            <param id="0" name="Variable">level</param>
+                            <param id="1" name="Value">level+1</param>
+                        </action>
+                    </actions>
+                    <sub-events>
+                        <event-block sid="2461262410530016">
+                            <conditions>
+                                <condition id="-14" name="Compare variable" sid="6464647558993335" type="System">
+                                    <param id="0" name="Variable">level</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">2</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-2" name="Go to layout" sid="9613251941972673" type="System">
+                                    <param id="0" name="Layout">level2</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="4235344422100191">
+                            <conditions>
+                                <condition id="-14" name="Compare variable" sid="1865642099684785" type="System">
+                                    <param id="0" name="Variable">level</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">3</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-2" name="Go to layout" sid="2202323418052127" type="System">
+                                    <param id="0" name="Layout">level3</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="3511377749263085">
+                            <conditions>
+                                <condition id="-14" name="Compare variable" sid="1019580392241313" type="System">
+                                    <param id="0" name="Variable">level</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">4</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-2" name="Go to layout" sid="2294772308311145" type="System">
+                                    <param id="0" name="Layout">level4</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="2239069177136815">
+                            <conditions>
+                                <condition id="-14" name="Compare variable" sid="3355986111160118" type="System">
+                                    <param id="0" name="Variable">level</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">5</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-2" name="Go to layout" sid="6928732539075251" type="System">
+                                    <param id="0" name="Layout">level5</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="6941491030326545">
+                            <conditions>
+                                <condition id="-14" name="Compare variable" sid="3170811659246603" type="System">
+                                    <param id="0" name="Variable">level</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">6</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-2" name="Go to layout" sid="1160847937277855" type="System">
+                                    <param id="0" name="Layout">level6</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block any="1" sid="7468453109254718">
+                    <conditions>
+                        <condition id="6" name="On object clicked" sid="8631757020557275" type="Mouse">
+                            <param id="0" name="Mouse button">0</param>
+                            <param id="1" name="Click type">0</param>
+                            <param id="2" name="Object clicked">mainmenubtn</param>
+                        </condition>
+                        <condition id="3" name="On touched object" sid="5903930599641251" type="touch">
+                            <param id="0" name="Object">mainmenubtn</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="6" name="Stop" sid="2889775302824931" type="menu_sound">
+                            <param id="0" name="Tag">&quot;background&quot;</param>
+                        </action>
+                        <action id="-2" name="Go to layout" sid="1495699730355124" type="System">
+                            <param id="0" name="Layout">menu</param>
+                        </action>
+                        <action id="-4" name="Set layer visible" sid="3505151282482458" type="System">
+                            <param id="0" name="Layer">4</param>
+                            <param id="1" name="Visibility">0</param>
+                        </action>
+                        <action id="-4" name="Set layer visible" sid="5710703529519124" type="System">
+                            <param id="0" name="Layer">3</param>
+                            <param id="1" name="Visibility">0</param>
+                        </action>
+                        <action id="-4" name="Set layer visible" sid="4546568032242891" type="System">
+                            <param id="0" name="Layer">5</param>
+                            <param id="1" name="Visibility">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <event-block any="1" sid="2177462136944698">
+            <conditions>
+                <condition id="6" name="On object clicked" sid="653035687978153" type="Mouse">
+                    <param id="0" name="Mouse button">0</param>
+                    <param id="1" name="Click type">0</param>
+                    <param id="2" name="Object clicked">Sprite9</param>
+                </condition>
+                <condition id="3" name="On touched object" sid="5897367664537652" type="touch">
+                    <param id="0" name="Object">Sprite9</param>
+                </condition>
+            </conditions>
+            <actions />
+            <sub-events>
+                <event-block sid="5498854024428281">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="6427528616371708" type="System">
+                            <param id="0" name="Variable">level</param>
+                            <param id="1" name="Comparison">4</param>
+                            <param id="2" name="Value">0</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-4" name="Set layer visible" sid="9304188402245322" type="System">
+                            <param id="0" name="Layer">2</param>
+                            <param id="1" name="Visibility">0</param>
+                        </action>
+                        <action id="-4" name="Set layer visible" sid="6203657772579232" type="System">
+                            <param id="0" name="Layer">3</param>
+                            <param id="1" name="Visibility">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="7665941705928889">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="1575814077495699" type="System">
+                            <param id="0" name="Variable">level</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">0</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Set value" sid="5191332211188996" type="System">
+                            <param id="0" name="Variable">level</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="2768484661466789" type="System">
+                            <param id="0" name="Variable">cur_score</param>
+                            <param id="1" name="Value">0</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="8942366144247564" type="System">
+                            <param id="0" name="Variable">Total_score</param>
+                            <param id="1" name="Value">0</param>
+                        </action>
+                        <action id="-2" name="Go to layout" sid="4398284125864541" type="System">
+                            <param id="0" name="Layout">level1</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
+    </events>
+</c2eventsheet>

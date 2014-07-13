@@ -13,9 +13,6 @@
                     <param id="0" name="Variable">range</param>
                     <param id="1" name="Value">mobil.X - kancil.X</param>
                 </action>
-                <action id="0" name="Set text" sid="9135741526941112" type="score">
-                    <param id="0" name="Text">boxkecil_physic.lentur</param>
-                </action>
             </actions>
         </event-block>
         <event-group description="" sid="2960062128388967" title="mobil jalan">
